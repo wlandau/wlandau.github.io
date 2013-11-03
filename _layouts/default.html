@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="Author" content="Will Landau (landau@iastate.edu)"/>
+  <meta name="Description" content="Personal website"/>
+  <meta name="Keywords" content="statistics, genomics, computing, R, Iowa State University" />
+  <meta name="Robots" content="index,follow" />
+  <link rel="stylesheet" type="text/css" href="{{page.root}}css/wml-custom.css"/>
+  <link rel="icon" type="image/png" href="{{page.root}}img/me.jpg"/>  
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  
+  {% if page.current == "research" %} 
+    <script src="http://bibtex-js.googlecode.com/svn/trunk/src/bibtex_js.js"></script> 
+  {% endif %}
+
+  <script>
+    $(window).load(function(){
+      $("<div style=\"clear:both;\"></div>").insertAfter("h1");
+      $("<div style=\"clear:both;\"></div>").insertAfter("h2");
+      $("<div style=\"clear:both;\"></div>").insertAfter("h3");
+      $("<div style=\"clear:both;\"></div>").insertAfter("h4");
+      
+      if($('#disqus_thread').length == 0)
+        $('#main').outerHeight(Math.max(
+          $(window).outerHeight() - $('#navbar').outerHeight() - $('#footer').outerHeight(),
+          $('#main-content').outerHeight() 
+        ));
+    });
+    
+    window.onresize = function(){
+      if($('#disqus_thread').length == 0)
+        $('#main').height(Math.max(
+          $(window).outerHeight() - $('#navbar').outerHeight() - $('#footer').outerHeight(),
+          $('#main-content').outerHeight()
+        ));
+    };
+  </script>
+
+
+  <title>{{page.title}} - Will Landau - Iowa State University</title>
+</head>
+<body>
+
+<div id="navbar">
+<div class="float">
+<div id="navbar-content">
+  <a href="{{page.root}}index.html" class="navlink" {% if page.current == "home" %} id="current" {% endif %}>About</a>
+  <a href="{{page.root}}cv/cv.pdf" class="navlink" target="_blank">CV</a>
+  <a href="{{page.root}}research.html" class="navlink" {% if page.current == "research" %} id="current" {% endif %}>Research</a>
+  <a href="https://github.com/wlandau/" target="_blank" class="navlink" {% if page.current == "software" %} id="current" {% endif %}>Software</a>
+  <a href="{{page.root}}teaching.html" class="navlink" {% if page.current == "teaching" %} id="current" {% endif %}>Teaching</a>
+  <a href="{{page.root}}courses.html" class="navlink" {% if page.current == "courses" %} id="current" {% endif %}>Courses</a>
+  <a href="{{page.root}}calendar.html" class="navlink" {% if page.current == "calendar" %} id="current" {% endif %} target="_blank">Calendar</a>
+  <a href="{{page.root}}blog.html" class="navlink" {% if page.current == "blog" %} id="current" {% endif %}>Blog</a>
+  <a href="{{page.root}}contact.html" class="navlink" {% if page.current == "contact" %} id="current" {% endif %}>Contact</a>
+</div>
+</div>
+</div>
+
+<div id="main">
+<div class="float">
+<div id="main-content">
+
+{{content}}
+
+</div>
+</div>
+</div>
+
+<div id="footer">
+<div class="float">
+<div id="footer-content">
+  <div style="float:right;">
+    &copy; <a href="http://wlandau.github.com/index.html">Will Landau</a> 2012 - 2013
+  </div>
+  Powered by <a href="http://jekyllrb.com/">Jekyll</a> on <a href="https://github.com/">GitHub</a>
+</div>
+</div>
+</div>
+
+</body>
+</html>
