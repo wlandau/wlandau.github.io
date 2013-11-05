@@ -15,24 +15,16 @@ h1, h2, h3, h4{
   color: white; 
   border-radius: 3px;
   padding: 8px 8px 5px 8px;
+  background: #000099;
 }
 
 h1{
-  font-size: 30px;
-  background: #0000BB;
+  font-size: 36px;
+
 }
 
 h2{
-  font-size: 27px;
-  background: #000088;
-}
-
-h3{
-  background: #000066;
-}
-
-h3{
-  background: #000055;
+  font-size: 30px;
 }
 
 iframe.video{
