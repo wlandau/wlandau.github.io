@@ -12,7 +12,7 @@ html{
 h1, h2, h3, h4{
   font-family: sans-serif;
   font-weight: normal;
-  border-bottom: 2px solid brown;
+  border-bottom: 2px solid #C04000;
 }
 
 h1{
