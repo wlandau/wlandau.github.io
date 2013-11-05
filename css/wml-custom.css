@@ -116,6 +116,7 @@ ul {
 
 #footer{
   background: #DDDDDD;
+  border-top: 1px solid black;
 }
 
 #footer a{
