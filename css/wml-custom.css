@@ -115,7 +115,7 @@ ul {
 }
 
 #footer{
-  background: white;
+  background: #DDDDDD;
 }
 
 #footer a{
@@ -136,7 +136,7 @@ ul {
 }
 
 #footer-content{
-  padding: 40px 20px 5px 20px;
+  margin: 40px 20px 5px 20px;
   background: #DDDDDD;
   font-size: 10pt;
 }
