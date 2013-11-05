@@ -121,7 +121,7 @@ ul {
 
 #footer a{
   color: #006600;
-  background: white;
+  background: none;
   text-decoration: none;
   transition: text-decoration.2s ease-in;
   -moz-transition: text-decoration .2s ease-in;
@@ -138,6 +138,7 @@ ul {
 
 #footer-content{
   padding-bottom: 5px;
+  background: white;
   font-size: 10pt;
 }
 
