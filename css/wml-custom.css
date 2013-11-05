@@ -7,7 +7,7 @@ body{
 
 html{
   height: 100%; 
-    background: #DDDDDD;
+  background: #DDDDDD;
 }
 
 h1, h2, h3, h4{
@@ -165,10 +165,6 @@ ul {
   transition: text-decoration.2s ease-in;
   -moz-transition: text-decoration .2s ease-in;
   -webkit-transition: text-decoration .2s ease-in;
-}
-
-#navbar{
-  background: #DDDDDD;
 }
 
 #navbar-content{
