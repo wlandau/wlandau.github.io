@@ -116,11 +116,12 @@ ul {
 
 #footer{
   padding-top: 40px;
+  background: #DDDDDD;
 }
 
 #footer a{
   color: #006600;
-  background: none;
+  background: white;
   text-decoration: none;
   transition: text-decoration.2s ease-in;
   -moz-transition: text-decoration .2s ease-in;
