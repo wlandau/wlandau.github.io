@@ -77,7 +77,7 @@ ul {
 .float{
   width: 650px;
   margin: 0px auto 0px auto; 
-  padding: 40px 40px 0px 40px;
+  padding-left: 40px;
 }
 
 .navlink{
