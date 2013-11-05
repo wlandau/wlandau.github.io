@@ -136,6 +136,7 @@ ul {
 }
 
 #footer-content{
+  margin-top: 40px;
   padding: 5px 20px 5px 20px;
   background: #DDDDDD;
   font-size: 10pt;
