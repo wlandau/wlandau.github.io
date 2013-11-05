@@ -168,10 +168,10 @@ ul {
 
 #navbar{
   background: #DDDDDD;
-  margin-left: 20px;
 }
 
 #navbar-content{
   padding-top: 20px;
   background:white;
+    margin-left: 20px;
 }
