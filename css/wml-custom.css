@@ -12,7 +12,7 @@ html{
 h1, h2, h3, h4{
   font-family: sans-serif;
   font-weight: normal;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid brown;
 }
 
 h1{
@@ -91,14 +91,14 @@ ul {
 }
 
 .navlink:hover{
-  background: #0000BB;
+  background: #006600;
   transition: background .2s ease-in;
   -moz-transition: background .2s ease-in;
   -webkit-transition:background .2s ease-in;
 }
 
 #current{
-  background: #0000BB;
+  background: #006600;
   color:white;
   transition: background .2s ease-in;
   -moz-transition: background .2s ease-in;
