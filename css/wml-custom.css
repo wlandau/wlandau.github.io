@@ -149,7 +149,7 @@ ul {
 #main-content{
   background: white;
   color: black;
-  padding-top: 10px;
+  padding: 10px 40px 0px 40px;
 }
 
 #main-content a{
