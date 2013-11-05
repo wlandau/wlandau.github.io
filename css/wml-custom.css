@@ -116,7 +116,6 @@ ul {
 
 #footer{
   background: #DDDDDD;
-  border-top: 1px solid black;
 }
 
 #footer a{
@@ -138,7 +137,6 @@ ul {
 
 #footer-content{
   padding: 40px 20px 5px 20px;
-  background: white;
   font-size: 10pt;
 }
 
