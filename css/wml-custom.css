@@ -140,6 +140,7 @@ ul {
   background: white;
   color: black;
   padding: 10px 20px 0px 20px;
+  min-height: 600px;
 }
 
 #main-content a{
