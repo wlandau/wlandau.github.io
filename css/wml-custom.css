@@ -11,15 +11,16 @@ html{
 
 h1, h2, h3, h4{
   font-family: sans-serif;
-  border-bottom: 1px solid #DDDDDD;
 }
 
 h1{
   font-size: 30px;
+  border-bottom: 1px solid #DDDDDD;
 }
 
 h2{
   font-size: 27px;
+  border-bottom: 1px solid #DDDDDD;
 }
 
 iframe.video{
