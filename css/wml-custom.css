@@ -17,12 +17,15 @@ h1{
   font-size: 30px;
   border-radius: 3px;
   padding: 8px 8px 5px 8px;
-  background: #DDDDDD;
+  background: #999999;
+  color: white; 
 }
 
 h2{
   font-size: 27px;
   border-bottom: 1px solid #DDDDDD;
+  background: #999999;
+  color: white; 
 }
 
 iframe.video{
