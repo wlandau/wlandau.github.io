@@ -12,7 +12,6 @@ html{
 h1, h2, h3, h4{
   font-family: sans-serif;
   font-weight: normal;
-  background: #0000BB;
   color: white; 
   border-radius: 3px;
   padding: 8px 8px 5px 8px;
@@ -20,10 +19,20 @@ h1, h2, h3, h4{
 
 h1{
   font-size: 30px;
+  background: #0000BB;
 }
 
 h2{
   font-size: 27px;
+  background: #000099;
+}
+
+h3{
+  background: #000077;
+}
+
+h3{
+  background: #000055;
 }
 
 iframe.video{
