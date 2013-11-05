@@ -118,7 +118,7 @@ ul {
 }
 
 #footer a{
-  color: #0000BB;
+  color: #006600;
   background: none;
   text-decoration: none;
   transition: text-decoration.2s ease-in;
@@ -127,7 +127,7 @@ ul {
 }
 
 #footer a:hover{
-  color: #0000BB;
+  color: #006600;
   text-decoration: underline;
   transition: text-decoration.2s ease-in;
   -moz-transition: text-decoration .2s ease-in;
@@ -150,7 +150,7 @@ ul {
 }
 
 #main-content a{
-  color: #0000BB;
+  color: #006600;
   text-decoration: none;  
   transition: text-decoration.2s ease-in;
   -moz-transition: text-decoration .2s ease-in;
@@ -158,7 +158,7 @@ ul {
 }
 
 #main-content a:hover{
-  color: #0000BB;
+  color: #006600;
   text-decoration: underline;
   transition: text-decoration.2s ease-in;
   -moz-transition: text-decoration .2s ease-in;
