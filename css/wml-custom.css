@@ -141,11 +141,11 @@ ul {
 }
 
 #main{
-  background: white;
+  background: #DDDDDD;
 }
 
 #main-content{
-  background: none;
+  background: white;
   color: black;
   padding-top: 10px;
 }
