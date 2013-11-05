@@ -137,7 +137,7 @@ ul {
 }
 
 #footer-content{
-  padding: 40px 0px 5px 0px;
+  padding: 40px 20px 5px 20px;
   background: white;
   font-size: 10pt;
 }
@@ -173,6 +173,6 @@ ul {
 }
 
 #navbar-content{
-  padding-top: 20px;
+  padding: 20px 20px 0px 20px;
   background:white;
 }
