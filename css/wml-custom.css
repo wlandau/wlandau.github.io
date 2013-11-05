@@ -114,10 +114,6 @@ ul {
   -webkit-transition: background .2s ease-in;
 }
 
-#footer{
-  background: #DDDDDD;
-}
-
 #footer a{
   color: #006600;
   background: none;
@@ -137,7 +133,6 @@ ul {
 
 #footer-content{
   padding: 5px 20px 5px 20px;
-  background: #DDDDDD;
   font-size: 10pt;
 }
 
