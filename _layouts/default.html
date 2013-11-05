@@ -23,7 +23,7 @@
       
       if($('#disqus_thread').length == 0)
         $('#main-content').outerHeight(Math.max(
-          $(window).outerHeight() - $('#navbar').outerHeight() - $('#footer').outerHeight(),
+          $(window).outerHeight() - $('#navbar').outerHeight() - $('#footer-content').outerHeight(),
           $('#main-content').outerHeight() 
         ));
     });
@@ -31,7 +31,7 @@
     window.onresize = function(){
       if($('#disqus_thread').length == 0)
         $('#main-content').height(Math.max(
-          $(window).outerHeight() - $('#navbar').outerHeight() - $('#footer').outerHeight(),
+          $(window).outerHeight() - $('#navbar').outerHeight() - $('#footer-content').outerHeight(),
           $('#main-content').outerHeight()
         ));
     };
