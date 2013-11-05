@@ -12,9 +12,9 @@ html{
 h1, h2, h3, h4{
   font-family: sans-serif;
   font-weight: normal;
-  background: #DDDDDD;
+  background: #BBBBBB;
   color: white; 
-    border-radius: 3px;
+  border-radius: 3px;
   padding: 8px 8px 5px 8px;
 }
 
