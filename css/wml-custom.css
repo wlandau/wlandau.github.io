@@ -107,7 +107,7 @@ ul {
 }
 
 #current:hover{
-  background: #0000DD;
+  background: #008800;
   color:white;
   transition: background .2s ease-in;
   -moz-transition: background .2s ease-in;
