@@ -15,7 +15,8 @@ h1, h2, h3, h4{
 
 h1{
   font-size: 30px;
-  border-bottom: 1px solid #DDDDDD;
+ /* border-bottom: 1px solid #DDDDDD; */
+   background: #DDDDDD;
 }
 
 h2{
