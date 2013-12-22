@@ -18,6 +18,15 @@ can be exactly as frugal as you need to be, and you can easily avoid
 spending more than you actually have.
 </p>
 
+<p>Some ledger ledger programs allow you to input delayed transactions, 
+but few distinguish between "pending" transactions and charges
+that haven't even shown up online yet. In addition, no other ledger program I've
+seen takes into account the inherent layering of credit accounts on top of bank
+accounts. In other words, Dynamic Ledger calculates the true balances of your
+bank accounts (i.e., how much hard money you will have after everything on your credit
+cards is paid and all transactions clear) even if you haven't made
+any credit card payments.</p>
+
 <p>The program accepts a tab-delimited ledger file like the one below as input.
 
 <code><pre>
@@ -112,14 +121,7 @@ correctly. But in reality, I owe my credit card company $45.50 and I only have
 $1,289.50 of <i>real</i> money in my bank account because of the two delayed 
 transactions at the top of the ledger file.</p>
 
-<p>Some ledger ledger programs allow you to input delayed transactions, 
-but few distinguish between "pending" transactions and charges
-that haven't even shown up online yet. In addition, no other ledger program I've
-seen takes into account the inherent layering of credit accounts on top of bank
-accounts. In other words, Dynamic Ledger calculates the true balances of your
-bank accounts (i.e., how much hard money you will have after everything on your credit
-cards is paid and all transactions clear) even if you haven't made
-any credit card payments.</p>
+
 
 
 <p>Currently, the program is an open source Linux/Unix-style package written in C. You can 
