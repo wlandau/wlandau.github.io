@@ -1,0 +1,135 @@
+---
+layout: post
+title: "Dynamic Ledger: a minimalist, dynamic personal accounting package"
+comments: true
+root: "../../../../"
+--- 
+
+<h2>Dynamic Ledger</h2>
+
+<p>Personal accounting can be frustrating when there are a lot delayed 
+transactions. With pending charges and charges that take some time 
+to even reach the bank, it can be hard to know how much you 
+actually have left. That's why I created 
+<a href="https://github.com/wlandau/dynamic-ledger">Dynamic Ledger</a>.
+Unlike most other accounting programs, it gives you control over your 
+finances even when you have several delayed transactions. With it, you 
+can be exactly as frugal as you need to be, and you can easily avoid 
+spending more than you actually have.
+</p>
+
+<p>The program accepts a tab-delimited ledger file like the one below as input.
+
+<code><pre>
+
+<table border="0">
+<tr>
+<td width="100">amount</td>
+<td width="100">status</td>
+<td width="100">credit</td>
+<td width="100">bank</td>
+<td width="100">partition</td>
+<td width="100">description</td>
+</tr>
+<tr>
+<td width="100">-30.14</td>
+<td width="100">cn</td>
+<td width="100">card</td>
+<td width="100">checking</td>
+<td width="100">gas</td>
+<td width="100">gas</td>
+</tr>
+<tr>
+<td width="100">-15.36</td>
+<td width="100">cp</td>
+<td width="100">card</td>
+<td width="100">checking</td>
+<td width="100">food</td>
+<td width="100">food</td>
+</tr>
+<tr>
+<td width="100">-5</td>
+<td width="100"></td>
+<td width="100">card</td>
+<td width="100">checking</td>
+<td width="100"></td>
+<td width="100"></td>
+</tr>
+<tr>
+<td width="100">400</td>
+<td width="100"></td>
+<td width="100"></td>
+<td width="100">checking</td>
+<td width="100"></td>
+<td width="100"></td>
+</tr>
+<tr>
+<td width="100">300</td>
+<td width="100"></td>
+<td width="100"></td>
+<td width="100">checking</td>
+<td width="100">food</td>
+<td width="100">food fund</td>
+</tr>
+<tr>
+<td width="100">200</td>
+<td width="100"></td>
+<td width="100"></td>
+<td width="100">checking</td>
+<td width="100">gas</td>
+<td width="100">gas fund</td>
+</tr>
+<tr>
+<td width="100">440</td>
+<td width="100"></td>
+<td width="100"></td>
+<td width="100">checking</td>
+<td width="100"></td>
+<td width="100"></td>
+</tr>
+</table>
+
+</pre></code>
+
+This is not my personal ledger, of course, but it is a useful example.
+If the file above is called <code>ledger.txt</code>, then I can open Terminal 
+(or another command line interface program) and type 
+
+<code><pre>
+dl ledger.txt
+</pre></code>
+
+And I get a summary of my ledger.
+
+<img align="middle" src="{{page.root}}img/dynamic-ledger.png" height="650px" width="650px"/>
+
+The summary tells me that I have $0.00 "available" on my credit card and $1,335.00 
+"available" in my credit card. These are the balances that I should see on my banks' 
+websites and <a href="http://www.mint.com/">mint.com</a> if I've done my bookkeeping
+correctly. But in reality, I owe my credit card company $45.50 and I only have 
+$1,289.50 of <i>real</i> money in my bank account because of the two delayed 
+transactions at the top of the ledger file.
+</p>
+
+
+
+<p>Currently, the program is an open source Linux/Unix-style package written in C. You can 
+clone it from <a href="https://github.com/wlandau/dynamic-ledger">my GitHub page</a>
+or download the source as a tarball from 
+<a href="https://github.com/wlandau/dynamic-ledger/blob/master/dl-0.0.tar.gz?raw=true">here</a>.
+It should be compatible with all platforms with a C compiler. Installation and usage
+instructions are explained in the <code>man</code> page and pdf tutorial.</p>
+
+
+<p>I've done my personal accounting this way for years, and it's given me
+a lot of peace of mind. It's gratifying to be able to finally package
+up this system and distribute it as a program that other people can use.</p>
+
+<p>Eventually, I want to turn Dynamic Ledger into an app for Mac,
+iphone, and Android. I've written most of the backend already. The plan
+is to learn Objective C and Cocoa and then write a spreadsheet program
+that not only computes summaries, but also allows the user to 
+condense and clean ledgers (supported in the current version), click
+and drag around rows and columns, etc. Please let me know what 
+you'd like to see.</p>
+
