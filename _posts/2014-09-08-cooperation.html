@@ -86,7 +86,8 @@ st: steal time, % CPU time in involuntary wait by virtual cpu ...
 
 <p>Only 8 cores have more than 80%id (time spent idling), 
 so spawning more than 8 expensive concurrent processes may slow down 
-or even crash the server. Plus, you never know how many other people
+or even crash the server. I recommend using less than 8 in this case
+because you never know how many other people
 will need to run things.</p>
 
 <h3>3. Be nice.</h3>
