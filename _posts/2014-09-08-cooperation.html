@@ -84,7 +84,7 @@ si: software irq (or) % CPU time spent handling software interrupts
 st: steal time, % CPU time in involuntary wait by virtual cpu ...
 </code></pre>
 
-<p>There are 8 cores with more than 80%id (time spent idling), 
+<p>Only 8 cores have more than 80%id (time spent idling), 
 so spawning more than 8 expensive concurrent processes may slow down 
 or even crash the server. Plus, you never know how many other people
 will need to run things.</p>
