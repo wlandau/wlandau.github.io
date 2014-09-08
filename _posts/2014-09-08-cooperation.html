@@ -16,18 +16,18 @@ the resources. Here are some ways you can contribute.</p>
 <p>The easiest way to do this is though "top". I can look up my own processes with</p>
 
 <pre></code>
-    $ top -u landau
+$ top -u landau
 </code></pre>
 
 <p>and I get a table of processes.</p>
 
 <pre><code>  
-    PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
-    19522 landau    39  19  128g  65m  24m R 100.4  0.1  85:46.54 R
-    20255 landau    20   0 26328 1732 1068 R  0.7  0.0   0:00.03 top
-    19516 landau    39  19  103m 1320 1128 S  0.0  0.0   0:00.00 sh
-    20015 landau    20   0  100m 2036 1076 S  0.0  0.0   0:00.09 sshd
-    20016 landau    20   0  117m 3324 1636 S  0.0  0.0   0:00.12 bash
+PID USER  PR  NI  VIRT  RES  SHR S %CPU %MEMTIME+  COMMAND
+19522 landau39  19  128g  65m  24m R 100.4  0.1  85:46.54 R
+20255 landau20   0 26328 1732 1068 R  0.7  0.0   0:00.03 top
+19516 landau39  19  103m 1320 1128 S  0.0  0.0   0:00.00 sh
+20015 landau20   0  100m 2036 1076 S  0.0  0.0   0:00.09 sshd
+20016 landau20   0  117m 3324 1636 S  0.0  0.0   0:00.12 bash
 </code></pre>
 
 <p>From looking at the %CPU column, I see that my R process (look under the "COMMAND" column)
@@ -35,9 +35,9 @@ the resources. Here are some ways you can contribute.</p>
   I should kill it. I just</p>
 
 <ol>
-    <li>Type k within top.</li>
-    <li>Type the PID (process ID) of the R process (19522 in this case).</li>
-    <li>Press enter.</li>
+<li>Type k within top.</li>
+<li>Type the PID (process ID) of the R process (19522 in this case).</li>
+<li>Press enter.</li>
 </ol>
 
 <h3>2. Ballpark the number of free cores.</h3>
@@ -45,43 +45,43 @@ the resources. Here are some ways you can contribute.</p>
 <p>Within top, press 1 to get the following table.</p>
 
 <pre><code>   
-    Cpu0  :  0.0%us,  0.3%sy,  0.0%ni, 99.7%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu1  :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu2  :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu3  :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu4  :  0.0%us, 29.4%sy, 70.6%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu5  :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu6  : 81.1%us,  0.0%sy,  0.0%ni, 18.9%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu7  : 17.3%us,  0.0%sy,  0.0%ni, 82.7%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu8  :  7.3%us,  0.0%sy,  0.0%ni, 92.7%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu9  : 65.4%us,  0.0%sy,  0.0%ni, 34.6%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu10 : 46.0%us,  0.3%sy,  0.0%ni, 53.6%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu11 : 82.5%us,  0.0%sy,  0.0%ni, 17.5%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu12 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu13 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu14 :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu15 :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu16 :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu17 :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu18 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu19 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu20 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu21 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu22 : 99.7%us,  0.3%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
-    Cpu23 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu0  :  0.0%us,  0.3%sy,  0.0%ni, 99.7%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu1  :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu2  :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu3  :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu4  :  0.0%us, 29.4%sy, 70.6%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu5  :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu6  : 81.1%us,  0.0%sy,  0.0%ni, 18.9%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu7  : 17.3%us,  0.0%sy,  0.0%ni, 82.7%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu8  :  7.3%us,  0.0%sy,  0.0%ni, 92.7%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu9  : 65.4%us,  0.0%sy,  0.0%ni, 34.6%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu10 : 46.0%us,  0.3%sy,  0.0%ni, 53.6%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu11 : 82.5%us,  0.0%sy,  0.0%ni, 17.5%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu12 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu13 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu14 :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu15 :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu16 :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu17 :  0.0%us,  0.0%sy,  0.0%ni,100.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu18 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu19 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu20 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu21 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu22 : 99.7%us,  0.3%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
+Cpu23 :100.0%us,  0.0%sy,  0.0%ni,  0.0%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st
 </code></pre>
 
 <p>These percentages are of time spent.</p>
 
 <pre><code> 
-    us: user cpu time (or) % CPU time spent in user space
-    sy: system cpu time (or) % CPU time spent in kernel space
-    ni: user nice cpu time (or) % CPU time spent on low priority processes
-    id: idle cpu time (or) % CPU time spent idle
-    wa: io wait cpu time (or) % CPU time spent in wait (on disk)
-    hi: hardware irq (or) % CPU time spent servicing/handling hardware interrupts
-    si: software irq (or) % CPU time spent servicing/handling software interrupts
-    st: steal time - - % CPU time in involuntary wait by virtual cpu while hypervisor is servicing another processor (or) % CPU time stolen from a virtual machine
+us: user cpu time (or) % CPU time spent in user space
+sy: system cpu time (or) % CPU time spent in kernel space
+ni: user nice cpu time (or) % CPU time spent on low priority processes
+id: idle cpu time (or) % CPU time spent idle
+wa: io wait cpu time (or) % CPU time spent in wait (on disk)
+hi: hardware irq (or) % CPU time spent servicing/handling hardware interrupts
+si: software irq (or) % CPU time spent servicing/handling software interrupts
+st: steal time - - % CPU time in involuntary wait by virtual cpu while hypervisor is servicing another processor (or) % CPU time stolen from a virtual machine
 </code></pre>
 
 <p>There are 8 cores with more than 80%id (time spent idling), 
