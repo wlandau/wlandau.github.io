@@ -9,10 +9,25 @@ root: "../../../../"
 
 <h3>Edit (September 9, 2014)</h3>
 
-<p>For this to work, you'll need to make sure you're default shell is
+<p>For these instructions to work, you'll need to make sure you're default shell is
 <code>bash</code>. You may be using <code>ksh</code>, <code>tsh</code>,
-or some other command line interface. If you're using a server at Iowa State,
-you can change your default login shell this way:
+or some other command line interface. To check, run</p>
+
+<pre><code>
+ps -p $$
+</code></pre>
+
+<p>and you should see something like</p>
+
+<pre><code>
+  PID TTY          TIME CMD
+6453 pts/0    00:00:00 bash
+</code></pre>
+
+<p>The CMD column tells me I'm running <code>bash</code>, which is good.</p>
+
+<p> If you're using a server at Iowa State,
+you can change your default login shell this way:</p>
 
 <ol>
 <li>Log into <a href="https://asw.iastate.edu">ASW</a> (Account Services on the Web).</li>
@@ -22,7 +37,7 @@ you can change your default login shell this way:
 <li>Click "Update Shell".</li>
 </ol>
 
-Other institutions should have something similar. Otherwise,
+<p>Other institutions should have something similar. Otherwise,
 there are several pages on changing shells, including
 <a href="http://stackoverflow.com/questions/13046192/changing-default-shell-in-linux">
 this one</a>.</p>
