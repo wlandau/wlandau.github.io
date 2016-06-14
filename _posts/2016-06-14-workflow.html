@@ -48,7 +48,7 @@ Above, <code>plot.pdf</code> depends on <code>plot.R</code>,
 <code>random.csv</code>, and <code>mtcars.csv</code>. With those dependencies available,
 <code>plot.pdf</code> is constructed by executing <code>Rscript plot.R</code> in the
 <a href = "http://linuxcommand.org/">command line</a>. Similarly, <code>mtcars.csv</code>
-depends on <code>mtcars.R</code>, and is constructed by calling <code>Rscript mtcars.R</code>
+depends on <code>mtcars.R</code> and is constructed by calling <code>Rscript mtcars.R</code>
 in the <a href = "http://linuxcommand.org/">command line</a>. The case of <code>random.csv</code>
 is analogous.
 </p>
@@ -82,7 +82,8 @@ write.csv(d, "random.csv")
 
 With all these files, I open a
 <a href="https://en.wikipedia.org/wiki/Terminal_(OS_X)">command line program</a>,
- type <code>make</code>, and press enter. The console shows
+ type <code>make</code>, and press enter. The files are generated in sequence,
+ and the console shows the following.
 
 <pre><code>
 Rscript random.R
