@@ -110,7 +110,7 @@ make: Nothing to be done for `all'.
 
 One of the best features of <a href="https://www.gnu.org/software/make/">GNU Make</a>
 is that "targets" such as <code>plot.pdf</code>, <code>mtcars.csv</code>, and
-<code>random.csv</code> are only built when their dependencies change. For example, suppose
+<code>random.csv</code> are only (re)built when their dependencies change or need to be generated. For example, suppose
 I change mtcars.R and then run <code>make</code>. Then, <code>mtcars.csv</code> and <code>plot.pdf</code>
 are rebuilt, but <code>random.csv</code> is left alone.
 
