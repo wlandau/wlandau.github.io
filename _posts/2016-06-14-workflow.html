@@ -5,7 +5,7 @@ comments: true
 root: "../../../../"
 ---
 
-<h2>Workflow management in R</h2>
+<h1>Workflow management in R</h1>
 
 <p>
 Whenever I seriously analyze data in R, I like to bundle my
@@ -15,7 +15,7 @@ work for the sake of portability, but there are much better
 tools and practices.
 </p>
 
-<h3><a href="https://www.gnu.org/software/make/">GNU Make</a></h3>
+<h2><a href="https://www.gnu.org/software/make/">GNU Make</a></h2>
 
 <p>
 Programmers who work with compiled languages have been using
@@ -134,7 +134,7 @@ triggers unnecessary rebuilds. A better solution for R is
 </p>
 
 
-<h3><a href="https://github.com/richfitz/remake">remake</a></h3>
+<h2><a href="https://github.com/richfitz/remake">remake</a></h2>
 
 <p>
 <a href="https://richfitz.github.io/">Rich FitzJohn</a>'s
@@ -205,14 +205,14 @@ them in a hidden folder called <code>.remake/objects</code>, managed internally 
 still has room for improvement. For one, it currently does not support parallel
 computing, so there is not a built-in way to distribute targets over parallel processes
 as with <code>make -j</code>. In addition, the user needs to maintain a
-<a href="http://yaml.org/">YAML</a> file, which could be large and complicated for
+<a href="http://yaml.org/">YAML</a> file, which could get large and complicated for
 serious projects. With these issues in mind, I wrote the
 <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a> and
 <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>
 packages.
 </p>
 
-<h3><a href="https://github.com/wlandau/parallelRemake">parallelRemake</a></h3>
+<h2><a href="https://github.com/wlandau/parallelRemake">parallelRemake</a></h2>
 
 <p>
 The <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>
@@ -262,7 +262,7 @@ parallel computing plus all the original advantages of
 <a href="https://github.com/richfitz/remake">remake</a>.
 </p>
 
-<h3><a href="https://github.com/wlandau/workflowHelper">workflowHelper</a></h3>
+<h2><a href="https://github.com/wlandau/workflowHelper">workflowHelper</a></h2>
 
 <p>
 This package takes much of the headache out of workflows that analyze
