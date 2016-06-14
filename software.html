@@ -17,7 +17,7 @@ so when you change your code, only the affected pieces of your reproducible work
 be recomputed when you rerun things. <a href="https://github.com/richfitz/remake">Remake</a>
 is smart, so meaningful changes to code trigger rebuilds, but changes to comments and whitespace do not.
 You can deploy or update your workflow with a single call to <a href="https://www.gnu.org/software/make/">GNU Make</a>,
-and you can take advantage of the distributed computing available via <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>.
+and you can take advantage of the distributed computing capabilities available via <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>.
 </p>
 
 <h2><a href="https://github.com/wlandau/parallelRemake">parallelRemake</a></h2>
@@ -28,7 +28,7 @@ This <a href="https://www.r-project.org/">R</a> package is a slight extension of
 <a href="https://github.com/richfitz/remake">remake</a>. <a href="https://github.com/richfitz/remake">Remake</a>
 does not support parallel computing natively, so I wrote <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>
 in order to generate a <a href="https://www.gnu.org/software/make/">Makefile</a> that distributes
-<a href="https://github.com/richfitz/remake">remake</a> rules over simultaneous processes.
+<a href="https://github.com/richfitz/remake">remake</a> targets over simultaneous processes.
 <a href="https://github.com/wlandau/parallelRemake">ParallelRemake</a> is also a building block of
 <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>.
 </p>
