@@ -11,7 +11,7 @@ root: "../../../../"
 Whenever I seriously analyze data in R, I like to bundle my
 materials in a reproducible workflow so that others can replicate
 the results. Until rececently, I built formal R packages around my
-work for the sake of portability. But there are much better
+work for the sake of portability, but there are much better
 tools and practices.
 </p>
 
@@ -43,8 +43,8 @@ clean:
 </code></pre>
 
 <p>
-In the <code>Makefile</code>, the end goal is to make <code>plot.pdf</code>.
-The file <code>plot.pdf</code> depends on <code>plot.R</code>,
+
+Above, <code>plot.pdf</code> depends on <code>plot.R</code>,
 <code>random.csv</code>, and <code>mtcars.csv</code>. With those dependencies available,
 <code>plot.pdf</code> is constructed by executing <code>Rscript plot.R</code> in the
 <a href = "http://linuxcommand.org/">command line</a>. Similarly, <code>mtcars.csv</code>
