@@ -9,15 +9,15 @@ root: "/"
 
 <p>
 This package is for anyone who uses <a href="https://www.r-project.org/">R</a> to analyze multiple datasets in multiple ways.
-With minimal code, you can smoothly can generate datasets, apply multiple methods of analysis to each dataset,
+With minimal code, you can generate datasets, apply multiple methods of analysis to each dataset,
 summarize each analysis of each dataset, collect the summaries, and generate presentable output.
-And the best part is that <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a> is
-built on top of <a href="https://richfitz.github.io/">Rich Fitzjohn</a>'s <a href="https://github.com/richfitz/remake">remake</a>
-package, so when you change your code, only the affected pieces of your workflow will
-be recomputed when you run your workflow again. <a href="https://github.com/richfitz/remake">Remake</a>
+<a href="https://github.com/wlandau/workflowHelper">WorkflowHelper</a> is
+built on top of <a href="https://richfitz.github.io/">Rich Fitzjohn</a>'s <a href="https://github.com/richfitz/remake">remake</a>,
+so when you change your code, only the affected pieces of your reproducible workflow will
+be recomputed when you rerun things. <a href="https://github.com/richfitz/remake">Remake</a>
 is smart, so meaningful changes to code trigger rebuilds, but changes to comments and whitespace do not.
-Deploy or update your workflow with a single call to <a href="https://www.gnu.org/software/make/">GNU Make</a>,
-and take advantage of the parallel computing available via <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>.
+You can deploy or update your workflow with a single call to <a href="https://www.gnu.org/software/make/">GNU Make</a>,
+and you can take advantage of the distributed computing available via <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>.
 </p>
 
 <h2><a href="https://github.com/wlandau/parallelRemake">parallelRemake</a></h2>
