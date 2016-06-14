@@ -17,12 +17,14 @@ tools and practices.
 
 <h3><a href="https://www.gnu.org/software/make/">GNU Make</a></h3>
 
+<p>
 Programmers who work with compiled languages have been using
 <a href="https://www.gnu.org/software/make/">GNU Make</a>
 for decades, and you can use it with R. Here's an example that makes
 a file called <code>plot.pdf</code>.
  I write the steps to make <code>plot.pdf</code> in a file
 called <code>Makefile</code> below.
+</p>
 
 <pre><code>
 all: plot.pdf
@@ -40,14 +42,19 @@ clean:
 	rm -f mtcars.csv random.csv plot.pdf
 </code></pre>
 
+<p>
 In the <code>Makefile</code>, the end goal is to make <code>plot.pdf</code>.
 The file <code>plot.pdf</code> depends on <code>plot.R</code>,
 <code>random.csv</code>, and <code>mtcars.csv</code>. With those dependencies available,
 <code>plot.pdf</code> is constructed by executing <code>Rscript plot.R</code> in the
 <a href = "http://linuxcommand.org/">command line</a>. Similarly, <code>mtcars.csv</code>
 depends on <code>mtcars.R</code>, and is constructed by calling <code>Rscript mtcars.R</code>
-in the <a href = "http://linuxcommand.org/">command line</a>. <code>random.csv</code>
-is analogous. Alongside the <code>Makefile</code>, I have <code>plot.R</code>,
+in the <a href = "http://linuxcommand.org/">command line</a>. The case of <code>random.csv</code>
+is analogous.
+</p>
+
+<p>
+Alongside the <code>Makefile</code>, I have <code>plot.R</code>,
 
 <pre><code>
 x <- read.csv("mtcars.csv")[["mpg"]]
@@ -58,6 +65,7 @@ dev.off()
 </code></pre>
 
 <code>mtcars.R</code>,
+
 
 <pre><code>
 data(mtcars)
@@ -71,11 +79,10 @@ d = data.frame(y = rnorm(32))
 write.csv(d, "random.csv")
 </code></pre>
 
+
 With all these files, I open a
 <a href="https://en.wikipedia.org/wiki/Terminal_(OS_X)">command line program</a>,
- type <code>make</code>, and press enter.
-
-The console shows
+ type <code>make</code>, and press enter. The console shows
 
 <pre><code>
 Rscript random.R
@@ -84,12 +91,16 @@ Rscript plot.R
 null device
           1
 </code></pre>
+</p>
 
+<p>
 If I wanted to distribute this workflow over two parallel processes, I could have typed
  <code>make -j 2</code>. In that case, <code>mtcars.csv</code> and
 <code>random.csv</code> would have been computed simultaneously, and then <code>plot.pdf</code>
 would have been created afterwards.
+</p>
 
+<p>
 If I run <code>make</code> again, I get
 
 <pre><code>
@@ -108,7 +119,9 @@ Rscript plot.R
 null device
           1
 </code></pre>
+</p>
 
+<p>
 <a href="https://www.gnu.org/software/make/">Make</a> saves a lot of time, but
 the solution is incomplete. To get the most out of
 <a href="https://www.gnu.org/software/make/">Make</a>'s conditional rebuild policy,
@@ -117,11 +130,12 @@ collate them yourself, which could get messy. Also, adding comments and whitespa
 triggers unnecessary rebuilds. A better solution for R is
 <a href="https://richfitz.github.io/">Rich FitzJohn</a>'s
 <a href="https://github.com/richfitz/remake">remake</a>.
-
+</p>
 
 
 <h3><a href="https://github.com/richfitz/remake">remake</a></h3>
 
+<p>
 <a href="https://richfitz.github.io/">Rich FitzJohn</a>'s
  <a href="https://github.com/richfitz/remake">remake</a> package is like
  <a href="https://www.gnu.org/software/make/">GNU Make</a> for a single R session.
@@ -170,7 +184,9 @@ Then in an R session, I run
 library(remake)
 make()
 </code></pre>
+</p>
 
+<p>
 Only out-of-date targets are rebuilt. Changing <code>my_random()</code>
 does not trigger a rebuild of <code>mtcars</code>, for example. In addition,
 you can add comments and whitespace wherever you want in <code>code.R</code>
@@ -180,7 +196,9 @@ I can let <a href="https://github.com/richfitz/remake">remake</a>
 compute objects <code>mtcars</code> and <code>random</code> and maintain
 them in a hidden folder called <code>.remake/objects</code>, managed by
 <a href="https://github.com/richfitz/storr">storr</a>.
+</p>
 
+<p>
 <a href="https://github.com/richfitz/remake">Remake</a> is amazing, but it
 still has room for improvement. For one, it currently does not support parallel
 computing, so there is not a way to distribute targets over parallel processes
@@ -190,9 +208,11 @@ for some. With these issues in mind, I wrote the
 <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a> and
 <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>
 packages.
+</p>
 
 <h3><a href="https://github.com/wlandau/parallelRemake">parallelRemake</a></h3>
 
+<p>
 The <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>
 package is basically <a href="https://github.com/richfitz/remake">remake</a>
 plus parallel computing. You begin with a <a href="http://yaml.org/">YAML</a>
@@ -230,16 +250,19 @@ clean:
 	Rscript -e 'remake::make("clean", remake_file = "remake.yml")'
 	rm -rf .remake
 </code></pre>
+</p>
 
+<p>
 I can now run the whole project in two parallel processes with
 <code>make -j 2</code>, and the targets <code>mtcars</code>
 and <code>random</code> will be built in parallel. Thus, we have
 parallel computing plus all the original advantages of
 <a href="https://github.com/richfitz/remake">remake</a>.
-
+</p>
 
 <h3><a href="https://github.com/wlandau/workflowHelper">workflowHelper</a></h3>
 
+<p>
 This package takes much of the headache out of workflows that analyze
 multiple datasets in multiple ways. The user supplies functions to
 generate each dataset and perform each analysis, and then the package
@@ -338,7 +361,9 @@ output = commands(
 begin = c("# This is my Makefile", "# Variables...")
 plan_workflow(sources, packages, datasets, analyses, summaries, output, begin = begin)
 </code></pre>
+</p>
 
+<p>
 Using the <code>..dataset..</code> and <code>..analysis..</code>
 wildcards, a plan is created to analyze each dataset with each method
 and then summarize each analysis of each datset.
@@ -350,3 +375,4 @@ is generated with <code>parallelRemake::write_makefile()</code>. Finally, the us
 parallel processes. The main advantages of <a href="https://github.com/richfitz/remake">remake</a>
 and <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>,
 such as conditional rebuilds, remain.
+</p>
