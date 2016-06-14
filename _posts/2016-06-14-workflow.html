@@ -42,8 +42,8 @@ clean:
 
 In the <code>Makefile</code>, the end goal is to make <code>plot.pdf</code>.
 The file <code>plot.pdf</code> depends on <code>plot.R</code>,
-<code>random.csv</code>, and <code>mtcars.csv</code>, and is constructed
-by executing <code>Rscript plot.R</code> in the
+<code>random.csv</code>, and <code>mtcars.csv</code>. With those dependencies available,
+<code>plot.pdf</code> is constructed by executing <code>Rscript plot.R</code> in the
 <a href = "http://linuxcommand.org/">command line</a>. Similarly, <code>mtcars.csv</code>
 depends on <code>mtcars.R</code>, and is constructed by calling <code>Rscript mtcars.R</code>
 in the <a href = "http://linuxcommand.org/">command line</a>. <code>random.csv</code>
