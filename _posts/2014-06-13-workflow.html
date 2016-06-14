@@ -1,0 +1,352 @@
+---
+layout: post
+title: "Workflow management in R"
+comments: true
+root: "../../../../"
+---
+
+<h2>Workflow management in R</h2>
+
+<p>
+Whenever I seriously analyze data in R, I like to bundle my
+materials in a reproducible workflow so that others can replicate
+the results. Until rececently, I built formal R packages around my
+work to make it easy to test and share. But there are much better
+tools and practices.
+</p>
+
+<h3><a href="https://www.gnu.org/software/make/">GNU Make</a></h3>
+
+Programmers who work with compiled languages have been using
+<a href="https://www.gnu.org/software/make/">GNU Make</a>
+for decades, and you can use it with R. Here's an example.
+Suppose I want to make a plot called <code>plot.pdf</code>, which
+requires a series of steps. I write down those steps in a file
+called <code>Makefile</code> below.
+
+<pre><code>
+all: plot.pdf
+
+plot.pdf: plot.R random.csv mtcars.csv
+	Rscript plot.R
+
+mtcars.csv: mtcars.R
+	Rscript mtcars.R
+
+random.csv: random.R
+	Rscript random.R
+
+clean:
+	rm -f mtcars.csv random.csv plot.pdf
+</code></pre>
+
+In the <code>Makefile</code>, the end goal is to make <code>plot.pdf</code>.
+The file <code>plot.pdf</code> depends on <code>plot.R</code>,
+<code>random.csv</code>, and <code>mtcars.csv</code>, and is constructed
+by executing <code>Rscript plot.R</code> in the
+<a href = "http://linuxcommand.org/">command line</a>. Similarly, <code>mtcars.csv</code>
+depends on <code>mtcars.R</code>, and is constructed by calling <code>Rscript mtcars.R</code>
+in the <a href = "http://linuxcommand.org/">command line</a>. <code>random.csv</code>
+is analogous. Alongside the <code>Makefile</code>, I have <code>plot.R</code>,
+
+<pre><code>
+x <- read.csv("mtcars.csv")[["mpg"]]
+y <- read.csv("random.csv")[["y"]]
+pdf("plot.pdf")
+plot(x, y)
+dev.off()
+</code></pre>
+
+<code>mtcars.R</code>,
+
+<pre><code>
+data(mtcars)
+write.csv(mtcars, "mtcars.csv")
+</code></pre>
+
+and <code>random.R</code>.
+
+<pre><code>
+d = data.frame(y = rnorm(32))
+write.csv(d, "random.csv")
+</code></pre>
+
+With all these files, I open a
+<a href="https://en.wikipedia.org/wiki/Terminal_(OS_X)">command line program</a>,
+ type <code>make</code>, and press enter.
+
+The console shows
+
+<pre><code>
+Rscript random.R
+Rscript mtcars.R
+Rscript plot.R
+null device
+          1
+</code></pre>
+
+If I wanted to distribute this workflow over two parallel processes, I could have typed
+ <code>make -j 2</code>. In that case, <code>mtcars.csv</code> and
+<code>random.csv</code> would have been computed simultaneously, and then <code>plot.pdf</code>
+would have been created afterwards.
+
+If I run <code>make</code> again, I get
+
+<pre><code>
+make: Nothing to be done for `all'.
+</code></pre>
+
+One of the best features of <a href="https://www.gnu.org/software/make/">GNU Make</a>
+is that "targets" such as <code>plot.pdf</code>, <code>mtcars.csv</code>, and
+<code>random.csv</code> are only built when their dependencies change. For example, suppose
+I change mtcars.R and then run `make`. Then, <code>mtcars.csv</code> and <code>plot.pdf</code>
+are rebuilt, but <code>random.csv</code> is left alone.
+
+<pre><code>
+Rscript mtcars.R
+Rscript plot.R
+null device
+          1
+</code></pre>
+
+<a href="https://www.gnu.org/software/make/">Make</a> saves a lot of time, but
+the solution is incomplete. To get the most out of
+<a href="https://www.gnu.org/software/make/">Make</a>'s conditional rebuild policy,
+you'll have to split up your R code into as many separate files as possible and
+collate them yourself, which could get messy. Also, adding comments and whitespace
+triggers unnecessary rebuilds. A better solution for R is
+<a href="https://richfitz.github.io/">Rich FitzJohn</a>'s
+<a href="https://github.com/richfitz/remake">remake</a>.
+
+
+
+<h3><a href="https://github.com/richfitz/remake">remake</a></h3>
+
+<a href="https://richfitz.github.io/">Rich FitzJohn</a>'s
+ <a href="https://github.com/richfitz/remake">remake</a> package is like
+ <a href="https://www.gnu.org/software/make/">GNU Make</a> for a single R session.
+To run the previous example, I first create the <a href="http://yaml.org/">YAML</a>
+file <code>remake.yml</code> below.
+
+<pre><code>
+sources: code.R
+
+targets:
+
+  all:
+    depends: plot.pdf
+
+  plot.pdf:
+    command: my_plot(mtcars, random)
+    plot: TRUE
+
+  mtcars:
+    command: my_mtcars()
+
+  random:
+    command: my_random()
+</code></pre>
+
+with a single source file <code>code.R</code>
+
+<pre><code>
+my_mtcars = function(){
+  data(mtcars)
+  mtcars
+}
+
+my_random = function(){
+  data.frame(y = rnorm(32))
+}
+
+my_plot = function(mtcars, random){
+  plot(mtcars$mpg, random$y)
+}
+</code></pre>
+
+Then in an R session, I run
+
+<pre><code>
+library(remake)
+make()
+</code></pre>
+
+Only out-of-date targets are rebuilt. Changing <code>my_random()</code>
+does not trigger a rebuild of <code>mtcars</code>, for example. In addition,
+you can add comments and whitespace wherever you want in <code>code.R</code>
+without triggering redundant rebuilds. I also like that I don't have
+to manage intermediate files. Rather than having to save CSV files,
+I can let <a href="https://github.com/richfitz/remake">remake</a>
+compute objects <code>mtcars</code> and <code>random</code> and maintain
+them in a hidden folder called <code>.remake/objects</code>, managed by
+<a href="https://github.com/richfitz/storr">storr</a>.
+
+<a href="https://github.com/richfitz/remake">Remake</a> is amazing, but it
+still has room for improvement. For one, it currently does not support parallel
+computing, so there is not a way to distribute targets over parallel processes
+as with <code>make -j</code>. In addition, the user needs to maintain a
+<a href="http://yaml.org/">YAML</a> file, which is easy, but possibly annoying
+for some. With these issues in mind, I wrote the
+<a href="https://github.com/wlandau/parallelRemake">parallelRemake</a> and
+<a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>
+packages.
+
+<h3><a href="https://github.com/wlandau/parallelRemake">parallelRemake</a></h3>
+
+The <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>
+package is basically <a href="https://github.com/richfitz/remake">remake</a>
+plus parallel computing. You begin with a <a href="http://yaml.org/">YAML</a>
+file such as <code>remake.yml</code> in the above example, and then you
+write a <a href="https://www.gnu.org/software/make/">Makefile</a>
+that can run <a href="https://github.com/richfitz/remake">remake</a>
+targets in parallel. Using the <a href="https://github.com/richfitz/remake">remake</a>
+example, I first open an R session and write
+
+<pre><code>
+library(parallelRemake)
+write_makefile()
+</code></pre>
+
+That produces the proper <a href="https://www.gnu.org/software/make/">Makefile</a>
+below.
+
+<pre><code>
+# Generated by parallelRemake::write_makefile() on 2016-06-14 08:45:47
+
+.PHONY: all plot.pdf mtcars random clean
+
+all: plot.pdf
+
+plot.pdf: mtcars random
+	Rscript -e 'remake::make("plot.pdf", remake_file = "remake.yml")'
+
+mtcars:
+	Rscript -e 'remake::make("mtcars", remake_file = "remake.yml")'
+
+random:
+	Rscript -e 'remake::make("random", remake_file = "remake.yml")'
+
+clean:
+	Rscript -e 'remake::make("clean", remake_file = "remake.yml")'
+	rm -rf .remake
+</code></pre>
+
+I can now run the whole project in two parallel processes with
+<code>make -j 2</code>, and the targets <code>mtcars</code>
+and <code>random</code> will be built in parallel. Thus, we have
+parallel computing plus all the original advantages of
+<a href="https://github.com/richfitz/remake">remake</a>.
+
+
+<h3><a href="https://github.com/wlandau/workflowHelper">workflowHelper</a></h3>
+
+This package takes much of the headache out of workflows that analyze
+multiple datasets in multiple ways. The user supplies functions to
+generate each dataset and perform each analysis, and then the package
+puts all the pieces together and manages the files for you. Let's dive into an
+example, which you can run from start to finish with
+
+<pre><code>
+library(workflowHelper)
+run_example_workflow()
+</code></pre>
+
+The file <code>code.R</code> has the building blocks of the workflow,
+
+<pre><code>
+# Code for each component of the example analysis
+
+# Generate datasets
+poisson_dataset = function(n = 100){
+  data.frame(x = rpois(n, 1), y = rpois(n, 5))
+}
+
+normal_dataset = function(n = 100){
+  data.frame(x = rnorm(n, 1), y = rnorm(n, 5))
+}
+
+# Analyze each dataset
+lm_analysis = function(dataset){
+  out = lm(y ~ x, data = dataset)
+}
+
+glm_analysis = function(dataset){
+  dataset$y = dataset$y + 1 # force a difference between glm and lm
+  glm(y ~ x, data = dataset)
+}
+
+# Compute summaries
+mse_summary = function(dataset, analysis){
+  pred = predict(analysis)
+  mean((pred - dataset$y)^2)
+}
+
+coef_summary = function(analysis){
+  coef(analysis)
+}
+
+# Final output
+mse_plot = function(x){
+  mse = unlist(x)
+  pdf("mse.pdf")
+  hist(mse, col = "black")
+  dev.off()
+}
+
+coef_table = function(x){
+  tab = do.call(rbind, x)
+  write.csv(tab, "coef.csv")
+}
+</code></pre>
+
+and <code>workflow.R</code> structures the workflow.
+
+<code><pre>
+library(workflowHelper)
+
+sources = strings(code.R)
+packages = "MASS"
+
+# Generate the data
+datasets = commands(
+  poisson100 = poisson_dataset(n = 100),
+  normal100 = normal_dataset(n = 100),
+  normal1000 = normal_dataset(n = 1000)
+)
+
+# For 4 replicates of each kind of dataset,
+# assign datasets = reps(datasets, 4)
+
+# Analyze each dataset
+analyses = commands(
+  lm = lm_analysis(..dataset..),
+  glm = glm_analysis(..dataset..)
+)
+
+# Summarize each analysis and aggregate the summaries together
+summaries = commands(
+  mse = mse_summary(..dataset.., ..analysis..),
+  coef = coef_summary(..analysis..)
+)
+
+# Final output.
+output = commands(
+  mse.pdf = mse_plot(mse),
+  coef.csv = coef_table(coef)
+)
+
+begin = c("# This is my Makefile", "# Variables...")
+plan_workflow(sources, packages, datasets, analyses, summaries, output, begin = begin)
+</code></pre>
+
+Using the <code>..dataset..</code> and <code>..analysis..</code>
+wildcards, a plan is created to analyze each dataset with each method
+and then summarize each analysis of each datset.
+The function <code>plan_workflow()</code> first creates a
+<a href="https://github.com/richfitz/remake">remake</a>/<a href="http://yaml.org/">YAML</a>
+file. Next, an overarching <a href="https://www.gnu.org/software/make/">Makefile</a>
+is generated with <code>parallelRemake::write_makefile()</code>. Finally, the user runs the project with
+<code>make</code> or <code>make -j [n]</code>, where <code>[n]</code> is the number of
+parallel processes. The main advantages of <a href="https://github.com/richfitz/remake">remake</a>
+and <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>,
+such as conditional rebuilds, remain.
