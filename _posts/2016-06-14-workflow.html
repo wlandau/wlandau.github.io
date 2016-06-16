@@ -375,8 +375,8 @@ plan_workflow(sources, packages, datasets, analyses, summaries, output,
 
 <p>
 Using the <code>..dataset..</code> and <code>..analysis..</code>
-wildcards, a plan is created to analyze each dataset with each method
-and then summarize each analysis of each datset.
+wildcards, a plan is created to analyze each dataset with each method,
+ summarize each analysis of each datset, and then generate some final output.
 The function <code>plan_workflow()</code> at the bottom of <code>workflow.R</code> generates a
 <a href="http://yaml.org/">YAML</a> file with the instructions to
 <a href="https://github.com/richfitz/remake">remake</a>. It also produces an overarching
