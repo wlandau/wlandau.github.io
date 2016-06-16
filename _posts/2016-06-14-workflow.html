@@ -376,10 +376,10 @@ plan_workflow(sources, packages, datasets, analyses, summaries, output,
 <p>
 Using the <code>..dataset..</code> and <code>..analysis..</code>
 wildcards, a plan is created to analyze each dataset with each method,
- summarize each analysis of each datset, and then generate some final output.
+ summarize each analysis of each dataset, and then generate some final output.
 The function <code>plan_workflow()</code> at the bottom of <code>workflow.R</code> generates a
-<a href="http://yaml.org/">YAML</a> file with the instructions to
-<a href="https://github.com/richfitz/remake">remake</a>. It also produces an overarching
+<a href="http://yaml.org/">YAML</a> file with instructions to
+<a href="https://github.com/richfitz/remake">remake</a> and then produces an overarching
 <a href="https://www.gnu.org/software/make/">Makefile</a>
 using <code>parallelRemake::write_makefile()</code>. Finally, the user runs the project with
 <code>make</code> or <code>make -j [n]</code>, where <code>[n]</code> is the number of
@@ -398,10 +398,10 @@ To read and inspect them, use <code>recall()</code> and
 <h2>Workflows as R packages</h2>
 
 <p>
-Personally, I would still like to be able to write my workflows as dedicated R
+Personally, I would still like to be able to write my workflows as R
 packages without abandoning <a href="https://github.com/richfitz/remake">remake</a>.
 I like the portability, convenience, transparency, and quality control, and
-<a href="http://r-pkgs.had.co.nz/tests.html">automated testing</a> of writing packages.
+<a href="http://r-pkgs.had.co.nz/tests.html">automated testing</a> of formal packages.
 Unfortunately, <a href="https://github.com/richfitz/remake">remake</a> and custom
 packages do not play nicely yet, as I show <a href="https://github.com/wlandau/remakeInPackage">here</a>.
 For now, though, I find it worthwhile to switch to
