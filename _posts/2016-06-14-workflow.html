@@ -219,7 +219,7 @@ packages.
 The <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>
 package is basically <a href="https://github.com/richfitz/remake">remake</a>
 plus parallel computing. You begin with a <a href="http://yaml.org/">YAML</a>
-file such as <code>remake.yml</code> in the above example, and then you
+file such as <code>remake.yml</code> as in the above example, and then you
 write a <a href="https://www.gnu.org/software/make/">Makefile</a>
 that can run <a href="https://github.com/richfitz/remake">remake</a>
 targets in parallel. Using the previous
@@ -258,7 +258,7 @@ clean:
 <p>
 I can now run the whole project in two parallel processes with
 <code>make -j 2</code>, and the targets <code>mtcars</code>
-and <code>random</code> will be built in parallel. Thus, we have
+and <code>random</code> are built in parallel. Thus, we have
 parallel computing plus all the original advantages of
 <a href="https://github.com/richfitz/remake">remake</a>.
 </p>
@@ -266,7 +266,7 @@ parallel computing plus all the original advantages of
 <p>
 As before, intermediate R objects are stored in <code>.remake/objects</code>,
 a cache managed internally by <a href="https://github.com/richfitz/storr">storr</a>.
-To read these objects for debugging and planning purposes,
+To load these objects into an R session for debugging and planning purposes,
 use the <code>recall()</code> function. To see the objects available,
 use <code>recallable()</code>.
 </p>
@@ -285,7 +285,9 @@ library(workflowHelper)
 run_example_workflow()
 </code></pre>
 
-The file <code>code.R</code> has the building blocks of the workflow,
+The file <code>code.R</code> below has all the building blocks of the workflow.
+In practice, you can divide <code>code.R</code> into separate R files
+however you want.
 
 <pre><code>
 # Code for each component of the example analysis
@@ -333,7 +335,7 @@ coef_table = function(x){
 }
 </code></pre>
 
-and <code>workflow.R</code> structures the workflow.
+The file <code>workflow.R</code> below structures the workflow.
 
 <code><pre>
 library(workflowHelper)
@@ -366,7 +368,8 @@ output = commands(
 )
 
 begin = c("# This is my Makefile", "# Variables...")
-plan_workflow(sources, packages, datasets, analyses, summaries, output, begin = begin)
+plan_workflow(sources, packages, datasets, analyses, summaries, output,
+  begin = begin)
 </code></pre>
 </p>
 
