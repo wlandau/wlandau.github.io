@@ -189,7 +189,8 @@ make()
 </p>
 
 <p>
-Only out-of-date or missing targets are (re)built. For example, changing <code>my_random()</code>
+Only out-of-date or missing targets are (re)built. For example, changing
+the contents of <code>my_random()</code>
 does not trigger a rebuild of <code>mtcars</code>. In addition,
 you can add comments and whitespace throughout <code>code.R</code>
 without triggering redundant rebuilds. I also like that I don't have
@@ -205,7 +206,7 @@ them in a hidden folder called <code>.remake/objects</code>, managed internally 
 still has room for improvement. For one, it currently does not support parallel
 computing, so there is not a built-in way to distribute targets over parallel processes
 as with <code>make -j</code>. In addition, the user needs to maintain a
-<a href="http://yaml.org/">YAML</a> file, which could get large and complicated for
+<a href="http://yaml.org/">YAML</a> file that could get large and complicated for
 serious projects. With these issues in mind, I wrote the
 <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a> and
 <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>
