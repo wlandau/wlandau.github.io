@@ -5,36 +5,6 @@ title: "Software"
 root: "/"
 ---
 
-<h2><a href="https://github.com/wlandau/workflowHelper">workflowHelper</a></h2>
-
-<p>
-I intended this package to be for anyone who uses <a href="https://www.r-project.org/">R</a> to analyze multiple datasets in multiple ways.
-With minimal code, you can generate datasets, apply multiple methods of analysis to each dataset,
-summarize each analysis of each dataset, collect the summaries, and generate presentable output.
-The user provides the pieces of the analysis, and then <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>
-constructs the reproducible workflow, manages the files, and allows for distributed
-computing via <a href="https://www.gnu.org/software/make/">GNU Make</a>.
-<a href="https://github.com/wlandau/workflowHelper">WorkflowHelper</a> is
-built on top of <a href="https://richfitz.github.io/">Rich Fitzjohn</a>'s <a href="https://github.com/richfitz/remake">remake</a>,
-so when you change your code, only the affected pieces of your reproducible workflow will
-be recomputed when you rerun things. <a href="https://github.com/richfitz/remake">Remake</a>
-is smart, so meaningful changes to code trigger rebuilds, but changes to comments and whitespace do not.
-</p>
-
-<h2><a href="https://github.com/wlandau/parallelRemake">parallelRemake</a></h2>
-
-<p>
-This <a href="https://www.r-project.org/">R</a> package is a slight extension of
-<a href="https://richfitz.github.io/">Rich Fitzjohn</a>'s
-<a href="https://github.com/richfitz/remake">remake</a>. <a href="https://github.com/richfitz/remake">Remake</a>
-does not support parallel computing natively, so I wrote <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>
-in order to generate a <a href="https://www.gnu.org/software/make/">Makefile</a> that distributes
-<a href="https://github.com/richfitz/remake">remake</a> targets over simultaneous processes.
-<a href="https://github.com/wlandau/parallelRemake">ParallelRemake</a> is also a building block of
-<a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>.
-</p>
-
-
 <h2><a href="https://github.com/wlandau/fbseq">fbseq</a></h2>
 
 <p>
@@ -47,5 +17,22 @@ is encapsulated in separate helper packages. The <a href="https://github.com/wla
 package implements <a href="https://developer.nvidia.com/about-cuda">GPU-accelerated</a> MCMC with tens of thousands of simultaneous threads,
 and the <a href="https://github.com/wlandau/fbseqOpenMP/">fbseqOpenMP</a> implements
 the same parallelism on a smaller scale using <a href="http://openmp.org">OpenMP</a>.
-Publication of the method is pending.
+The publication of the method is pending.
+</p>
+
+<h2><a href="https://github.com/wlandau/workflowHelper">workflowHelper</a></h2>
+
+<p>
+This package is for anyone who uses <a href="https://www.r-project.org/">R</a> to analyze multiple datasets in multiple ways,
+and it has been a huge help for my own reproducible workflows.  For the full story and motivation, check
+out the <a href="http://will-landau.com/2016/06/14/workflow.html">blog post</a>.
+</p>
+
+<h2><a href="https://github.com/wlandau/parallelRemake">parallelRemake</a></h2>
+
+<p>
+This <a href="https://www.r-project.org/">R</a> package implements parallel computing for
+<a href="https://richfitz.github.io/">Rich Fitzjohn</a>'s
+<a href="https://github.com/richfitz/remake">remake</a> package. For the full story and motivation, check
+out the <a href="http://will-landau.com/2016/06/14/workflow.html">blog post</a>.
 </p>
