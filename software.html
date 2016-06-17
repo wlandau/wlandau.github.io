@@ -8,16 +8,18 @@ root: "/"
 <h2><a href="https://github.com/wlandau/fbseq">fbseq</a></h2>
 
 <p>
-This <a href="https://www.r-project.org/">R</a> package toolkit is at the center of my dissertation research.
+This <a href="https://www.r-project.org/">R</a> package toolkit is at the center of my PhD dissertation research.
 It fits a hierarchical model to <a href="https://en.wikipedia.org/wiki/RNA-Seq">RNA-sequencing</a>
 data and other high-dimensional count data
-in fully Bayesian fashion via <a href="https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo">Markov chain Monte Carlo</a> (MCMC). I
+in fully Bayesian fashion via <a href="https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo">Markov chain Monte Carlo</a> (MCMC). We
 accelerated the MCMC using massively parallel, the machinery for which
 is encapsulated in separate helper packages. The <a href="https://github.com/wlandau/fbseqCUDA/">fbseqCUDA</a>
 package implements <a href="https://developer.nvidia.com/about-cuda">GPU-accelerated</a> MCMC with tens of thousands of simultaneous threads,
 and the <a href="https://github.com/wlandau/fbseqOpenMP/">fbseqOpenMP</a> implements
 the same parallelism on a smaller scale using <a href="http://openmp.org">OpenMP</a>.
-The publication of the method is pending.
+The publication of the method is pending, and my coauthors are Drs. <a href="http://jarad.me/">Jarad Niemi</a>
+and <a href="http://www.public.iastate.edu/~dnett/">Dan Nettleton</a> of the
+<a href="http://www.iastate.edu/">Iowa State University</a> <a href="http://stat.iastate.edu/">Department of Statistics</a>.
 </p>
 
 <h2><a href="https://github.com/wlandau/workflowHelper">workflowHelper</a></h2>
