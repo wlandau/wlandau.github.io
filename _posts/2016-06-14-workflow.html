@@ -428,12 +428,19 @@ ds("Leave me alone when downsize is FALSE.", "Return me when downsize is TRUE.")
 ds(1:10, length = 2)
 m = matrix(1:36, ncol = 6)
 ds(m, ncol = 2)
+ds(m, ncol = 2, random = T)
 ds(m, nrow = 2)
 ds(m, dim = c(2, 2))
 ds(data.frame(x = 1:10, y = 1:10), nrow = 5)
 dim(ds(array(0, dim = c(10, 100, 2, 300, 12)), dim = rep(3, 5)))
 </code></pre>
 
+Setting <code>random</code> to <code>TRUE</code> randomly subsets the
+first argument instead of just taking the first few elements
+(vectors and array-like objects only).
+</p>
+
+<p>
 To use <a href="https://github.com/wlandau/downsize">downsize</a>
 with the <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>
 example, just include <code>downsize</code> in
