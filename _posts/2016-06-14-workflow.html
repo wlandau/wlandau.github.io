@@ -408,7 +408,58 @@ To read and inspect them, use <code>recall()</code> and
  <code>recallable()</code> as with <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>.
 </p>
 
-<h2>Workflows as R packages</h2>
+<h2><a href="https://github.com/wlandau/downsize">downsize</a></h2>
+
+<p>
+When I'm setting up a reproducible workflow in R, I don't run the
+full scaled-up workflow right away. I first run a downsized
+version to test and debug. This package helps with the downsizing.
+It can be used to shrink the size of datasets, the number of
+Monte Carlo iterations to run, etc.
+With the <code>ds</code> function, objects are downsized if
+<code>getOption("downsize")</code> is <code>TRUE</code> and left alone otherwise.
+Here are some examples. Try running these lines by themselves first. Then,
+enter <code>options(downsize = TRUE)</code> and run them again.
+
+<code><pre>
+library(downsize)
+ds("Leave me alone when downsize is FALSE.", "Return me when downsize is TRUE.")
+ds(1:10, length = 2)
+m = matrix(1:36, ncol = 6)
+ds(m, ncol = 2)
+ds(m, nrow = 2)
+ds(m, dim = c(2, 2))
+ds(data.frame(x = 1:10, y = 1:10), nrow = 5)
+dim(ds(array(0, dim = c(10, 100, 2, 300, 12)), dim = rep(3, 5)))
+</code></pre>
+
+In the <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a> example,
+just include <code>downsize</code> in
+<code>packages</code> inside <code>workflow.R</code> and
+replace the top few lines of <code>code.R</code> with the following.
+
+```{r}
+options(downsize = TRUE)
+
+poisson_dataset = function(n = 100){
+  ds(data.frame(x = rpois(n, 1), y = rpois(n, 5)), nrow = 10)
+}
+
+normal_dataset = function(n = 100){
+  ds(data.frame(x = rnorm(n, 1), y = rnorm(n, 5)), nrow = 10)
+}
+```
+
+This sets the <code>downsize</code> option and use the <code>ds</code>
+function to shrink the datasets. For the full scaled-up workflow,
+just replace the first line with <code>options(downsize = FALSE)</code>.
+Unfortunately, <a href="https://github.com/richfitz/remake">remake</a>
+ does not rebuild things when options are changed,
+ so you'll have to run <code>make clean</code> whenever you
+ change the <code>downsize</code> option.
+</p>
+
+<h2>A final note on workflows as R packages</h2>
 
 <p>
 Personally, I would still like to be able to write my workflows as R
