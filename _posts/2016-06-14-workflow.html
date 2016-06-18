@@ -439,7 +439,7 @@ just include <code>downsize</code> in
 <code>packages</code> inside <code>workflow.R</code> and
 replace the top few lines of <code>code.R</code> with the following.
 
-```{r}
+<code><pre>
 options(downsize = TRUE)
 
 poisson_dataset = function(n = 100){
@@ -449,7 +449,7 @@ poisson_dataset = function(n = 100){
 normal_dataset = function(n = 100){
   ds(data.frame(x = rnorm(n, 1), y = rnorm(n, 5)), nrow = 10)
 }
-```
+</code></pre>
 
 This sets the <code>downsize</code> option and use the <code>ds</code>
 function to shrink the datasets. For the full scaled-up workflow,
