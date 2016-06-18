@@ -434,8 +434,9 @@ ds(data.frame(x = 1:10, y = 1:10), nrow = 5)
 dim(ds(array(0, dim = c(10, 100, 2, 300, 12)), dim = rep(3, 5)))
 </code></pre>
 
-In the <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a> example,
-just include <code>downsize</code> in
+To use <a href="https://github.com/wlandau/downsize">downsize</a>
+with the <a href="https://github.com/wlandau/workflowHelper">workflowHelper</a>
+example, just include <code>downsize</code> in
 <code>packages</code> inside <code>workflow.R</code> and
 replace the top few lines of <code>code.R</code> with the following.
 
