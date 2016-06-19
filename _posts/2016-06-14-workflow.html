@@ -356,6 +356,7 @@ library(workflowHelper)
 sources = strings(code.R)
 packages = "MASS"
 
+# Generate the data
 datasets = commands(
   poisson100 = poisson_dataset(n = 100),
   normal100 = normal_dataset(n = 100),
@@ -363,26 +364,29 @@ datasets = commands(
 )
 
 # For 4 replicates of each kind of dataset,
-# assign datasets = reps(datasets, 4).
+# assign datasets = reps(datasets, 4)
 
+# Analyze each dataset
 analyses = commands(
   lm = lm_analysis(..dataset..),
   glm = glm_analysis(..dataset..)
 )
 
+# Summarize each analysis and aggregate the summaries together
 summaries = commands(
   mse = mse_summary(..dataset.., ..analysis..),
   coef = coef_summary(..analysis..)
 )
 
+# Final output.
 output = commands(
-  mse.pdf = mse_plot(mse),
-  coef.csv = coef_table(coef)
+  coef.csv = coef_table(coef),
+  mse.pdf = ..plot.. <- mse_plot(mse),
+  report.md = ..knitr.. <- list(fig.height = 7, fig.align = "right")
 )
 
 begin = c("# This is my Makefile", "# Variables...")
-plan_workflow(sources, packages, datasets, analyses, summaries, output,
-  begin = begin)
+plan_workflow(sources, packages, datasets, analyses, summaries, output, begin = begin)
 </code></pre>
 </p>
 
@@ -390,6 +394,8 @@ plan_workflow(sources, packages, datasets, analyses, summaries, output,
 Using the <code>..dataset..</code> and <code>..analysis..</code>
 wildcards, a plan is created to analyze each dataset with each method,
  summarize each analysis of each dataset, and then generate some final output.
+ The <code>..plot..</code> and <code>..knitr..</code> wildcards make it
+ easier to generate plots and knit reports with <a href="http://yihui.name/knitr/">knitr</a>.
 The function <code>plan_workflow()</code> at the bottom of <code>workflow.R</code> generates a
 <a href="http://yaml.org/">YAML</a> file with instructions to
 <a href="https://github.com/richfitz/remake">remake</a> and then produces an overarching
@@ -406,6 +412,8 @@ Datasets, analyses, and summaries are stored in the <code>.remake/objects</code>
 <a href="https://github.com/richfitz/storr">storr</a> cache.
 To read and inspect them, use <code>recall()</code> and
  <code>recallable()</code> as with <a href="https://github.com/wlandau/parallelRemake">parallelRemake</a>.
+ For serious iterations of your workflow, however, it is best not to manually access this cache
+ because changes there are not tracked.
 </p>
 
 <h2><a href="https://github.com/wlandau/downsize">downsize</a></h2>
