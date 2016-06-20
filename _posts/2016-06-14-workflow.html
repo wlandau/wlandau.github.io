@@ -303,8 +303,6 @@ In practice, you can divide <code>code.R</code> into separate R files
 however you want.
 
 <pre><code>
-# Code for each component of the example analysis
-
 # Generate datasets
 poisson_dataset = function(n = 100){
   data.frame(x = rpois(n, 1), y = rpois(n, 5))
@@ -337,9 +335,7 @@ coef_summary = function(analysis){
 # Final output
 mse_plot = function(x){
   mse = unlist(x)
-  pdf("mse.pdf")
   hist(mse, col = "black")
-  dev.off()
 }
 
 coef_table = function(x){
