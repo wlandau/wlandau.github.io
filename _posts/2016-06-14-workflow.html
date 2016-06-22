@@ -331,17 +331,6 @@ mse_summary = function(dataset, analysis){
 coef_summary = function(analysis){
   coef(analysis)
 }
-
-# Final output
-mse_plot = function(x){
-  mse = unlist(x)
-  hist(mse, col = "black")
-}
-
-coef_table = function(x){
-  tab = do.call(rbind, x)
-  write.csv(tab, "coef.csv")
-}
 </code></pre>
 
 The file <code>workflow.R</code> below structures the workflow.
@@ -376,8 +365,10 @@ summaries = commands(
 
 # Final output.
 output = commands(
-  coef.csv = coef_table(coef),
-  mse.pdf = ..plot.. <- mse_plot(mse),
+  coef_table = do.call(I("rbind"), coef),
+  coef.csv = write.csv(coef_table, target_name),
+  mse_vector = unlist(mse),
+  mse.pdf = ..plot.. <- hist(mse_vector, col = I("black")),
   report.md = ..knitr.. <- list(fig.height = 7, fig.align = "right"),
   report.html = render("report.md", quiet = TRUE)
 )
