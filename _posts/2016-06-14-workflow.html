@@ -310,7 +310,8 @@ also below, structures the workflow. It requires the <code>rmarkdown</code> and
 library(workflowHelper)
 
 sources = strings(code.R)
-packages = strings(rmarkdown, tools)
+packages = strings(MASS)
+# packages = strings(MASS, rmarkdown, tools) # Uncomment before building pdf/html.
 
 datasets = commands(
   poisson100 = poisson_dataset(n = 100),
@@ -343,9 +344,9 @@ plots = commands(
 
 reports = commands(
   markdown.md = list(fig.height = 6, fig.align = "right"),
-  markdown.html = render("markdown.md", quiet = TRUE, clean = FALSE),
   latex.tex = TRUE
-#  latex.pdf = texi2pdf("latex.tex", clean = FALSE) # Uncomment to compile pdf.
+#  markdown.html = render("markdown.md", quiet = TRUE, clean = FALSE),
+#  latex.pdf = texi2pdf("latex.tex", clean = FALSE)
 )
 
 begin = c("# This is my Makefile", "# Variables...")
@@ -365,9 +366,10 @@ wildcards, a plan is created to analyze each dataset with each method,
  If you want to render <code>markdown.md</code> to <code>markdown.html<code>,
    be sure to include <code>rmarkdown</code> in your packages.
   Likewise, to compile <code>latex.tex</code> to <code>latex.pdf</code>,
-   include the <code>tools</code> package. The line to make <code>latex.pdf</code>
-   is commented out to increase portability, but you may uncomment it if
-   your copy of R is connected to a copy of <a href="https://www.latex-project.org/">LaTeX</a>.
+   include the <code>tools</code> package. I commented out the lines to make <code>latex.pdf</code>
+   and  <code>markdown.html</code> to increase portability, but you may uncomment them if
+   your copy of R is connected to copies of <a href="https://www.latex-project.org/">LaTeX</a>
+and <a href="http://pandoc.org/">Pandoc</a>.
 
 Here, either a list of <a href="http://yihui.name/knitr/">knitr</a> global
 chunk options or <code>TRUE</code> is given in place of a command.
