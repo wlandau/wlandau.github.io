@@ -303,7 +303,8 @@ has all the building blocks of the workflow.
 In practice, you can divide <code>code.R</code> into separate R files
 however you want. The file online
 <a href="https://github.com/wlandau/workflowHelper/blob/master/inst/example/workflow.R"><code>workflow.R</code></a>,
-also below, structures the workflow.
+also below, structures the workflow. It requires the <code>rmarkdown</code> and
+<code>tools</code> packages.
 
 <code><pre>
 library(workflowHelper)
@@ -343,8 +344,8 @@ plots = commands(
 reports = commands(
   markdown.md = list(fig.height = 6, fig.align = "right"),
   markdown.html = render("markdown.md", quiet = TRUE, clean = FALSE),
-  latex.tex = TRUE,
-  latex.pdf = texi2pdf("latex.tex", clean = FALSE)
+  latex.tex = TRUE
+#  latex.pdf = texi2pdf("latex.tex", clean = FALSE) # Uncomment to compile pdf.
 )
 
 begin = c("# This is my Makefile", "# Variables...")
@@ -364,7 +365,9 @@ wildcards, a plan is created to analyze each dataset with each method,
  If you want to render <code>markdown.md</code> to <code>markdown.html<code>,
    be sure to include <code>rmarkdown</code> in your packages.
   Likewise, to compile <code>latex.tex</code> to <code>latex.pdf</code>,
-   include the <code>tools</code> package.
+   include the <code>tools</code> package. The line to make <code>latex.pdf</code>
+   is commented out to increase portability, but you may uncomment it if
+   your copy of R is connected to a copy of <a href="https://www.latex-project.org/">LaTeX</a>.
 
 Here, either a list of <a href="http://yihui.name/knitr/">knitr</a> global
 chunk options or <code>TRUE</code> is given in place of a command.
