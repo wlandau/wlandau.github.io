@@ -309,7 +309,7 @@ also below, structures the workflow.
 library(workflowHelper)
 
 sources = strings(code.R)
-packages = "rmarkdown"
+packages = strings(rmarkdown, tools)
 
 datasets = commands(
   poisson100 = poisson_dataset(n = 100),
@@ -341,8 +341,10 @@ plots = commands(
 )
 
 reports = commands(
-  report.md = list(fig.height = 7, fig.align = "right"),
-  report.html = render("report.md", quiet = TRUE)
+  latex.tex = list(),
+  latex.pdf = texi2pdf("latex.tex", clean = TRUE),
+  markdown.md = list(fig.height = 6, fig.align = "right"),
+  markdown.html = render("markdown.md", quiet = TRUE)
 )
 
 begin = c("# This is my Makefile", "# Variables...")
@@ -355,8 +357,15 @@ plan_workflow(sources, packages, datasets, analyses, summaries,
 Using the <code>..dataset..</code> and <code>..analysis..</code>
 wildcards, a plan is created to analyze each dataset with each method,
  summarize each analysis of each dataset, and then produce general output,
- plots, and reports. The package automatically assumes <code>report.md</code>
- is knitted from <code>report.Rmd</code> using <a href="http://yihui.name/knitr/">knitr</a>.
+ plots, and reports. The package automatically assumes <code>markdown.md</code>
+ is knitted from <code>markdown.Rmd</code> using <a href="http://yihui.name/knitr/">knitr</a>.
+ Similarly, <code>latex.Rnw</code> must be present to knit <code>latex.tex</code>.
+
+ If you want to render <code>markdown.md</code> to <code>markdown.html<code>,
+   be sure to include <code>rmarkdown</code> in your packages.
+  Likewise, to compile <code>latex.tex</code> to <code>latex.pdf</code>,
+   include the <code>tools</code> package.
+
 Here, either a list of <a href="http://yihui.name/knitr/">knitr</a> global
 chunk options or <code>TRUE</code> is given in place of a command.
 The function <code>plan_workflow()</code> at the bottom of <code>workflow.R</code> generates a
