@@ -298,42 +298,12 @@ library(workflowHelper)
 run_example_workflowHelper()
 </code></pre>
 
-The file <code>code.R</code> below has all the building blocks of the workflow.
+The online file <a href="https://github.com/wlandau/workflowHelper/blob/master/inst/example/code.R"><code>code.R</code></a>
+has all the building blocks of the workflow.
 In practice, you can divide <code>code.R</code> into separate R files
-however you want.
-
-<pre><code>
-# Generate datasets
-poisson_dataset = function(n = 100){
-  data.frame(x = rpois(n, 1), y = rpois(n, 5))
-}
-
-normal_dataset = function(n = 100){
-  data.frame(x = rnorm(n, 1), y = rnorm(n, 5))
-}
-
-# Analyze each dataset
-lm_analysis = function(dataset){
-  out = lm(y ~ x, data = dataset)
-}
-
-glm_analysis = function(dataset){
-  dataset$y = dataset$y + 1 # force a difference between glm and lm
-  glm(y ~ x, data = dataset)
-}
-
-# Compute summaries
-mse_summary = function(dataset, analysis){
-  pred = predict(analysis)
-  mean((pred - dataset$y)^2)
-}
-
-coef_summary = function(analysis){
-  coef(analysis)
-}
-</code></pre>
-
-The file <code>workflow.R</code> below structures the workflow.
+however you want. The file online
+<a href="https://github.com/wlandau/workflowHelper/blob/master/inst/example/workflow.R"><code>workflow.R</code></a>,
+also below, structures the workflow.
 
 <code><pre>
 library(workflowHelper)
@@ -341,7 +311,6 @@ library(workflowHelper)
 sources = strings(code.R)
 packages = "rmarkdown"
 
-# Generate the data
 datasets = commands(
   poisson100 = poisson_dataset(n = 100),
   normal100 = normal_dataset(n = 100),
@@ -351,31 +320,33 @@ datasets = commands(
 # For 4 replicates of each kind of dataset,
 # assign datasets = reps(datasets, 4)
 
-# Analyze each dataset
 analyses = commands(
   lm = lm_analysis(..dataset..),
   glm = glm_analysis(..dataset..)
 )
 
-# Summarize each analysis and aggregate the summaries together
 summaries = commands(
   mse = mse_summary(..dataset.., ..analysis..),
   coef = coef_summary(..analysis..)
 )
 
-# Final output.
 output = commands(
   coef_table = do.call(I("rbind"), coef),
   coef.csv = write.csv(coef_table, target_name),
-  mse_vector = unlist(mse),
-  mse.pdf = ..plot.. <- hist(mse_vector, col = I("black")),
-  report.md = ..knitr.. <- list(fig.height = 7, fig.align = "right"),
+  mse_vector = unlist(mse)
+)
+
+plots = commands(
+  mse.pdf = hist(mse_vector, col = I("black"))
+)
+
+reports = commands(
+  report.md = list(fig.height = 7, fig.align = "right"),
   report.html = render("report.md", quiet = TRUE)
 )
 
 begin = c("# This is my Makefile", "# Variables...")
-plan_workflow(sources, packages, datasets, analyses, summaries,
-  output, begin = begin)
+plan_workflow(sources, packages, datasets, analyses, summaries, output, plots, reports = reports, begin = begin)
 </code></pre>
 </p>
 
