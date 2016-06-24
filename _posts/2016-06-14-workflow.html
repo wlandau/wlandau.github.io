@@ -362,18 +362,6 @@ wildcards, a plan is created to analyze each dataset with each method,
  plots, and reports. The package automatically assumes <code>markdown.md</code>
  is knitted from <code>markdown.Rmd</code> using <a href="http://yihui.name/knitr/">knitr</a>.
  Similarly, <code>latex.Rnw</code> must be present to knit <code>latex.tex</code>.
-
- If you want to render <code>markdown.md</code> to <code>markdown.html</code>,
-   be sure to include <code>rmarkdown</code> in your packages.
-  Likewise, to compile <code>latex.tex</code> to <code>latex.pdf</code>,
-   include the <code>tools</code> package. I commented out the lines to make <code>latex.pdf</code>
-   and  <code>markdown.html</code> to increase portability, but you may uncomment them if
-   your copy of R is connected to copies of <a href="https://www.latex-project.org/">LaTeX</a>
-and <a href="http://pandoc.org/">Pandoc</a>. Use the <code>recall()</code> function
-to load intermediate objects such as datasets into the code chunks of a <a href="http://yihui.name/knitr/">knitr</a> report.
-
-Here, either a list of <a href="http://yihui.name/knitr/">knitr</a> global
-chunk options or <code>TRUE</code> is given in place of a command.
 The function <code>plan_workflow()</code> at the bottom of <code>workflow.R</code> generates a
 <a href="http://yaml.org/">YAML</a> file with instructions to
 <a href="https://github.com/richfitz/remake">remake</a> and then produces an overarching
