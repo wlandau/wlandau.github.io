@@ -369,7 +369,8 @@ wildcards, a plan is created to analyze each dataset with each method,
    include the <code>tools</code> package. I commented out the lines to make <code>latex.pdf</code>
    and  <code>markdown.html</code> to increase portability, but you may uncomment them if
    your copy of R is connected to copies of <a href="https://www.latex-project.org/">LaTeX</a>
-and <a href="http://pandoc.org/">Pandoc</a>.
+and <a href="http://pandoc.org/">Pandoc</a>. Use the <code>recall()</code> function
+to load intermediate objects such as datasets into the code chunks of a <a href="http://yihui.name/knitr/">knitr</a> report.
 
 Here, either a list of <a href="http://yihui.name/knitr/">knitr</a> global
 chunk options or <code>TRUE</code> is given in place of a command.
