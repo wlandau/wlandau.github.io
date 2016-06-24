@@ -360,8 +360,8 @@ Using the <code>..dataset..</code> and <code>..analysis..</code>
 wildcards, a plan is created to analyze each dataset with each method,
  summarize each analysis of each dataset, and then produce general output,
  plots, and reports. The package automatically assumes <code>markdown.md</code>
- is knitted from <code>markdown.Rmd</code> using <a href="http://yihui.name/knitr/">knitr</a>.
- Similarly, <code>latex.Rnw</code> must be present to knit <code>latex.tex</code>.
+ is produced from <code>markdown.Rmd</code> using <a href="http://yihui.name/knitr/">knitr</a>.
+ Similarly, <code>latex.Rnw</code> must be present to produce <code>latex.tex</code>.
 The function <code>plan_workflow()</code> at the bottom of <code>workflow.R</code> generates a
 <a href="http://yaml.org/">YAML</a> file with instructions to
 <a href="https://github.com/richfitz/remake">remake</a> and then produces an overarching
