@@ -1,6 +1,6 @@
 title: Will Landau
-baseurl: "wlandau.github.io"
-url: "http://syaning.com"
+baseurl: "/"
+url: "http://wlandau.github.io"
 github: "https://github.com/wlandau"
 
 kramdown:
