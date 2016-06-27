@@ -1,58 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta name="Author" content="Will Landau (landau@iastate.edu)"/>
-  <meta name="Description" content="Personal website"/>
-  <meta name="Keywords" content="statistics, genomics, computing, R, Iowa State University" />
-  <meta name="Robots" content="index,follow" />
-  <link rel="stylesheet" type="text/css" href="{{page.root}}css/wml-custom.css"/>
-  <link rel="icon" type="image/png" href="{{page.root}}img/me-gray.jpg"/>
-  <script src="plugins/jquery-2.1.1.min.js" type="text/javascript"></script>
-
-  {% if page.current == "research" %}
-    <script src="http://bibtex-js.googlecode.com/svn/trunk/src/bibtex_js.js"></script>
-  {% endif %}
-
-  <title>{{page.title}} - Will Landau - Iowa State University</title>
-</head>
-<body>
-
-<div id="navbar">
-<div class="float">
-<div id="navbar-content">
-  <a href="{{page.root}}index.html" class="navlink" {% if page.current == "home" %} id="current" {% endif %}>About</a>
-  <a href="{{page.root}}resume/resume.pdf" class="navlink" target="_blank">Resume</a>
-  <a href="{{page.root}}research.html" class="navlink" {% if page.current == "research" %} id="current" {% endif %}>Research</a>
-  <a href="{{page.root}}software.html" target="_blank" class="navlink" {% if page.current == "software" %} id="current" {% endif %}>Software</a>
-  <a href="{{page.root}}teaching.html" class="navlink" {% if page.current == "teaching" %} id="current" {% endif %}>Teaching</a>
-  <a href="{{page.root}}courses.html" class="navlink" {% if page.current == "courses" %} id="current" {% endif %}>Courses</a>
-  <a href="{{page.root}}calendar.html" class="navlink" {% if page.current == "calendar" %} id="current" {% endif %} target="_blank">Calendar</a>
-  <a href="{{page.root}}blog.html" class="navlink" {% if page.current == "blog" %} id="current" {% endif %}>Blog</a>
-  <a href="{{page.root}}contact.html" class="navlink" {% if page.current == "contact" %} id="current" {% endif %}>Contact</a>
-</div>
-</div>
-</div>
-
-<div id="main">
-<div class="float">
-<div id="main-content">
-
-{{content}}
-
-</div>
-</div>
-</div>
-
-<div id="footer">
-<div class="float">
-<div id="footer-content">
-  <div style="float:right;">
-    &copy; <a href="http://wlandau.github.io/index.html">Will Landau</a> 2016
-  </div>
-  Powered by <a href="http://jekyllrb.com/">Jekyll</a> on <a href="https://github.com/">GitHub</a>
-</div>
-</div>
-</div>
-
-</body>
+  {% include head.html %}
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    </header>
+    <div class="page-content">
+      {{ content }}
+    </div>
+    {% include ga.html %}
+  </body>
 </html>

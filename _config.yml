@@ -1,2 +1,11 @@
-name: Will Landau
-url: http://will-landau.com
+title: Will Landau
+baseurl: "/slim"
+url: "http://syaning.com"
+github: "https://github.com/wlandau"
+
+kramdown:
+  input: GFM
+permalink: pretty
+
+google_analytics: 
+disqus_shortname: 

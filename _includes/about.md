@@ -1,0 +1,1 @@
+I am a new Statistics PhD seeking opportunities in the biomedical and technology industries. I like to solve scientific problems from a statistician's perspective, and I like to build tools. I am also a minimalist, a sailor (wind-powered, not military), a climber, a CrossFitter, and a martial artist.

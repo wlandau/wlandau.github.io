@@ -1,21 +1,27 @@
 ---
 layout: default
-current: "home"
-title: "About"
-root: "/"
 ---
-
-<h1>Will Landau</h1> 
-<img src="img/me-gray.jpg" alt="me" style="float:left; padding-right: 10px" width="168.33px" height="222.73px">
-
-<p>
-I am a new Statistics PhD seeking opportunities in the biomedical and technology industries.
-I like to solve scientific problems from a statistician's perspective,
-and I like to build tools.
-</p>
-
-<p>
-I am also a sailor (wind-powered, not military), a climber, a CrossFitter, and a martial artist.
-</p>
-
-<div style="clear:both;"></div>
+<div class="home">
+  <section>
+    <h2 class="smallcap">about</h2>
+    <img src="https://dl.dropboxusercontent.com/u/52007468/site/cartoon.png"
+      alt="me" style="float:right; padding-left: 5px" width="168.33px" height="222.73px">
+    <p>{% markdown about.md %}</p>
+  </section>
+    <h2 class="smallcap">latest posts</h2>
+    {% include posts.html %}
+  </section>
+  <section>
+    <h2 class="smallcap">portfolio</h2>
+    <ul>
+      <li><a href="{{ "/publications/index.html" | prepend: site.baseurl }}">Publications</a></li>
+      <li><a href="{{ "/software/index.html" | prepend: site.baseurl }}">Software</a></li>
+      <li><a href="https://dl.dropboxusercontent.com/u/52007468/site/resume.pdf">Resume</a></li>
+      <li><a href="">Graduate work</a></li>
+    </ul>
+  </section>
+  <section>
+    <h2 class="smallcap">contact</h2>
+    <p>{% markdown contact.md %}</p>
+  </section>
+</div>

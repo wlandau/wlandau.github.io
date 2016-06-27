@@ -1,2 +1,1 @@
-wlandau.github.com
-==================
+Repo for my blog and online portfolio.
