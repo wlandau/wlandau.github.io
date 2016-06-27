@@ -4,3 +4,4 @@
 *.log
 *.blg
 _site
+.sass-cache/

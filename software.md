@@ -3,7 +3,7 @@ layout: page
 title:  Software
 ---
 
-Most of my software is in R package form.
+Most of my software is in [R package](http://r-pkgs.had.co.nz) form.
 
 ## Reproducible workflow toolkit
 
