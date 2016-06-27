@@ -6,7 +6,7 @@ layout: default
     <h2 class="smallcap">about</h2>
     <img src="https://dl.dropboxusercontent.com/u/52007468/site/cartoon.png"
       alt="me" style="float:right; padding-left: 5px" width="168.33px" height="222.73px">
-    <p>{% markdown about.md %}</p>
+    <p>{% include about.html %}</p>
   </section>
     <h2 class="smallcap">latest posts</h2>
     {% include posts.html %}
@@ -22,6 +22,6 @@ layout: default
   </section>
   <section>
     <h2 class="smallcap">contact</h2>
-    <p>{% markdown contact.md %}</p>
+    <p>{% include contact.html %}</p>
   </section>
 </div>
