@@ -1,11 +1,11 @@
 <ul>
-{% for post in site.posts limit:5 %}
-<li>
-<pre><code>&lt;span&gt;{{ post.date | date: &quot;%b %d, %Y&quot; }}&lt;/span&gt;
-&lt;a href=&quot;{{ post.url | prepend: site.baseurl }}&quot;&gt;{{ post.title }}&lt;/a&gt;</code></pre>
-</li>
-{% endfor %}
-<li>
-<pre><code>&lt;a href=&quot;{{ &quot;/archives/&quot; | prepend: site.baseurl }}&quot;&gt;List all&lt;/a&gt;</code></pre>
-</li>
+  {% for post in site.posts limit:5 %}
+  <li>
+    <span>{{ post.date | date: "%b %d, %Y" }}</span>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+  <li>
+    <a href="{{ "/archives/" | prepend: site.baseurl }}">List all</a>
+  </li>
 </ul>
