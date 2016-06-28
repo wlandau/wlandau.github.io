@@ -7,5 +7,5 @@ kramdown:
   input: GFM
 permalink: pretty
 
-google_analytics: 
-disqus_shortname: 
+disqus_shortname: wlandau
+google_analytics:

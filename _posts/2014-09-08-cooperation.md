@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Cooperation on shared Linux servers"
-disqus_shortname: server_cooperation
 ---
 
 <p>If you're about to run computationally intensive jobs on a public or
