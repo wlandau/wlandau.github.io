@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Cooperation on shared Linux servers"
-comments: true
---- 
+disqus_shortname: server_cooperation
+---
 
 <p>If you're about to run computationally intensive jobs on a public or
-departmental server 
-(such as one of the impact servers at Iowa State), please help share 
+departmental server
+(such as one of the impact servers at Iowa State), please help share
 the resources. Here are some favors you can do.</p>
 
 <h3>1. Kill old processes you don't need.</h3>
@@ -26,9 +26,9 @@ $ top -u landau
 20016 landau 20  0   117m  3324 1636 S  0.0    0.0  0:00.12  bash
 </code></pre>
 
-<p>From looking at the %CPU column, I see that my R process 
+<p>From looking at the %CPU column, I see that my R process
  is the most expensive (see the COMMAND column) and has been running
- for a long time (TIME+). If I don't need this process anymore 
+ for a long time (TIME+). If I don't need this process anymore
  or if I need to restart my workflow, I should kill it. I</p>
 
 <ol>
@@ -79,24 +79,24 @@ si: software irq (or) % CPU time spent handling software interrupts
 st: steal time, % CPU time in involuntary wait by virtual cpu ...
 </code></pre>
 
-<p>Only 8 cores have more than 80%id (time spent idling), 
-so spawning more than 8 expensive concurrent processes may slow down 
+<p>Only 8 cores have more than 80%id (time spent idling),
+so spawning more than 8 expensive concurrent processes may slow down
 or even crash the server. Please leave some cores free for other people.</p>
 
 <h3>3. Be nice.</h3>
 
 <p>The Linux tool <code>nice</code> modifies the scheduling priority of your job so that
- more urgent jobs can work around it. Setting a high niceness level slows down 
- your work in the presence of more urgent jobs, but it helps the server schedule 
- its workflow and makes you a good citizen. Niceness levels range from 0 to 19, 
- and the higher the level, the nicer you are. I can submit an R job with a 
+ more urgent jobs can work around it. Setting a high niceness level slows down
+ your work in the presence of more urgent jobs, but it helps the server schedule
+ its workflow and makes you a good citizen. Niceness levels range from 0 to 19,
+ and the higher the level, the nicer you are. I can submit an R job with a
  niceness level of 19 with</p>
 
 <pre><code>$ nohup nice -19 R CMD BATCH job.R &
 </code></pre>
 
-<p>(I included the ampersand at the end and nohup at the beginning to run the job 
-in the background and keep it running after I log out.) To verify my job's niceness, 
+<p>(I included the ampersand at the end and nohup at the beginning to run the job
+in the background and keep it running after I log out.) To verify my job's niceness,
 I can run top and look at the NI column of the default table.</p>
 
 <h3>Final remarks</h3>
