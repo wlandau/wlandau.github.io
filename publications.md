@@ -8,3 +8,10 @@ Niemi, J., Mittman, E.,  **Landau, W.**, and Nettleton, D. (2015), "Empirical Ba
 **Landau, W.** and Liu, P. (2013), "Dispersion Estimation and Its Effect on Test Performance in RNA-seq Data Analysis: A Simulation-Based Comparison of Methods," *PLOS One*, 8. Available at [journals.plos.org](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0081415).
 
 Ratliff, B., Womack. C., Tang, X., **Landau, W.**, Butler, L., and Szpunar, D. (2010), "Modeling the Rovibrationally Excited C2H4OH Radicals from the Photodissociation of 2-Bromoethanol at 193 nm," *Journal of Physical Chemistry*, 114, 4934-4945. Available at [ncbi.nlm.nih.gov](http://www.ncbi.nlm.nih.gov/pubmed/20302318).
+
+# Articles under review
+
+**Landau, W.**, Niemi, J., and Nettleton, D., "Fully Bayesian analysis of RNA-seq counts for the detection of gene expression heterosis", submitted to the *Journal of the American Statistical Association* on June 24, 2016.
+
+**Landau, W.** and Niemi, J., "A fully Bayesian strategy for high-dimensional hierarchical modeling using massively parallel computing," submitted to the *Journal of Computational and Graphical Statistics* on March 8, 2016. Preprint available at [adsabs.harvard.edu](http://adsabs.harvard.edu/abs/2016arXiv160606659L).
+
