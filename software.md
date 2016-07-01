@@ -14,7 +14,7 @@ Most of my software is in [R package](http://r-pkgs.had.co.nz) form.
 
 ## Dissertation research
 
-- [fbseq]({{ "/fbseq" | prepend: site.github }}) [Fully-Bayesian GPU-accelerated analysis of RNA-seq data](http://adsabs.harvard.edu/abs/2016arXiv160606659L)
+- [fbseq]({{ "/fbseq" | prepend: site.github }}) Fully-Bayesian GPU-accelerated analysis of RNA-seq data ([preprint](http://adsabs.harvard.edu/abs/2016arXiv160606659L))
 - [fbseqCUDA]({{ "/fbseqCUDA" | prepend: site.github }}) CUDA GPU support for [fbseq]({{ "/fbseq" | prepend: site.github }})
 - [fbseqOpenMP]({{ "/fbseqOpenMP" | prepend: site.github }}) OpenMP support for [fbseq]({{ "/fbseq" | prepend: site.github }})
 
