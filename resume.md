@@ -14,13 +14,19 @@ layout: default
 <div style="float:right; width: 40%">
 <h2>Contact</h2>
 <ul>
-  <li><a href="mailto:will.landau@gmail.com">will.landau@gmail.com</a></li>
+  <li>
+    <script language="JavaScript"> 
+      var username = "will.landau";
+      var hostname = "gmail.com";
+      var linktext = "Email"; //username + "@" + hostname ;
+      document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+    </script>
+  </li>
   <li><a href="http://will-landau.com">will-landau.com</a></li>
   <li><a href="http://linkedin.com/in/wlandau">linkedin.com/in/wlandau</a></li>
   <li><a href="http://github.com/wlandau">github.com/wlandau</a></li>
 </ul>
 </div>
-
 
 
 <h2 style="clear: both">Publications</h2>
