@@ -15,10 +15,10 @@ layout: default
 <h2>Contact</h2>
 <ul>
   <li>
-    <script language="JavaScript"> 
+    <script language="JavaScript">
       var username = "will.landau";
       var hostname = "gmail.com";
-      var linktext = "Email"; //username + "@" + hostname ;
+      var linktext = username + "@" + hostname;
       document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
     </script>
   </li>
