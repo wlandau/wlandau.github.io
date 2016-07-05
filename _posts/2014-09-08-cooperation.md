@@ -11,8 +11,7 @@ the resources. Here are some favors you can do.</p>
 <h3>1. Kill old processes you don't need.</h3>
 
 <p>I recommend "top". I can look up my own processes with</p>
-<pre><code>
-$ top -u landau
+<pre><code>$ top -u landau
 </code></pre>
 
 <p>and I get a table of processes.</p>
