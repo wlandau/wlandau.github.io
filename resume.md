@@ -51,7 +51,7 @@ layout: default
 ## Skills
 
 - Hierarchical models, Bayesian methods, Markov chain Monte Carlo, statistical computing, high-dimensional data analysis, genomics data analysis, exploratory analysis, visualization, linear and nonlinear models, data mining, machine learning, predictive modeling, multivariate analysis.
-- Parallel computing, general-purpose graphics processing unit (GPU) computing, R, R package development, Rcpp, C/C++, CUDA C/C++, MPI, OpenMP, shell scripting, Python, JavaScript, AWK, Fortran, Markdown, LaTeX, knitr, ioslides, HTML, CSS.
+- Parallel computing, high-performance computing, general-purpose graphics processing unit (GPU) computing, R, R package development, Rcpp, C/C++, CUDA C/C++, MPI, OpenMP, shell scripting, Python, JavaScript, AWK, Fortran, Markdown, LaTeX, knitr, ioslides, HTML, CSS.
 
 ## Research assistant
 - **Jun 2013 - Aug 2016**
