@@ -117,7 +117,7 @@ blockquote {
  */
 pre,
 code {
-    background-color: #fcfcfc;
+    background-color: $grey-color-light;
 }
 
 code {
@@ -128,7 +128,7 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: auto;
-    border-left: 2px solid $grey-color-light;
+    border-left: 2px solid $grey-color-dark;
 
     > code {
         border: 0;
