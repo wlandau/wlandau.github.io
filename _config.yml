@@ -3,6 +3,14 @@ baseurl: ""
 url: "http://wlandau.github.io"
 github: "https://github.com/wlandau"
 
+## BLINDING FOR THE RESUME
+#blind: "blind" 
+#blinda: "span"
+
+## DEACTIVATE BLINDING
+blind: ""
+blinda: "a"
+
 kramdown:
   input: GFM
 permalink: pretty
