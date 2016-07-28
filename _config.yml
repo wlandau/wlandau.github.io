@@ -1,8 +1,3 @@
-title: William Michael Landau
-baseurl: ""
-url: "http://wlandau.github.io"
-github: "https://github.com/wlandau"
-
 ## BLINDING FOR THE RESUME
 #blind: "blind" 
 #blinda: "span"
@@ -10,6 +5,16 @@ github: "https://github.com/wlandau"
 ## DEACTIVATE BLINDING
 blind: ""
 blinda: "a"
+
+
+###################################
+###################################
+
+
+title: William Michael Landau
+baseurl: ""
+url: "http://wlandau.github.io"
+github: "https://github.com/wlandau"
 
 kramdown:
   input: GFM
