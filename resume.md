@@ -58,7 +58,7 @@ layout: default
 - Parallel computing, high-performance computing, general-purpose graphics processing unit (GPU) computing, R, R package development, Rcpp, C/C++, CUDA C/C++, MPI, OpenMP, shell scripting, Python, JavaScript, AWK, Fortran, Markdown, LaTeX, knitr, ioslides, HTML, CSS.
 
 ## Research assistant
-- **Jun 2013 - Aug 2016**
+- **May 2013 - Aug 2016**
 - RNA-sequencing Working Group, Department of Statistics, Iowa State University.
 - Funded by NIH grant R01GM109458 with Drs. Dan Nettleton and Jarad Niemi.
 - Developed a new fully Bayesian analysis method for high-dimensional genomic datasets using hierarchical models.
@@ -98,7 +98,7 @@ R package to distribute the analysis method.
 - Founder and leader, Cloud Computing Working Group, Sep - Dec 2015.
 - Member, Computation Advisory Committee, Sep 2015 - May 2016.
 - Volunteer instructor, Office of Precollegiate Programs for Talented and Gifted ([OPPTAG](http://www.opptag.iastate.edu)), Mar 13, 2014.
-- Fellow, [Preparing Future Faculty](http://www.celt.iastate.edu/graduate-students-postdocs/preparing-future-faculty), Aug 2013 - Jun 2014.
+- Fellow, [Preparing Future Faculty](http://www.celt.iastate.edu/graduate-students-postdocs/preparing-future-faculty), Aug 2013 - May 2014.
 - Assistant Coach, Boxing Club, Aug 2013 - Dec 2013.
 
 ## References
