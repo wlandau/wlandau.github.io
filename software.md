@@ -8,7 +8,7 @@ Most of my software is in [R package](http://r-pkgs.had.co.nz) form.
 ## Reproducible workflow toolkit
 
 
-- [workflowHelper]({{ "/workflowHelper" | prepend: site.github }}) Analyze multiple datasets multiple way
+- [remakeGenerator]({{ "/remakeGenerator" | prepend: site.github }}) Easily generate large [remake](https://github.com/richfitz/remake)-style workflows
 - [parallelRemake]({{ "/parallelRemake" | prepend: site.github }}) Parallel computing support for [remake](https://github.com/richfitz/remake)
 - [downsize]("{{ "/downsize" | prepend: site.github }}) Help scale  down you workflow for testing
 

@@ -68,7 +68,7 @@ layout: default
 R package to distribute the analysis method.
 - Implemented and distributed parallel computing backends for [CUDA GPUs](https://developer.nvidia.com/about-cuda) (<{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</{{ site.blinda }}>) and [OpenMP](https://en.wikipedia.org/wiki/OpenMP) (<{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</{{ site.blinda }}>).
 - Created the 
-<{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/workflowHelper">workflowHelper</{{ site.blinda }}>, 
+<{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/remakeGenerator">remakeGenerator</{{ site.blinda }}>, 
 <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/parallelRemake">parallelRemake</{{ site.blinda }}>, and 
 <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}> packages to manage, ameliorate, expedite, and accelerate reproducible workflows that are under heavy development.
 
