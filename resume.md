@@ -70,7 +70,7 @@ R package to distribute the analysis method.
 - Created the 
 <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/remakeGenerator">remakeGenerator</{{ site.blinda }}>, 
 <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/parallelRemake">parallelRemake</{{ site.blinda }}>, and 
-<{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}> packages to manage, ameliorate, expedite, and accelerate reproducible workflows that are under heavy development.
+<{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}> packages to manage, ameliorate, expedite, and accelerate computationally heavy reproducible workflows that are under heavy development.
 
 
 ## Seminar instructor
