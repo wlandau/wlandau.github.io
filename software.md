@@ -10,7 +10,7 @@ Most of my software is in [R package](http://r-pkgs.had.co.nz) form.
 
 - [remakeGenerator]({{ "/remakeGenerator" | prepend: site.github }}) Easily generate large [remake](https://github.com/richfitz/remake)-style workflows
 - [parallelRemake]({{ "/parallelRemake" | prepend: site.github }}) Parallel computing support for [remake](https://github.com/richfitz/remake)
-- [downsize]("{{ "/downsize" | prepend: site.github }}) Toggle the test and production versions of your workflow
+- [downsize](https://cran.r-project.org/web/packages/downsize/) Toggle the test and production versions of your workflow
 
 ## Dissertation research
 
