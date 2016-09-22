@@ -2,23 +2,20 @@
  * Site header
  */
 .site-header {
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 2px solid $grey-color-light;
     text-align: center;
-    padding: 1rem 0;
+    padding: (0.25*$spacing-unit) 0;
 }
 
 .site-title {
     font-size: 1.5rem;
     font-weight: 300;
-    letter-spacing: -1px;
     color: $grey-color-dark;
-
     &,
     &:hover {
         text-decoration: none;
     }
 }
-
 
 
 /**
@@ -27,7 +24,7 @@
 .page-content {
     position: relative;
     max-width: 48rem;
-    padding: $spacing-unit ($spacing-unit * 0.75);
+    padding: $spacing-unit (0.75 * $spacing-unit);
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -42,6 +39,7 @@
     }
 }
 
+/*
 h1, h2, h3, h4, .smallcap {
     text-transform: lowercase;
     font-variant: small-caps;
@@ -50,6 +48,7 @@ h1, h2, h3, h4, .smallcap {
         text-transform: uppercase;
     }
 }
+*/
 
 .post-list > li {
     margin-bottom: $spacing-unit / 4;
@@ -81,6 +80,7 @@ h1, h2, h3, h4, .smallcap {
     font-size: $small-font-size;
     color: $grey-color;
 }
+
 
 .post-content {
     margin-bottom: $spacing-unit;

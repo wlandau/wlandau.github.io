@@ -11,4 +11,3 @@ title:  Publications
 
 - **Landau, W.**, Niemi, J., and Nettleton, D., "Fully Bayesian analysis of RNA-seq counts for the detection of gene expression heterosis", submitted to the *Journal of the American Statistical Association* on June 24, 2016.
 - **Landau, W.** and Niemi, J., "A fully Bayesian strategy for high-dimensional hierarchical modeling using massively parallel computing," submitted to the *Journal of Computational and Graphical Statistics* on March 8, 2016. Preprint available at [arxiv.org](http://arxiv.org/abs/1606.06659).
-

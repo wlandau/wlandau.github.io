@@ -5,8 +5,8 @@
 
 
 // Our variables
-$base-font-family: "Cutive Mono", "Courier New", "Helvetica Neue", Helvetica, FangSong, STFangsong, sans-serif;
-$code-font-family: "Courier New", Consolas, monopace, FangSong, STFangsong;
+$base-font-family: "Ubuntu", "Helvetica Neue", Helvetica, sans-serif;
+$code-font-family: Inconsolata, Courier, Monaco, Consolas, monopace;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  0.875rem;
@@ -19,7 +19,7 @@ $background-color: #fff;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 35%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
