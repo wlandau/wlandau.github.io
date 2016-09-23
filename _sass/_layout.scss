@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-    border-bottom: 2px solid $grey-color-light;
+    border-bottom: 1px solid black;
     text-align: center;
     padding: (0.25*$spacing-unit) 0;
 }
@@ -11,10 +11,6 @@
     font-size: 1.5rem;
     font-weight: 300;
     color: black;
-    &,
-    &:hover {
-        text-decoration: none;
-    }
 }
 
 
@@ -78,7 +74,7 @@ h1, h2, h3, h4, .smallcap {
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    color: black;
 }
 
 
