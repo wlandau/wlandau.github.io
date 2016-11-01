@@ -3,7 +3,7 @@ layout: post
 title: "This Shiny app is a package! This package is a Shiny app!"
 ---
 
-Do you like the interactivity of <a href="http://shiny.rstudio.com/">Shiny apps</a>? Do you also like the modularity and <a href="http://r-pkgs.had.co.nz/tests.html">unit testing</a> of <a href="http://r-pkgs.had.co.nz/">R packages</a>? If you follow <a href="https://github.com/wlandau/appPackage">my small example on GitHub</a>, your next project can be both!
+Do you like the interactivity of <a href="http://shiny.rstudio.com/">Shiny apps</a>? Do you also like the modularity and <a href="http://r-pkgs.had.co.nz/tests.html">unit testing</a> of <a href="http://r-pkgs.had.co.nz/">R packages</a>? If you follow <a href="https://github.com/wlandau/appPackage">this small example on GitHub</a>, your next project can be both!
 
 # It's a Shiny app!
 
