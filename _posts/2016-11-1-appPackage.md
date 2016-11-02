@@ -13,13 +13,11 @@ The customary <a href="http://shiny.rstudio.com/articles/single-file.html"><code
 
 Since <code>app.R</code> is listed in <a href="http://r-pkgs.had.co.nz/package.html"><code>.Rbuildignore</code></a>, you can install the package as is.
 
-<pre><code>
-install_github("wlandau/appPackage")
+<pre><code>install_github("wlandau/appPackage")
 </code></pre>
 
 Then, you can run the Shiny app locally.
 
-<pre><code>
-library(appPackage)
+<pre><code>library(appPackage)
 my_app()
 </code></pre>
