@@ -7,7 +7,7 @@ Do you like the interactivity of <a href="http://shiny.rstudio.com/">Shiny apps<
 
 # It's a Shiny app!
 
-The customary <a href="http://shiny.rstudio.com/articles/single-file.html"><code>app.R</code></a> in the root directory, so you can launch the project as a Shiny app on a server as is. No package installation is required. Instead, <code>devtools::load_all()</code> in <code>app.R</code> automatically loads all the supplementary R scripts and data files required.
+The root directory contains the customary <a href="http://shiny.rstudio.com/articles/single-file.html"><code>app.R</code></a>, so you can launch the project as a Shiny app on a server as is. No package installation is required. Instead, <code>devtools::load_all()</code> in <code>app.R</code> automatically loads all the supplementary R scripts and data files required.
 
 # It's a package!
 
