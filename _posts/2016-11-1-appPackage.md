@@ -21,3 +21,14 @@ Then, you can run the Shiny app locally.
 <pre><code>library(appPackage)
 my_app()
 </code></pre>
+
+# But what if my app/package uses compiled code?
+
+All you need is an <code>app.R</code> that installs your package on the server and then launches your app with a function call.
+In the <a href="https://github.com/wlandau/appPackage">previous example</a>, the server-side <code>app.R</code> looks like this.
+
+<pre><code>install_github("wlandau/appPackage")
+appPackage::my_app()
+</code></pre>
+
+Here, feel free to discard the <code>app.R</code> inside the package and remove <code>app.R</code> from <code>.Rbuildignore</code>.
