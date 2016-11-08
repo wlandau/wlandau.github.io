@@ -25,7 +25,7 @@ my_app()
 # But what if my app uses compiled code?
 
 All you need is an <code>app.R</code> that installs your package on the server and then launches your app with a function call.
-In the <a href="https://github.com/wlandau/appPackage">previous example</a>, the server-side <code>app.R</code> looks like this.
+For the <a href="https://github.com/wlandau/appPackage">previous example</a>, the server-side <code>app.R</code> would look like this.
 
 <pre><code>install_github("wlandau/appPackage")
 appPackage::my_app()
