@@ -31,4 +31,4 @@ For the <a href="https://github.com/wlandau/appPackage">previous example</a>, th
 appPackage::my_app()
 </code></pre>
 
-Here, feel free to discard the <code>app.R</code> inside the package and remove <code>app.R</code> from <code>.Rbuildignore</code>.
+Here, feel free to discard the <code>app.R</code> inside the package and remove the <code>app.R</code> listing from <code>.Rbuildignore</code>.
