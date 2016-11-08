@@ -24,7 +24,7 @@ my_app()
 
 # But what if my app uses compiled code?
 
-Follow the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#System-and-foreign-language-interfaces">CRAN directions</a> to build your package on top of C, Fortran, or whatever compiled language you're using. Then, all you need is an `app.R` that installs the package on the server and then launches your app with a function call. For this example, the server-side `app.R` would look like this.
+Follow the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#System-and-foreign-language-interfaces">CRAN directions</a> to build your package on top of <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a href="https://en.wikipedia.org/wiki/Fortran">Fortran</a>, or whatever <a href="https://en.wikipedia.org/wiki/Compiled_language">compiled language</a> you're using. Then, all you need is an `app.R` that installs the package on the server and then launches your app with a function call. For this example, the server-side `app.R` would look like this.
 
 <pre><code>install_github("wlandau/appPackage")
 library(appPackage)
