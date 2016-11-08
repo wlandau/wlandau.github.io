@@ -28,7 +28,8 @@ All you need is an <code>app.R</code> that installs your package on the server a
 For the <a href="https://github.com/wlandau/appPackage">previous example</a>, the server-side <code>app.R</code> would look like this.
 
 <pre><code>install_github("wlandau/appPackage")
-appPackage::my_app()
+library(appPackage)
+my_app()
 </code></pre>
 
 Here, feel free to discard the <code>app.R</code> inside the package and remove the <code>app.R</code> listing from <code>.Rbuildignore</code>.
