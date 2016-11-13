@@ -32,3 +32,8 @@ my_app()
 </code></pre>
 
 Here, feel free to discard the <code>app.R</code> inside the package and remove the <code>app.R</code> listing from <code>.Rbuildignore</code>.
+
+
+# What of my project gets too big and messy?
+
+Overambitious projects tend to get bloated, cluttered, and slow, especially when interactivity and substance fall under the same roof. If you do serious computation behind the scenes in <code>xyzShinyApp</code>, you could encapsulate the hidden core functionality in a separate package: say, <code>xyzEngine</code>. I used this exact approach in my dissertation project. Package <code><a href="https://github.com/wlandau/fbseq">fbseq</a></code> processes user input and MCMC output, and <code><a href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</a></code> actually fits the model given an already-parsed set of instructions.
