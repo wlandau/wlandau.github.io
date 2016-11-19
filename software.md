@@ -7,7 +7,7 @@ Most of my software is in [R package](http://r-pkgs.had.co.nz) form.
 
 ## Reproducible workflow toolkit
 
-- [downsize](https://cran.r-project.org/web/packages/downsize/) Toggle the test and production versions of your workflow.
+- [downsize](http://will-landau.com/downsize) Toggle the test and production versions of your workflow.
 - [remakeGenerator](http://will-landau.com/remakeGenerator) Easily generate large [remake](https://github.com/richfitz/remake)-style workflows.
 - [parallelRemake](http://will-landau.com/parallelRemake) Parallel computing support for [remake](https://github.com/richfitz/remake).
 
