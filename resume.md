@@ -57,7 +57,7 @@ layout: default
 - Reproducible research, hierarchical models, Bayesian methods, Markov chain Monte Carlo, statistical computing, high-dimensional data analysis, genomics data analysis, exploratory analysis, visualization, linear and nonlinear models, data mining, machine learning, predictive modeling, multivariate analysis.
 - Parallel computing, high-performance computing, general-purpose graphics processing unit (GPU) computing, R, R package development, Rcpp, C/C++, CUDA C/C++, MPI, OpenMP, shell scripting, Python, JavaScript, AWK, Fortran, Markdown, LaTeX, knitr, ioslides, HTML, CSS.
 
-## Research Scientist
+## Research scientist
 - **October 2016 - Present**
 - [Eli Lilly and Company](http://www.lilly.com)
 - Advanced Analytics Immunology Hub
