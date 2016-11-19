@@ -57,9 +57,14 @@ layout: default
 - Reproducible research, hierarchical models, Bayesian methods, Markov chain Monte Carlo, statistical computing, high-dimensional data analysis, genomics data analysis, exploratory analysis, visualization, linear and nonlinear models, data mining, machine learning, predictive modeling, multivariate analysis.
 - Parallel computing, high-performance computing, general-purpose graphics processing unit (GPU) computing, R, R package development, Rcpp, C/C++, CUDA C/C++, MPI, OpenMP, shell scripting, Python, JavaScript, AWK, Fortran, Markdown, LaTeX, knitr, ioslides, HTML, CSS.
 
+## Research Scientist
+- **October 2016 - Present**
+- [Eli Lilly and Company](http://www.lilly.com)
+- Advanced Analytics Immunology Hub
+
 ## Research assistant
 - **May 2013 - Aug 2016**
-- RNA-sequencing Working Group, Department of Statistics, Iowa State University.
+- RNA-sequencing Working Group, Department of Statistics, [Iowa State University](http://www.iastate.edu).
 - Funded by NIH grant R01GM109458 with Drs. Dan Nettleton and Jarad Niemi.
 - Developed a new fully Bayesian analysis method for high-dimensional genomic datasets using hierarchical models.
 - Implemented massively parallelized Markov chain Monte Carlo.
@@ -76,7 +81,7 @@ R package to distribute the analysis method.
 ## Seminar instructor
 
 - **Aug - Dec, 2012 and 2013**.
-- Department of Statistics, Iowa State University.
+- Department of Statistics, [Iowa State University](http://www.iastate.edu).
 - [GPU computing](http://www.nvidia.com/object/what-is-gpu-computing.html) seminar series at <{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/gpu">will-landau.com/gpu</{{ site.blinda }}>.
 - Educated faculty and graduate students on massively parallel computing with [general-purpose graphics processing units](http://www.nvidia.com/object/what-is-gpu-computing.html).
 - Constructed, curated, and distributed slides, video, and example code at <{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/gpu">will-landau.com/gpu</{{ site.blinda }}> and on <{{ site.blinda }} href="https://www.youtube.com/watch?v=VL3qbqA_Xco&list=PLs5XGFlsJ8Wi635Ig2QX3dbmJCNpss4aT">YouTube</{{ site.blinda }}>.
@@ -84,12 +89,12 @@ R package to distribute the analysis method.
 
 ## Course instructor
 - **Jan - May, 2012 and 2013**.
-- Department of Statistics, Iowa State University.
+- Department of Statistics, [Iowa State University](http://www.iastate.edu).
 - STAT 305: Engineering Statistics (<{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/stat305/">will-landau.com/stat305</{{ site.blinda }}>).
 
 ## Grader
 - **Aug - Dec, 2011**.
-- Department of Statistics, Iowa State University.
+- Department of Statistics, [Iowa State University](http://www.iastate.edu).
 - STAT 231: Engineering Probability.
 - STAT 105: Introduction to Engineering Statistics.
 
