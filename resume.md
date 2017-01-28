@@ -61,6 +61,9 @@ layout: default
 - **October 2016 - Present**
 - [Eli Lilly and Company](http://www.lilly.com)
 - Advanced Analytics Immunology Hub
+- Used data mining to help tailor new treatments of autoimmune diseases to patients.
+- Developed an interactive tool to turn clinical trial simulation data into actionable knowledge for planning real-world trials.
+- Developed the utility R package <{{ site.blinda }} class="{{ site.blind }}" href="https://cran.r-project.org/web/packages/eply/vignettes/eply.html">eply</{{ site.blinda }}>.
 
 ## Research assistant
 - **May 2013 - Aug 2016**
