@@ -1,9 +1,10 @@
 ---
 layout: page
-title:  Standalone workflow toolkit
+title:  Reproducible workflow toolkit
 ---
 
-- [downsize](http://will-landau.com/downsize) Toggle the test and production versions of your workflow.
+- [drake](https://CRAN.R-project.org/package=drake) Efficient R-focused workflow manager and reproducible build system.
+- [downsize](https://CRAN.R-project.org/package=downsize) Test your whole workflow from start to finish quickly and cheaply
 
 ## Support for [remake](https://github.com/richfitz/remake)
 
@@ -12,7 +13,7 @@ title:  Standalone workflow toolkit
 
 ## Utilities
 
-- [eply](https://cran.r-project.org/web/packages/eply/vignettes/eply.html) Like `apply()`, but for processing batches of quoted expressions.
+- [eply](https://CRAN.R-project.org/package=eply) Like `apply()`, but for processing batches of quoted expressions.
 
 ## Dissertation research
 
