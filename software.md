@@ -8,8 +8,8 @@ title:  Reproducible workflow toolkit
 
 ## Support for [remake](https://github.com/richfitz/remake)
 
-- [remakeGenerator](http://will-landau.com/remakeGenerator) Generate large [remake](https://github.com/richfitz/remake)-style workflows.
-- [parallelRemake](http://will-landau.com/parallelRemake) Parallel computing support for [remake](https://github.com/richfitz/remake).
+- [remakeGenerator](https://www.github.com/wlandau/remakeGenerator) Generate large [remake](https://github.com/richfitz/remake)-style workflows.
+- [parallelRemake](http://www.github.com/wlandau/parallelRemake) Parallel computing support for [remake](https://github.com/richfitz/remake).
 
 ## Utilities
 
