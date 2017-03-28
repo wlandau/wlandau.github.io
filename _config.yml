@@ -22,3 +22,6 @@ permalink: pretty
 
 disqus_shortname: wlandau
 google_analytics:
+
+gems:
+  - jekyll-feed
