@@ -4,7 +4,7 @@ title:  Reproducible workflow toolkit
 ---
 
 - [drake](https://CRAN.R-project.org/package=drake) Efficient R-focused workflow manager and reproducible build system.
-- [downsize](https://CRAN.R-project.org/package=downsize) Test your whole workflow from start to finish quickly and cheaply
+- [downsize](https://CRAN.R-project.org/package=downsize) Test your whole workflow from start to finish quickly and cheaply.
 
 ## Support for [remake](https://github.com/richfitz/remake)
 
@@ -13,6 +13,7 @@ title:  Reproducible workflow toolkit
 
 ## Utilities
 
+- [grapes](https://CRAN.R-project.org/package=grapes) Turn functions into binary operators.
 - [eply](https://CRAN.R-project.org/package=eply) Like `apply()`, but for processing batches of quoted expressions.
 
 ## Dissertation research
