@@ -4,5 +4,5 @@ title: "New R packages drake and eply on CRAN"
 ---
 
 <p>
-[eply](https://cran.r-project.org/web/packages/eply/vignettes/eply.html) is a utility for processing batches of expressions, and [drake](https://cran.r-project.org/web/packages/drake/vignettes/drake.html) is a reproducible build system inspired by [remake](https://github.com/richfitz/remake). Check out the linked vignettes to learn more.
+<a href="https://cran.r-project.org/package=eply">eply</a> is a utility for processing batches of expressions, and <a href="https://cran.r-project.org/package=drake">drake</a> is a reproducible build system inspired by <a href="https://github.com/richfitz/remake">remake</a>. Check out the linked vignettes to learn more.
 </p>
