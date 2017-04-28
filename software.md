@@ -4,7 +4,7 @@ title:  Reproducible workflow toolkit
 ---
 
 - [drake](https://CRAN.R-project.org/package=drake) Efficient R-focused workflow manager and reproducible build system.
-- [downsize](https://CRAN.R-project.org/package=downsize) Test your whole workflow from start to finish quickly and cheaply.
+- [downsize](https://CRAN.R-project.org/package=downsize) Ease the transition between testing and deployment.
 
 ## Support for [remake](https://github.com/richfitz/remake)
 
