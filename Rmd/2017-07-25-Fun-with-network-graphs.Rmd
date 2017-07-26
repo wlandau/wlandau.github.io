@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-When it comes to visualizing networks, the <a href="https://datastorm-open.github.io/visNetwork/">visNetwork</a> is customizable, flexible, and loads of fun. All you need is a data frame of nodes and a data frame of edges. The interactive plot lets you zoom, pan, and drag with the mouse. Try it!
+When it comes to visualizing networks, the <a href="https://datastorm-open.github.io/visNetwork/">visNetwork</a> package is customizable, flexible, and loads of fun. All you need is a data frame of nodes and a data frame of edges. The interactive plot lets you zoom, pan, and drag with the mouse. Try it!
 
 ```{r intro}
 library(visNetwork)
