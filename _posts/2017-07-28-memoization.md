@@ -22,7 +22,7 @@ identical(x1, x2)
 ## [1] TRUE
 </code></pre>
 
-## Dependency neglect
+## Peril 1: dependency neglect
 
 <p>
 But what if you define multiple functions and nest them? Does a memoized function update results when dependencies change?
@@ -46,7 +46,7 @@ mf(1)
 ## [1] 9999.867 # Correct
 </code></pre>
 
-Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can force `mf()` to depend on `g()`. Though, in an ideal world, you should not have to.
+Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can force `mf()` to depend on `g()`. Though in an ideal world, you should not have to.
 
 <pre><code>mf = memoise(f, ~g)
 mf(1)
@@ -102,7 +102,7 @@ getInputs(body(f))
 ## g(x)
 </code></pre>
 
-## <a href="https://en.wikipedia.org/wiki/Race_condition">Race conditions</a>
+## Peril 2: <a href="https://en.wikipedia.org/wiki/Race_condition">Race conditions</a>
 
 <p>
 What about parallel computing? What if your code has multiple simultaneous calls to <code>mf(1)</code>?
