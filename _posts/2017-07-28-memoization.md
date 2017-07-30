@@ -3,7 +3,7 @@ layout: post
 title: "The strengths and perils of traditional memoization"
 ---
 
-## Memoization
+## Efficiency gains
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Memoization">Memoization</a> is the practice of storing the return values of function calls for later use. A memoized function simply reads a previous result if called a second time with the same inputs. With this approach, implemented with the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a> in R, you can skip redundant work and save time. 
@@ -22,10 +22,10 @@ identical(x1, x2)
 ## [1] TRUE
 </code></pre>
 
-## Flaw 1: dependency neglect
+## Dependency neglect
 
 <p>
-What if you define multiple functions and nest them? Does a memoized function update results when dependencies change?
+But what if you define multiple functions and nest them? Does a memoized function update results when dependencies change?
 </p>
 
 <pre><code>g <- function(x) 2*x
@@ -42,7 +42,7 @@ mf(1)
 ## [1] 100 # Correct
 </code></pre>
 
-## Flaw 2: <a href="https://en.wikipedia.org/wiki/Race_condition">race conditions</a>
+## <a href="https://en.wikipedia.org/wiki/Race_condition">Race conditions</a>
 
 <p>
 What about parallel computing? What if your code needs multiple simultaneous calls to <code>mf(1)</code>?
