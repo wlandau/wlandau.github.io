@@ -44,7 +44,6 @@ visNetwork(nodes = nodes, edges = edges, width = "100%") %>%
   visHierarchicalLayout(direction = "LR") %>%
   visNodes(physics = FALSE) %>%
   visInteraction(navigationButtons = TRUE) %>%
-  visEvents(type = "once", startStabilizing = "function() {
-    this.fit({nodes:[1,5,10]})}") %>%
+  visEvents(type = "once", startStabilizing = "function(){this.fit()}") %>%
   visPhysics(stabilization = FALSE)
 ```
