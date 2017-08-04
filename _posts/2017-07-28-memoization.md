@@ -3,11 +3,13 @@ layout: post
 title: "The strengths and perils of traditional memoization"
 ---
 
+<p>
+<a href="https://en.wikipedia.org/wiki/Memoization">Memoization</a> is the practice of storing the return values of function calls for later use. A memoized function simply reads a prior result if called a second time with the same inputs. It is a well-established method across many languages for skipping redundant work and saving time. In R, the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a> is an excellent implementation. 
+</p>
+
 ## Efficiency gains
 
-<p>
-<a href="https://en.wikipedia.org/wiki/Memoization">Memoization</a> is the practice of storing the return values of function calls for later use. A memoized function simply reads a prior result if called a second time with the same inputs. With this approach, implemented in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a> in R, you can skip redundant work and save time. 
-</p>
+Benchmarks are application-dependent. Here is just a taste.
 
 <pre><code>library(memoise)
 f <- function(n) mean(rnorm(n))
@@ -22,10 +24,12 @@ identical(x1, x2)
 ## [1] TRUE
 </code></pre>
 
-## Peril 1: dependency neglect
+But despite the appeal and promise of the gains in efficiency, traditional memoisation has perils and pitfalls. I name just two, and there could be more.
+
+## Dependency neglect
 
 <p>
-But what if you define multiple functions and nest them? Does a memoized function update results when dependencies change?
+What if you define multiple functions and nest them? Does a memoized function update the results when dependencies change?
 </p>
 
 <pre><code>g <- function(x) { 
@@ -102,10 +106,10 @@ getInputs(body(f))
 ## g(x)
 </code></pre>
 
-## Peril 2: <a href="https://en.wikipedia.org/wiki/Race_condition">Race conditions</a>
+## <a href="https://en.wikipedia.org/wiki/Race_condition">Race conditions</a>
 
 <p>
-What about parallel computing? What if your code has multiple simultaneous calls to <code>mf(1)</code>?
+And what about parallel computing? What if your code has multiple simultaneous calls to <code>mf(1)</code>?
 </p>
 
 <pre><code>library(parallel)
@@ -124,7 +128,7 @@ Which result was actually stored?
 </p>
 
 <pre><code>mf(1)
-## [1] 0.4883345 # Niether!
+## [1] 0.4883345
 </code></pre>
 
 <p>
@@ -134,5 +138,5 @@ As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester exp
 ## A solution
 
 <p>
-<a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble memoise, but go they extra mile: they account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. Such packages <a href="https://cran.r-project.org/web/packages/drake/vignettes/quickstart.html">already exist in R</a>.
+<a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. Such packages <a href="https://cran.r-project.org/web/packages/drake/vignettes/drake.html">already exist in R</a>.
 </p>
