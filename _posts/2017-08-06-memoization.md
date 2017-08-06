@@ -111,10 +111,10 @@ getInputs(body(f))
 ## g(x)
 </code></pre>
 
-## <a href="https://en.wikipedia.org/wiki/Race_condition">Race conditions</a>
+## Parallel computing
 
 <p>
-And what about parallel computing? What if your code has multiple simultaneous calls to <code>mf(1)</code>?
+What if your code has multiple simultaneous calls to <code>mf(1)</code>?
 </p>
 
 <pre><code>library(parallel)
