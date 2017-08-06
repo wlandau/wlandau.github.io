@@ -21,14 +21,13 @@ system.time(x1 <- mf(1e8))
 <pre style = "background: transparent"><code style = "background: transparent">##   user  system elapsed 
 ##  4.968   0.000   4.973 
 </code></pre>
-<pre><code>
-system.time(x2 <- mf(1e8))
+<pre><code>system.time(x2 <- mf(1e8))
 </code></pre>
 <pre style = "background: transparent"><code style = "background: transparent">##   user  system elapsed 
 ##      0       0       0 
 </code></pre>
-<pre><code>
-identical(x1, x2)
+<pre><code>identical(x1, x2)
+</code></pre>
 <pre style = "background: transparent"><code style = "background: transparent">## [1] TRUE
 </code></pre>
 
