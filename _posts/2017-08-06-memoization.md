@@ -52,7 +52,7 @@ mf(1)
 ## [1] 9999.867 # Correct
 </code></pre>
 
-Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can manually force `mf()` to depend on `g()`. (Though in an ideal world, you would not have to.)
+Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can manually force `mf()` to react to changes to `g()`. (Though in an ideal world, you would not have to.)
 
 <pre><code>mf = memoise(f, ~g)
 mf(1)
