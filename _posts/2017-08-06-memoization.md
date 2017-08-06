@@ -49,7 +49,7 @@ mf(1)
 <pre style = "background: transparent"><code style = "background: transparent">## [1] 0.9391441 # Correct
 </code></pre>
 <pre><code>g <- function(x) {
-  1e4*x + rnorm(1)
+  1e4 * x + rnorm(1)
 }
 mf(1)
 </code></pre>
