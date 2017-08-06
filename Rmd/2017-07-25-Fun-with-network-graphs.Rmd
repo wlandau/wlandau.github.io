@@ -3,6 +3,7 @@ title: "Fun with network graphs"
 author: "Will Landau"
 date: "July 25, 2017"
 output: html_document
+tags: R
 ---
 
 ```{r setup, include=FALSE}
