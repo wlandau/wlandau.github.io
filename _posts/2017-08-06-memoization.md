@@ -17,13 +17,19 @@ A memoized function simply returns a prior result if called a second time with t
 f <- function(n) mean(rnorm(n))
 mf = memoise(f)
 system.time(x1 <- mf(1e8))
-##   user  system elapsed 
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">##   user  system elapsed 
 ##  4.968   0.000   4.973 
+</code></pre>
+<pre><code>
 system.time(x2 <- mf(1e8))
-##   user  system elapsed 
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">##   user  system elapsed 
 ##      0       0       0 
+</code></pre>
+<pre><code>
 identical(x1, x2)
-## [1] TRUE
+<pre style = "background: transparent"><code style = "background: transparent">## [1] TRUE
 </code></pre>
 
 However, there are good reasons to apply caution when using traditional memoisation.
@@ -147,5 +153,5 @@ As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester exp
 ## Alternatives
 
 <p>
-<a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. There are already <a href="https://github.com/wlandau-lilly/drake">Make-like packages just for R</a>.
+<a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they automatically account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. There are already <a href="https://github.com/wlandau-lilly/drake">Make-like packages just for R</a>.
 </p>
