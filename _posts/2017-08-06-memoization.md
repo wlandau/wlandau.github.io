@@ -64,7 +64,7 @@ mf(1)
 <pre style = "background: transparent"><code style = "background: transparent">## [1] 9999.867 # Correct
 </code></pre>
 
-Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can manually force `mf()` to react to changes to `g()`.
+Fortunately, with the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can manually force `mf()` to react to changes to `g()`.
 
 <pre><code>mf = memoise(f, ~g)
 mf(1)
