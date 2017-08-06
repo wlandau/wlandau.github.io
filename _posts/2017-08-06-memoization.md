@@ -127,7 +127,7 @@ run <- function(){
 }
 run()
 </code></pre>
-<pre style = "background: transparent"><code style = "background: transparent">## 1] -0.1669109  1.1784395
+<pre style = "background: transparent"><code style = "background: transparent">## [1] -0.1669109  1.1784395
 </code></pre>
 <pre><code>run()
 </code></pre>
