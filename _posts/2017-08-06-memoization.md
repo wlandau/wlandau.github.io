@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "On the strengths and perils of traditional memoization"
-tags: R
+tags: 
+  - R
 ---
 
 <p>
