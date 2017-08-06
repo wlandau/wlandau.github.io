@@ -143,5 +143,5 @@ As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester exp
 ## A solution
 
 <p>
-<a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. Such packages <a href="https://github.com/wlandau-lilly/drake">already exist in R</a>.
+<a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. <a href="https://github.com/wlandau-lilly/drake">Make-like packages just for R already exist</a>.
 </p>
