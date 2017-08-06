@@ -152,7 +152,7 @@ run()
 But even then, you should avoid calling the same memoized function on the same inputs twice simultaneously. As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester explains</a>, multiple processes could write to the same file at the same time and corrupt the results. In general, this sort of unpredictable behavior is called a <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a>, and it is the bane of any kind of parallel computing.
 </p>
 
-## Alternatives
+## Solutions
 
 <p>
 <a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they automatically account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. There are already <a href="https://github.com/wlandau-lilly/drake">Make-like packages just for R</a>.
