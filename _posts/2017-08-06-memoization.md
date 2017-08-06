@@ -95,42 +95,21 @@ findGlobals(f)
 <pre style = "background: transparent"><code style = "background: transparent">## [1] "g"
 </code></pre>
 <pre><code>library(CodeDepnds)
-getInputs(body(f))
+str(getInputs(body(f)))
 </code></pre>
-<pre style = "background: transparent"><code style = "background: transparent">## An object of class "ScriptNodeInfo"
-## Slot "files":
-## character(0)
-## 
-## Slot "strings":
-## character(0)
-## 
-## Slot "libraries":
-## character(0)
-## 
-## Slot "inputs":
-## [1] "x"
-## 
-## Slot "outputs":
-## character(0)
-## 
-## Slot "updates":
-## character(0)
-## 
-## Slot "functions":
-##  g 
-## NA 
-## 
-## Slot "removes":
-## character(0)
-## 
-## Slot "nsevalVars":
-## character(0)
-## 
-## Slot "sideEffects":
-## character(0)
-## 
-## Slot "code":
-## g(x)
+<pre style = "background: transparent"><code style = "background: transparent">## Formal class 'ScriptNodeInfo' [package "CodeDepends"] with 11 slots
+##   ..@ files      : chr(0) 
+##   ..@ strings    : chr(0) 
+##   ..@ libraries  : chr(0) 
+##   ..@ inputs     : chr "x"
+##   ..@ outputs    : chr(0) 
+##   ..@ updates    : chr(0) 
+##   ..@ functions  : Named logi NA
+##   .. ..- attr(*, "names")= chr "g"
+##   ..@ removes    : chr(0) 
+##   ..@ nsevalVars : chr(0) 
+##   ..@ sideEffects: chr(0) 
+##   ..@ code       : language g(x)
 </code></pre>
 
 ## Parallel computing
