@@ -125,11 +125,15 @@ mclapply(c(1, 1), mf, mc.cores = 2)
 </code></pre>
 
 <p>
-Which result was actually stored?
+Can the cached results be reused?
 </p>
 
-<pre><code>mf(1)
-## [1] 0.4883345
+<pre><code>mclapply(c(1, 1), mf, mc.cores = 2)
+## [[1]]
+## [1] 0.2769101
+##
+## [[2]]
+## [1] 0.2129442
 </code></pre>
 
 <p>
