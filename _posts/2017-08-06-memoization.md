@@ -91,10 +91,13 @@ To look for the immediate dependencies of a function, you can use `findGlobals()
 
 <pre><code>library(codetools)
 findGlobals(f)
-## [1] "g"
-library(CodeDepnds)
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] "g"
+</code></pre>
+<pre><code>library(CodeDepnds)
 getInputs(body(f))
-## An object of class "ScriptNodeInfo"
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## An object of class "ScriptNodeInfo"
 ## Slot "files":
 ## character(0)
 ## 
@@ -140,7 +143,8 @@ What if your code has multiple simultaneous calls to <code>mf(1)</code>?
 f <- function(n) rnorm(n)
 mf <- memoise(f)
 mclapply(c(1, 1), mf, mc.cores = 2)
-## [[1]]
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [[1]]
 ## [1] 0.9794243
 ##
 ## [[2]]
@@ -152,7 +156,8 @@ Can you reuse the previous results?
 </p>
 
 <pre><code>mclapply(c(1, 1), mf, mc.cores = 2)
-## [[1]]
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [[1]]
 ## [1] 0.2769101
 ##
 ## [[2]]
