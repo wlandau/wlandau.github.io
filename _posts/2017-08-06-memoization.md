@@ -128,7 +128,7 @@ mclapply(c(1, 1), mf, mc.cores = 2)
 </code></pre>
 
 <p>
-Can the cached results be reused?
+Can you reuse the previous results?
 </p>
 
 <pre><code>mclapply(c(1, 1), mf, mc.cores = 2)
