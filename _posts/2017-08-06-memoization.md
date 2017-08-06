@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The strengths and perils of traditional memoization"
+title: "On the strengths and perils of traditional memoization"
 tags: R
 ---
 
