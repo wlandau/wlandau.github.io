@@ -31,7 +31,7 @@ system.time(x1 <- mf(1e8))
 <pre style = "background: transparent"><code style = "background: transparent">## [1] TRUE
 </code></pre>
 
-However, there are good reasons to apply caution when using traditional memoisation.
+However, there are good reasons to apply caution when using traditional memoization.
 
 ## Dependencies
 
