@@ -10,7 +10,7 @@ tags: R
 
 ## Efficiency gains
 
-Benchmarks are application-dependent. Here is just a taste.
+Time savings depend on the use case. Here is just a taste.
 
 <pre><code>library(memoise)
 f <- function(n) mean(rnorm(n))
@@ -30,7 +30,7 @@ But despite the appeal and promise, traditional memoisation has potential pitfal
 ## Dependency neglect
 
 <p>
-What if you define multiple functions and nest them? Does a memoized function update the results when dependencies change?
+What if you define multiple functions and nest them? Does a memoized function update the results when non-local dependencies change?
 </p>
 
 <pre><code>g <- function(x) { 
@@ -51,7 +51,7 @@ mf(1)
 ## [1] 9999.867 # Correct
 </code></pre>
 
-Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can force `mf()` to depend on `g()`. Though in an ideal world, you would not have to.
+Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can manually force `mf()` to depend on `g()`. (Though in an ideal world, you would not have to.)
 
 <pre><code>mf = memoise(f, ~g)
 mf(1)
@@ -67,9 +67,12 @@ mf(1)
 ## [1] 0.08486043
 </code></pre>
 
-To look for the immediate dependencies of a function, I recommend the <a href="https://CRAN.R-project.org/package=CodeDepends">CodeDepends package</a>. Just keep in mind that `g()` may have dependencies too.
+To look for the immediate dependencies of a function, you could use `findGlobals()` from <a href="http://homepage.divms.uiowa.edu/~luke/">Luke Tierney</a>'s long-established <a href="https://CRAN.R-project.org/package=codetools">codetools</a> package. Alternatively <a href="https://CRAN.R-project.org/package=CodeDepends">CodeDepends</a> is a more recent effort <a href="https://github.com/gmbecker">Gabe Becker</a>, <a href="https://github.com/duncantl">Duncan Temple Lang</a>, and others, and it goes beyond simply finding dependencies. Whatever tool you use, just keep in mind that `g()` may have dependencies too.
 
-<pre><code>library(CodeDepnds)
+<pre><code>library(codetools)
+findGlobals(f)
+## [1] "g"
+library(CodeDepnds)
 getInputs(body(f))
 ## An object of class "ScriptNodeInfo"
 ## Slot "files":
