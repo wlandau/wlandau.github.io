@@ -115,28 +115,41 @@ str(getInputs(body(f)))
 ## Parallel computing
 
 <p>
-What if your code has multiple simultaneous calls to <code>mf(1)</code>?
+What if your code has multiple simultaneous calls to <code>mf(1)</code>? First, notice how memoization can fail if you use the default in-memory cache.
 </p>
 
 <pre><code>library(parallel)
-f <- function(x) rnorm(n = 1, mean = x)
+f <- function(n) rnorm(n)
 mf <- memoise(f)
-unlist(mclapply(1:2, mf, mc.cores = 2))
+run <- function(){
+  output <- mclapply(c(1, 1), mf, mc.cores = 2)
+  unlist(output)
+}
+run()
 </code></pre>
-<pre style = "background: transparent"><code style = "background: transparent">## [1] -0.4580604  1.7078366
+<pre style = "background: transparent"><code style = "background: transparent">## 1] -0.1669109  1.1784395
+</code></pre>
+<pre><code>run()
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] -0.4694902  1.8671464 # new results computed
 </code></pre>
 
 <p>
-Can you reuse the previous results?
+At minimum, I recommend the file system cache.
 </p>
 
-<pre><code>unlist(mclapply(1:2, mf, mc.cores = 2))
+<pre><code>mf <- memoise(f, cache = cache_filesystem("my_cache"))
+run()
 </code></pre>
-<pre style = "background: transparent"><code style = "background: transparent">## [1] 0.2213628 1.7208111
+<pre style = "background: transparent"><code style = "background: transparent">## [1] -0.01171047 -0.01171047
+</code></pre>
+<pre><code>run()
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] -0.01171047 -0.01171047
 </code></pre>
 
 <p>
-As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester explains</a>, multiple processes could simultaneously write to the same file and corrupt the results.
+But even then, you should avoid calling the same memoized function on the same inputs twice simultaneously. As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester explains</a>, multiple processes could write to the same file at the same time and corrupt the results. In general, this sort of unpredictable behavior is called a <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a>, and it is the bane of any kind of parallel computing.
 </p>
 
 ## Alternatives
