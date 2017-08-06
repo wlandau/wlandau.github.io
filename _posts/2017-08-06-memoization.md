@@ -149,10 +149,10 @@ run()
 </code></pre>
 
 <p>
-But even then, you should avoid calling the same memoized function on the same inputs twice simultaneously. As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester explains</a>, multiple processes could write to the same file at the same time and corrupt the results. In general, this sort of unpredictable behavior is called a <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a>, and it is the bane of any kind of parallel computing.
+But even then, you should avoid calling the same memoized function on the same inputs twice simultaneously. As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester explains</a>, multiple processes could write to the same file at the same time and corrupt the results. In general, this sort of unpredictable behavior is called a <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a>, and it is the bane of any kind of parallel computing. For the <a href="https://github.com/r-lib/memoise">memoise package</a> specifically, there is <a href="https://github.com/r-lib/memoise/issues/29">ongoing discussion</a> about preventing race conditions in future development, possibly with <a href="https://github.com/gaborcsardi">Gábor Csárdi</a>'s <a href="https://github.com/r-lib/filelock">file-locking package</a>
 </p>
 
-## Solutions
+## Other solutions
 
 <p>
 <a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they automatically account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. There already exist <a href="https://github.com/wlandau-lilly/drake">Make-like packages just for R</a>.
