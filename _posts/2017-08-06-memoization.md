@@ -26,9 +26,9 @@ identical(x1, x2)
 ## [1] TRUE
 </code></pre>
 
-But despite the appeal and promise, traditional memoisation has potential pitfalls. From my perspective, the most concerning are dependency neglect and <a href="https://en.wikipedia.org/wiki/Race_condition">race conditions</a>.
+However, there are good reasons to apply caution when using traditional memoisation.
 
-## Dependency neglect
+## Dependencies
 
 <p>
 What if you define multiple functions and nest them? Does a memoized function update the results when non-local dependencies change?
@@ -52,7 +52,7 @@ mf(1)
 ## [1] 9999.867 # Correct
 </code></pre>
 
-Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can manually force `mf()` to react to changes to `g()`. (Though in an ideal world, such behavior would be automatic.)
+Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can manually force `mf()` to react to changes to `g()`.
 
 <pre><code>mf = memoise(f, ~g)
 mf(1)
@@ -144,7 +144,7 @@ Can you reuse the previous results?
 As <a href="https://github.com/r-lib/memoise/issues/29">RStudio's Jim Hester explains</a>, multiple processes could simultaneously write to the same file and corrupt the results.
 </p>
 
-## A solution
+## Alternatives
 
 <p>
 <a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. There are already <a href="https://github.com/wlandau-lilly/drake">Make-like packages just for R</a>.
