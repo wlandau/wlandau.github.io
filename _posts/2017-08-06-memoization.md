@@ -6,7 +6,7 @@ tags:
 ---
 
 <p>
-<a href="https://en.wikipedia.org/wiki/Memoization">Memoization</a> is the practice of storing the return values of function calls for later use. A memoized function simply returns a prior result if called a second time with the same inputs. Memoization is a well-established technique across many languages for skipping redundant work and saving time. In R, the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a> by <a href="https://github.com/hadley">Hadley Wickham</a>, <a href="https://github.com/jimhester">Jim Hester</a>, <a href="https://github.com/krlmlr">Kirill Müller</a>, and others is one of the most elegant and useful packages I have ever seen. 
+<a href="https://en.wikipedia.org/wiki/Memoization">Memoization</a> is the practice of storing the return values of function calls for later use, a well-established technique across many languages for skipping redundant work and saving time. A memoized function simply returns a prior result if called a second time with the same inputs. In R, the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a> by <a href="https://github.com/hadley">Hadley Wickham</a>, <a href="https://github.com/jimhester">Jim Hester</a>, <a href="https://github.com/krlmlr">Kirill Müller</a>, and others is one of the most elegant and useful packages I have ever seen. 
 </p>
 
 ## Efficiency gains
