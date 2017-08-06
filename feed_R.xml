@@ -5,6 +5,7 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R posts from Will Landau's blog</title>
+    <description>Added to <a href="https://www.r-bloggers.com">R Bloggers</a></description>
     <link>{{ site.url }}</link>
     {% for post in site.posts %}
 		{% unless post.draft %}
