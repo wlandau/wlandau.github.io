@@ -68,7 +68,7 @@ mf(1)
 ## [1] 0.08486043
 </code></pre>
 
-To look for the immediate dependencies of a function, you could use `findGlobals()` from <a href="http://homepage.divms.uiowa.edu/~luke/">Luke Tierney</a>'s long-established <a href="https://CRAN.R-project.org/package=codetools">codetools</a> package. Alternatively, <a href="https://CRAN.R-project.org/package=CodeDepends">CodeDepends</a> is a more recent effort by <a href="https://github.com/gmbecker">Gabe Becker</a>, <a href="https://github.com/duncantl">Duncan Temple Lang</a>, and others, and it <a href="https://cran.r-project.org/package=CodeDepends/vignettes/intro.html">goes beyond simply finding dependencies</a>. Whatever tool you use, just keep in mind that `g()` may have dependencies too.
+To look for the immediate dependencies of a function, you can use `findGlobals()` from <a href="http://homepage.divms.uiowa.edu/~luke/">Luke Tierney</a>'s long-established <a href="https://CRAN.R-project.org/package=codetools">codetools</a> package. Alternatively, <a href="https://CRAN.R-project.org/package=CodeDepends">CodeDepends</a> is a more recent effort by <a href="https://github.com/gmbecker">Gabe Becker</a>, <a href="https://github.com/duncantl">Duncan Temple Lang</a>, and others, and it <a href="https://cran.r-project.org/package=CodeDepends/vignettes/intro.html">goes beyond simply finding dependencies</a>. Whatever tool you use, just keep in mind that no static code analysis tool is perfect, and dependencies like `g()` may have dependencies of their own.
 
 <pre><code>library(codetools)
 findGlobals(f)
