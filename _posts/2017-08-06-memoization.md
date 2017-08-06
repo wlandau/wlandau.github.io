@@ -119,28 +119,20 @@ What if your code has multiple simultaneous calls to <code>mf(1)</code>?
 </p>
 
 <pre><code>library(parallel)
-f <- function(n) rnorm(n)
+f <- function(x) rnorm(n = 1, mean = x)
 mf <- memoise(f)
-mclapply(c(1, 1), mf, mc.cores = 2)
+unlist(mclapply(1:2, mf, mc.cores = 2))
 </code></pre>
-<pre style = "background: transparent"><code style = "background: transparent">## [[1]]
-## [1] 0.9794243
-##
-## [[2]]
-## [1] 0.03021947
+<pre style = "background: transparent"><code style = "background: transparent">## [1] -0.4580604  1.7078366
 </code></pre>
 
 <p>
 Can you reuse the previous results?
 </p>
 
-<pre><code>mclapply(c(1, 1), mf, mc.cores = 2)
+<pre><code>unlist(mclapply(1:2, mf, mc.cores = 2))
 </code></pre>
-<pre style = "background: transparent"><code style = "background: transparent">## [[1]]
-## [1] 0.2769101
-##
-## [[2]]
-## [1] 0.2129442
+<pre style = "background: transparent"><code style = "background: transparent">## [1] 0.2213628 1.7208111
 </code></pre>
 
 <p>
