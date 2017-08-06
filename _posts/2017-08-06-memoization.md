@@ -11,7 +11,7 @@ tags:
 
 ## Efficiency gains
 
-Time savings depend on the use case. Here is just a taste.
+The time savings depend on the use case. Here is just a taste.
 
 <pre><code>library(memoise)
 f <- function(n) mean(rnorm(n))
