@@ -45,32 +45,46 @@ What if you define multiple functions and nest them? Does a memoized function up
 f <- function(x) g(x)
 mf <- memoise(f)
 mf(1)
-## [1] 0.9391441 # Correct
-g <- function(x) {
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] 0.9391441 # Correct
+</code></pre>
+<pre><code>g <- function(x) {
   1e4*x + rnorm(1)
 }
 mf(1)
-## [1] 0.9391441 # Memoise does not know that g() changed!
-forget(mf) # Throw away old results, get the next one from scratch.
-## [1] TRUE
-mf(1)
-## [1] 9999.867 # Correct
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] 0.9391441 # Memoise does not know that g() changed!
+</code></pre>
+<pre><code>forget(mf) # Throw away old results, get the next one from scratch.
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] TRUE
+</code></pre>
+<pre><code>mf(1)
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] 9999.867 # Correct
 </code></pre>
 
 Fortunately, in the <a href="https://CRAN.R-project.org/package=memoise">memoise package</a>, you can manually force `mf()` to react to changes to `g()`.
 
 <pre><code>mf = memoise(f, ~g)
 mf(1)
-## [1] 10000.56
-mf(1)
-## [1] 10000.56
-g <- function(x) { 
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] 10000.56
+</code></pre>
+<pre><code>mf(1)
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] 10000.56
+</code></pre>
+<pre><code>g <- function(x) { 
   2*x + rnorm(1)
 }
 mf(1)
-## [1] 0.08486043
-mf(1)
-## [1] 0.08486043
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] 0.08486043
+</code></pre>
+<pre><code>mf(1)
+</code></pre>
+<pre style = "background: transparent"><code style = "background: transparent">## [1] 0.08486043
 </code></pre>
 
 To look for the immediate dependencies of a function, you can use `findGlobals()` from <a href="http://homepage.divms.uiowa.edu/~luke/">Luke Tierney</a>'s long-established <a href="https://CRAN.R-project.org/package=codetools">codetools</a> package. Alternatively, <a href="https://CRAN.R-project.org/package=CodeDepends">CodeDepends</a> is a more recent effort by <a href="https://github.com/gmbecker">Gabe Becker</a>, <a href="https://github.com/duncantl">Duncan Temple Lang</a>, and others, and it <a href="https://cran.r-project.org/package=CodeDepends/vignettes/intro.html">goes beyond simply finding dependencies</a>. Whatever tool you use, just keep in mind that no static code analysis tool is perfect, and dependencies like `g()` may have dependencies of their own.
