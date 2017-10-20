@@ -101,7 +101,7 @@ I can run top and look at the NI column of the default table.</p>
 
 <p>To get <code>nice</code> to work, you may have to change your default
 shell to <code>bash</code>. If you're at Iowa State, you can follow
-the instructions in the September 9, 2014 edit of <a href="http://will-landau.com/2013/08/13/Rversion">
+the instructions in the September 9, 2014 edit of <a href="http://wlandau.github.io/2013/08/13/Rversion">
 this post</a>. Otherwise, contact your institution or follow a guide like
 <a href="http://stackoverflow.com/questions/13046192/changing-default-shell-in-linux">
 this one</a>.</p>
