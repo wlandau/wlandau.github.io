@@ -22,7 +22,7 @@ layout: default
       document.write("<{{ site.blinda }} href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</{{ site.blinda }}>");
     </script>
   </li>
-  <li><{{ site.blinda }} href="http://will-landau.com">will-landau.com</{{ site.blinda }}></li>
+  <li><{{ site.blinda }} href="http://wlandau.github.io">wlandau.github.io</{{ site.blinda }}></li>
   <li><{{ site.blinda }} href="http://linkedin.com/in/wlandau">linkedin.com/in/wlandau</{{ site.blinda }}></li>
   <li><{{ site.blinda }} href="http://github.com/wlandau">github.com/wlandau</{{ site.blinda }}></li>
 </ul>
@@ -78,24 +78,24 @@ layout: default
 R package to distribute the analysis method.
 - Implemented and distributed parallel computing backends for [CUDA GPUs](https://developer.nvidia.com/about-cuda) (<{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</{{ site.blinda }}>) and [OpenMP](https://en.wikipedia.org/wiki/OpenMP) (<{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</{{ site.blinda }}>).
 - Created the 
-<{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/remakeGenerator">remakeGenerator</{{ site.blinda }}>, 
-<{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/parallelRemake">parallelRemake</{{ site.blinda }}>, and 
-<{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/downsize">downsize</{{ site.blinda }}> packages to manage, ameliorate, expedite, and accelerate computationally heavy reproducible workflows that are under heavy development.
+<{{ site.blinda }} class="{{ site.blind }}" href="http://wlandau.github.io/remakeGenerator">remakeGenerator</{{ site.blinda }}>, 
+<{{ site.blinda }} class="{{ site.blind }}" href="http://wlandau.github.io/parallelRemake">parallelRemake</{{ site.blinda }}>, and 
+<{{ site.blinda }} class="{{ site.blind }}" href="http://wlandau.github.io/downsize">downsize</{{ site.blinda }}> packages to manage, ameliorate, expedite, and accelerate computationally heavy reproducible workflows that are under heavy development.
 
 
 ## Seminar instructor
 
 - **Aug - Dec, 2012 and 2013**.
 - Department of Statistics, [Iowa State University](http://www.iastate.edu).
-- [GPU computing](http://www.nvidia.com/object/what-is-gpu-computing.html) seminar series at <{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/gpu">will-landau.com/gpu</{{ site.blinda }}>.
+- [GPU computing](http://www.nvidia.com/object/what-is-gpu-computing.html) seminar series at <{{ site.blinda }} class="{{ site.blind }}" href="http://wlandau.github.io/gpu">wlandau.github.io/gpu</{{ site.blinda }}>.
 - Educated faculty and graduate students on massively parallel computing with [general-purpose graphics processing units](http://www.nvidia.com/object/what-is-gpu-computing.html).
-- Constructed, curated, and distributed slides, video, and example code at <{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/gpu">will-landau.com/gpu</{{ site.blinda }}> and on <{{ site.blinda }} href="https://www.youtube.com/watch?v=VL3qbqA_Xco&list=PLs5XGFlsJ8Wi635Ig2QX3dbmJCNpss4aT">YouTube</{{ site.blinda }}>.
+- Constructed, curated, and distributed slides, video, and example code at <{{ site.blinda }} class="{{ site.blind }}" href="http://wlandau.github.io/gpu">wlandau.github.io/gpu</{{ site.blinda }}> and on <{{ site.blinda }} href="https://www.youtube.com/watch?v=VL3qbqA_Xco&list=PLs5XGFlsJ8Wi635Ig2QX3dbmJCNpss4aT">YouTube</{{ site.blinda }}>.
 
 
 ## Course instructor
 - **Jan - May, 2012 and 2013**.
 - Department of Statistics, [Iowa State University](http://www.iastate.edu).
-- STAT 305: Engineering Statistics (<{{ site.blinda }} class="{{ site.blind }}" href="http://will-landau.com/stat305/">will-landau.com/stat305</{{ site.blinda }}>).
+- STAT 305: Engineering Statistics (<{{ site.blinda }} class="{{ site.blind }}" href="http://wlandau.github.io/stat305/">wlandau.github.io/stat305</{{ site.blinda }}>).
 
 ## Grader
 - **Aug - Dec, 2011**.
