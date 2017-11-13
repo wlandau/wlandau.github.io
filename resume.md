@@ -45,8 +45,15 @@ layout: default
 - <b class="{{ site.blind }}">Landau, W.</b> and Niemi, J., "A fully Bayesian strategy for high-dimensional hierarchical modeling using massively parallel computing," submitted to the *Journal of Computational and Graphical Statistics* on March 8, 2016. Preprint available at 
 <{{ site.blinda }} href="http://arxiv.org/abs/1606.06659">arxiv.org</{{ site.blinda }}>.
 
+## Open Source Software
+
+- <{{ site.blinda }} href="https://github.com/wlandau-lilly/drake">drake</{{ site.blinda }}>, a solution in R for reproducibility and high-performance computing. Currently  <{{ site.blinda }} href="https://github.com/ropensci/onboarding/issues/156">under review</{{ site.blinda }}> by <a href="https://ropensci.org">rOpenSci</a>.
+- <{{ site.blinda }} href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}>, and R package to toggle between the test and production versions of large workflows.
+- Infrastructure-related R package utilities <{{ site.blinda }} href="https://github.com/wlandau-lilly/eply">eply</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/grapes">grapes</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/wildcard">wildcard</{{ site.blinda }}>.
+
 ## Awards
 
+- 2017 Lilly Innovator Award. During my first year at Lilly, I created and led a successful campaign to transform the company's open source software policies and procedures.
 - <{{ site.blinda }} href="http://stat-computing.org/awards/student/winners.html">Student Paper Award</{{ site.blinda }}>, American Statistical Association Section on Statistical Computing, Jan 2016. Awarded for an early draft of the preprint at <{{ site.blinda }} class="{{ site.blind }}" href="http://arxiv.org/abs/1606.06659">arxiv.org/abs/1606.06659</{{ site.blinda }}>.
 - [Vince Sposito Statistical Computing Award](https://stat.iastate.edu/graduate-financial-support), Iowa State University, Aug 2013.
 - [GlaxoSmithKline Industrial Scholarship](https://stat.iastate.edu/graduate-financial-support), Iowa State University, Sep 2011.
@@ -55,17 +62,18 @@ layout: default
 ## Skills
 
 - Reproducible research, hierarchical models, Bayesian methods, Markov chain Monte Carlo, statistical computing, high-dimensional data analysis, genomics data analysis, exploratory analysis, visualization, linear and nonlinear models, data mining, machine learning, predictive modeling, multivariate analysis.
-- Parallel computing, high-performance computing, general-purpose graphics processing unit (GPU) computing, R, R package development, Rcpp, C/C++, CUDA C/C++, MPI, OpenMP, shell scripting, Python, JavaScript, AWK, Fortran, Markdown, LaTeX, knitr, ioslides, HTML, CSS.
+- High-performance computing, R, R package development, general-purpose graphics processing unit (GPU) computing, CUDA, shell scripting, LaTeX, HTML, CSS.
+- Past experience with C/C++, MPI, OpenMP, Python, JavaScript, AWK, Fortran.
 
 ## Research scientist
 - **October 2016 - Present**
 - [Eli Lilly and Company](http://www.lilly.com)
 - Advanced Analytics Immunology Hub
-- Used data mining to help tailor new treatments of autoimmune diseases to patients.
-- Simulated entire pipelines of clinical trials to predict the efficacy of immunology treatments under development.
-- Created an interactive tool to turn clinical trial simulation data into actionable knowledge for planning real-world trials.
-- Created <{{ site.blinda }} class="{{ site.blind }}" href="https://cran.r-project.org/web/packages/drake/vignettes/drake.html">drake</{{ site.blinda }}>, an R package on <a href="https://cran.r-project.org/">CRAN</a> that efficiently manages reproducible workflows and provides easy access to multiple modes of high-performance computing.
-- Created <{{ site.blinda }} class="{{ site.blind }}" href="https://cran.r-project.org/web/packages/eply/vignettes/eply.html">eply</{{ site.blinda }}>, and R package on <a href="https://cran.r-project.org/">CRAN</a> that evaluates code chunks in bulk in a controlled environment.
+- Used tree-based algorithms to help tailor new treatments of autoimmune diseases to patients.
+- Used modeling and simulation to help teams optimize clinical trial pipelines.
+- Created interactive R-powered web applications to deliver cogent real-time insights to clinical teams.
+- Created <{{ site.blinda }} class="{{ site.blind }}" href="https://cran.r-project.org/web/packages/drake/vignettes/drake.html">drake</{{ site.blinda }}>, an R package on <a href="https://cran.r-project.org/">CRAN</a> for reproducibility and high-performance computing. Currently  <{{ site.blinda\
+ }} href="https://github.com/ropensci/onboarding/issues/156">under review</{{ site.blinda }}> by <a href="https://ropensci.org">rOpenSci</a>.
 
 ## Research assistant
 - **May 2013 - Aug 2016**
