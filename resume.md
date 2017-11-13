@@ -72,7 +72,7 @@ layout: default
 - Used tree-based algorithms to help tailor new treatments of autoimmune diseases to patients.
 - Used modeling and simulation to help teams optimize clinical trial pipelines.
 - Created interactive R-powered web applications to deliver cogent real-time insights to clinical teams.
-- Created <{{ site.blinda }} class="{{ site.blind }}" href="https://cran.r-project.org/web/packages/drake/vignettes/drake.html">drake</{{ site.blinda }}>, an R package on <a href="https://cran.r-project.org/">CRAN</a> for reproducibility and high-performance computing. Currently  <{{ site.blinda\
+- Created <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau-lilly/drake">drake</{{ site.blinda }}>, an R package for reproducibility and high-performance computing. Currently  <{{ site.blinda\
  }} href="https://github.com/ropensci/onboarding/issues/156">under review</{{ site.blinda }}> by <a href="https://ropensci.org">rOpenSci</a>.
 
 ## Research assistant
