@@ -3,8 +3,8 @@ layout: page
 title:  Reproduciblity and high-performance computing
 ---
 
-- [drake](https://CRAN.R-project.org/package=drake) A scalable solution for reproducibility and high-performance computing.
-- [downsize](https://CRAN.R-project.org/package=downsize) Ease the transition between testing and deployment.
+- [drake](https://wlandau-lilly.github.io/drake/) Save time, stay reproducible, and scale up.
+- [downsize](https://CRAN.R-project.org/package=downsize) Ease the transition between testing and deploying data analysis workflows.
 
 ## Support for [remake](https://github.com/richfitz/remake)
 
@@ -13,8 +13,9 @@ title:  Reproduciblity and high-performance computing
 
 ## Utilities
 
-- [grapes](https://CRAN.R-project.org/package=grapes) Turn functions into binary operators.
 - [eply](https://CRAN.R-project.org/package=eply) Like `apply()`, but for processing batches of quoted expressions.
+- [grapes](https://CRAN.R-project.org/package=grapes) Turn functions into binary operators.
+- [wildcard](https://CRAN.R-project.org/package=wildcard) Generate data frames from templates.
 
 ## Dissertation research
 
