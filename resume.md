@@ -47,9 +47,9 @@ layout: default
 
 ## Open Source Software
 
-- <{{ site.blinda }} href="https://github.com/wlandau-lilly/drake">drake</{{ site.blinda }}>, a solution in R for reproducibility and high-performance computing. Currently  <{{ site.blinda }} href="https://github.com/ropensci/onboarding/issues/156">under review</{{ site.blinda }}> by <a href="https://ropensci.org">rOpenSci</a>.
+- <{{ site.blinda }} href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, a solution in R for reproducibility and high-performance computing. Currently  <{{ site.blinda }} href="https://github.com/ropensci/onboarding/issues/156">under review</{{ site.blinda }}> by <a href="https://ropensci.org">rOpenSci</a>.
 - <{{ site.blinda }} href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}>, and R package to toggle between the test and production versions of large workflows.
-- Infrastructure-related R package utilities <{{ site.blinda }} href="https://github.com/wlandau-lilly/eply">eply</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/grapes">grapes</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/wildcard">wildcard</{{ site.blinda }}>.
+- Infrastructure-related R package utilities <{{ site.blinda }} href="https://github.com/ropensci/eply">eply</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/grapes">grapes</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/wildcard">wildcard</{{ site.blinda }}>.
 
 ## Awards
 
@@ -72,7 +72,7 @@ layout: default
 - Used tree-based algorithms to help tailor new treatments of autoimmune diseases to patients.
 - Used modeling and simulation to help teams optimize clinical trial pipelines.
 - Created interactive R-powered web applications to deliver cogent real-time insights to clinical teams.
-- Created <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau-lilly/drake">drake</{{ site.blinda }}>, an R package for reproducibility and high-performance computing. Currently  <{{ site.blinda\
+- Created <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, an R package for reproducibility and high-performance computing. Currently  <{{ site.blinda\
  }} href="https://github.com/ropensci/onboarding/issues/156">under review</{{ site.blinda }}> by <a href="https://ropensci.org">rOpenSci</a>.
 
 ## Research assistant

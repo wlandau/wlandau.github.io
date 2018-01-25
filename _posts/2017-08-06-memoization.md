@@ -155,5 +155,5 @@ But even then, you should avoid calling the same memoized function on the same i
 ## Other solutions
 
 <p>
-<a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they automatically account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. There already exist <a href="https://github.com/wlandau-lilly/drake">Make-like packages just for R</a>.
+<a href="https://www.gnu.org/software/make/">Make</a> and its spinoffs resemble <a href="https://CRAN.R-project.org/package=memoise">memoise</a>, but go they extra mile: they automatically account for dependencies and unlock <a href="https://en.wikipedia.org/wiki/Implicit_parallelism">implicit parallel computing</a>. There already exist <a href="https://github.com/ropensci/drake">Make-like packages just for R</a>.
 </p>
