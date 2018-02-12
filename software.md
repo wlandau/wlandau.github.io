@@ -3,7 +3,7 @@ layout: page
 title:  Reproduciblity and high-performance computing
 ---
 
-- [drake](https://ropensci.github.io/drake/) Save time, stay reproducible, and scale up.
+- [drake](https://ropensci.github.io/drake/) Save time, stay reproducible, and scale up. Featured in the [rOpenSci blog](https://ropensci.org/blog/2018/02/06/drake/) and [R Podcast Episode 22](https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/).
 - [downsize](https://CRAN.R-project.org/package=downsize) Ease the transition between testing and deploying data analysis workflows.
 
 ## Support for [remake](https://github.com/richfitz/remake)
