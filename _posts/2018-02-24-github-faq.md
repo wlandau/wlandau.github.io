@@ -5,11 +5,6 @@ tags:
   - R
 ---
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
-```
-
 For a GitHub repository, the [issue tracker](https://help.github.com/articles/about-issues/) is a searchable online forum where the community can ask questions and discuss development. Issue trackers are great because they help make projects self-documenting. For even more convenience, we can scrape the issues to programmatically generate an FAQ.
 
 1. [Label](https://help.github.com/articles/about-labels/) your favorite issues as frequently asked questions.
