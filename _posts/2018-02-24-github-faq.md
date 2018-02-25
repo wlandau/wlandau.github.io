@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An automated FAQ for a GitHub repo"
+title: "An automated FAQ for an R package on GitHub"
 tags: 
   - R
 ---
