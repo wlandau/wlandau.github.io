@@ -5,24 +5,23 @@ tags:
   - R
 ---
 
-For a GitHub repository, the [issue tracker](https://help.github.com/articles/about-issues/) is a searchable online forum where the community can ask questions and discuss development. Issue trackers are great because they help make projects self-documenting. For even more convenience, we can scrape the issues to programmatically generate an FAQ.
+For a GitHub repository, the [issue tracker](https://help.github.com/articles/about-issues/) is a searchable online forum where the community can ask questions and discuss development. Issue trackers are great because they help make projects self-documenting. For even more convenience, we can scrape the issues with code to generate an FAQ. Steps:
 
 1. [Label](https://help.github.com/articles/about-labels/) your favorite issues as frequently asked questions.
 1. Scrape these FAQ issues from the tracker using [GitHub's REST API](https://developer.github.com/v3/).
-1. Create a text of links to the FAQ issues.
+1. Create a text vector of links to the FAQ issues.
 
-Let's take my favorite project as an example: the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>. Here, I flagged <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">several issues with the label, "frequently asked question"</a>, some open and some closed. I periodically run the R script, <a href="https://github.com/ropensci/drake/blob/master/docs.R">docs.R</a>, which generates an <a href="https://github.com/ropensci/drake/blob/master/vignettes/faq.Rmd">FAQ vignette</a>. With the <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code> package </a>, this vignette becomes an <a href="https://ropensci.github.io/drake/articles/faq.html">online index</a> to the original issues.
+Let's take my favorite project as an example: the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>. Here, I flagged <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">several issues with the label "frequently asked question"</a>. I periodically run the R script <a href="https://github.com/ropensci/drake/blob/master/docs.R">docs.R</a> to generate an <a href="https://github.com/ropensci/drake/blob/master/vignettes/faq.Rmd">FAQ vignette</a>. With the <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code> package </a>, this vignette becomes an <a href="https://ropensci.github.io/drake/articles/faq.html">online index</a> to the original issues.
 
-The FAQ-generating code uses the <a href="https://github.com/r-lib/gh"><code>gh</code> package</a>
+The FAQ-generating code uses the <a href="https://github.com/r-lib/gh"><code>gh</code> package</a>.
 
 <pre><code>library(tidyverse)
 library(gh)
 </code></pre>
 
-and I define a couple supporting functions below. The tidyverse has more elegant solutions, but I am behind the curve.
+I define a couple supporting functions below. The tidyverse has more elegant solutions, but I am behind the curve.
 
-<pre><code>
-is_faq <- function(label){
+<pre><code>is_faq <- function(label){
   identical(label$name, "frequently asked question")
 }
 
@@ -35,13 +34,12 @@ Next, I scrape the issue tracker to get a list of FAQ issues.
 
 <pre><code>faq <- gh(
   "GET /repos/ropensci/drake/issues?state=all",
-  .limit = Inf,
-  .token = token
+  .limit = Inf
 ) %>%
   Filter(f = any_faq_label)
 </code></pre>
 
-I quickly hit my limit of <code>gh()</code> queries, so I followed <a href="https://gist.github.com/christopheranderton/8644743">this guide</a> to get a personal access token. Adding <code>Sys.setenv(GITHUB_TOKEN ="YOURAPITOKENWITHFUNKYNUMBERSHERE")</code> to my <code>.Rprofile</code> file solved the problem. (<code>"YOURAPITOKENWITHFUNKYNUMBERSHERE"</code> is not my actual token.)
+I quickly hit my limit of <code>gh()</code> queries, so I followed <a href="https://gist.github.com/christopheranderton/8644743">this guide</a> to get a personal access token. Adding <code>Sys.setenv(GITHUB_TOKEN ="YOURAPITOKENWITHFUNKYNUMBERSHERE")</code> to my <code>.Rprofile</code> file seems to have solved the problem. The <code>gh()</code> function also has a <code>.token</code> argument. (<code>"YOURAPITOKENWITHFUNKYNUMBERSHERE"</code> is not my actual token.)
 
 Next, I created a text vector of links to the actual issues.
 
@@ -74,6 +72,8 @@ writeLines(c("", links), con)
 close(con)
 </code></pre>
 
-Because the FAQ is an R package vignette, <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code></a> automatically turns it into a <a href="https://ropensci.github.io/drake/articles/faq.html">webpage "article"</a>. Some <a href="">extra lines in <code>drake</code>'s <code>_pkgdown.yml</code> file</a> add "FAQ" to the navbar of the <a href="https://ropensci.github.io/drake/index.html">documentation website</a>.
+Because the FAQ is an R package vignette, <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code></a> automatically turns it into a <a href="https://ropensci.github.io/drake/articles/faq.html">webpage "article"</a>. Some <a href="https://github.com/ropensci/drake/blob/65023735e670ac11f647f5893511b6c2381e78b7/_pkgdown.yml#L13">extra lines in <code>drake</code>'s <code>_pkgdown.yml</code> file</a> add "FAQ" to the navbar of the <a href="https://ropensci.github.io/drake/index.html">documentation website</a>.
 
 This technique adds convenience and automation, but it is tough to set up from the beginning. I think I will nudge GitHub to support self-generating FAQs natively.
+
+Thanks to <a href="https://github.com/jennybc">Jenny Bryan</a>, <a href="https://github.com/maelle">Mäelle Salmon</a>, <a href="https://github.com/noamross">Noam Ross</a>, and <a href="https://github.com/jekriske">Jeff Kriske</a> for pointing me to the great tools to interact with the GitHub API.
