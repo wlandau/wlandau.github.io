@@ -45,7 +45,7 @@ Next, I scrape the issue tracker to get a list of FAQ issues.
 
 I quickly hit my limit of <code>gh()</code> queries, so I followed <a href="https://gist.github.com/christopheranderton/8644743">this guide</a> to get a personal access token. Adding <code>Sys.setenv(GITHUB_TOKEN ="YOURAPITOKENWITHFUNKYNUMBERSHERE")</code> to my <code>.Rprofile</code> file seems to have solved the problem. The <code>gh()</code> function also has a <code>.token</code> argument. (<code>"YOURAPITOKENWITHFUNKYNUMBERSHERE"</code> is not my actual token.)
 
-Next, I created a text vector of links to the actual issues.
+Next, I create a text vector of links to the actual issues.
 
 <pre><code>combine_fields <- function(lst, field){
   map_chr(lst, function(x){
@@ -57,7 +57,7 @@ urls <- combine_fields(faq, "html_url")
 links <- paste0("- [", titles, "](", urls, ")")
 </code></pre>
 
-Finally, I moved <a href="https://github.com/ropensci/drake/blob/master/inst/stubs/faq.Rmd">this FAQ stub</a> to the <a href="https://github.com/ropensci/drake/tree/master/vignettes">vignettes folder</a> and appended the links.
+Finally, I move <a href="https://github.com/ropensci/drake/blob/master/inst/stubs/faq.Rmd">this FAQ stub</a> to the <a href="https://github.com/ropensci/drake/tree/master/vignettes">vignettes folder</a> and append the links.
 
 <pre><code>starter <- system.file(
   file.path("stubs", "faq.Rmd"),
