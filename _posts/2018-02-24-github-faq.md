@@ -17,7 +17,7 @@ In the <a href = "https://github.com/">GitHub</a> repo of the <a href="https://g
 
 <h3>The code</h3>
 
-The FAQ-generating code uses the <a href="https://github.com/r-lib/gh"><code>gh</code> package</a> to interact with GitHub.
+I use the <a href="https://github.com/r-lib/gh"><code>gh</code> package</a> to interact with GitHub.
 
 <pre><code>library(gh)
 library(tidyverse)
