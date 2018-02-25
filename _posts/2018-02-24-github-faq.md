@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Auto-generated FAQs for GitHub repos"
+title: "Automated FAQs for GitHub repos"
 tags: 
   - R
 ---
@@ -78,7 +78,7 @@ close(con)
 
 Because the FAQ is an R package vignette, <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code></a> automatically turns it into a <a href="https://ropensci.github.io/drake/articles/faq.html">webpage "article"</a>. Some <a href="https://github.com/ropensci/drake/blob/65023735e670ac11f647f5893511b6c2381e78b7/_pkgdown.yml#L13">extra lines in <code>drake</code>'s <code>_pkgdown.yml</code> file</a> add "FAQ" to the navbar of the <a href="https://ropensci.github.io/drake/index.html">documentation website</a>.
 
-This technique adds convenience and automation, but it is tough to set up from the beginning. I think I may nudge <a href="http://github.com/">GitHub</a> to support auto-generated FAQs natively.
+This technique adds convenience and automation, but it is tough to set up from the beginning. I think I may nudge <a href="http://github.com/">GitHub</a> to support automated FAQs natively.
 
 <h3>Thanks</h3>
 
