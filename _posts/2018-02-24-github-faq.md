@@ -13,7 +13,7 @@ For a GitHub repository, the [issue tracker](https://help.github.com/articles/ab
 
 <h3>An example</h3>
 
-In the GitHub repo of the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>, I flagged <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">several issues with the label "frequently asked question"</a>. I periodically run the R script <a href="https://github.com/ropensci/drake/blob/master/docs.R">docs.R</a> to generate an <a href="https://github.com/ropensci/drake/blob/master/vignettes/faq.Rmd">FAQ vignette</a>. With the <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code> package </a>, this vignette becomes an <a href="https://ropensci.github.io/drake/articles/faq.html">online index</a> to the original issues.
+In the GitHub repo of the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>, I flag <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">pedagogically useful issues with the "frequently asked question" label</a>. I periodically run <a href="https://github.com/ropensci/drake/blob/master/docs.R">docs.R</a> to generate an <a href="https://github.com/ropensci/drake/blob/master/vignettes/faq.Rmd">FAQ vignette</a> (along with the <a href="https://ropensci.github.io/drake/">documentation website</a>). With the <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code> package </a>, this vignette becomes an <a href="https://ropensci.github.io/drake/articles/faq.html">online index</a> to the original issues.
 
 <h3>The code</h3>
 
