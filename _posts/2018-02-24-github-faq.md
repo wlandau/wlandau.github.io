@@ -11,7 +11,11 @@ For a GitHub repository, the [issue tracker](https://help.github.com/articles/ab
 1. Scrape these FAQ issues from the tracker using [GitHub's REST API](https://developer.github.com/v3/).
 1. Create a text vector of links to the FAQ issues.
 
-Let's take my favorite project as an example: the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>. Here, I flagged <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">several issues with the label "frequently asked question"</a>. I periodically run the R script <a href="https://github.com/ropensci/drake/blob/master/docs.R">docs.R</a> to generate an <a href="https://github.com/ropensci/drake/blob/master/vignettes/faq.Rmd">FAQ vignette</a>. With the <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code> package </a>, this vignette becomes an <a href="https://ropensci.github.io/drake/articles/faq.html">online index</a> to the original issues.
+<h3>An example</h3>
+
+In the GitHub repo of the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>, I flagged <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">several issues with the label "frequently asked question"</a>. I periodically run the R script <a href="https://github.com/ropensci/drake/blob/master/docs.R">docs.R</a> to generate an <a href="https://github.com/ropensci/drake/blob/master/vignettes/faq.Rmd">FAQ vignette</a>. With the <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code> package </a>, this vignette becomes an <a href="https://ropensci.github.io/drake/articles/faq.html">online index</a> to the original issues.
+
+<h3>The code</h3>
 
 The FAQ-generating code uses the <a href="https://github.com/r-lib/gh"><code>gh</code> package</a>.
 
@@ -75,5 +79,7 @@ close(con)
 Because the FAQ is an R package vignette, <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code></a> automatically turns it into a <a href="https://ropensci.github.io/drake/articles/faq.html">webpage "article"</a>. Some <a href="https://github.com/ropensci/drake/blob/65023735e670ac11f647f5893511b6c2381e78b7/_pkgdown.yml#L13">extra lines in <code>drake</code>'s <code>_pkgdown.yml</code> file</a> add "FAQ" to the navbar of the <a href="https://ropensci.github.io/drake/index.html">documentation website</a>.
 
 This technique adds convenience and automation, but it is tough to set up from the beginning. I think I will nudge GitHub to support self-generating FAQs natively.
+
+<h3>Thanks/h3>
 
 Thanks to <a href="https://github.com/jennybc">Jenny Bryan</a>, <a href="https://github.com/maelle">Mäelle Salmon</a>, <a href="https://github.com/noamross">Noam Ross</a>, and <a href="https://github.com/jekriske">Jeff Kriske</a> for pointing me to the great tools to interact with the GitHub API.
