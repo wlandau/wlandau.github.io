@@ -9,7 +9,7 @@ For a <a href = "https://github.com/">GitHub</a> repository, the [issue tracker]
 
 1. [Label](https://help.github.com/articles/about-labels/) your favorite issues as frequently asked questions.
 1. Scrape these labeled issues from the tracker using [GitHub's REST API](https://developer.github.com/v3/).
-1. Compile an index of links to the original issues.
+1. Use code to compile an index of links to the original issues.
 
 <h3>Example</h3>
 
