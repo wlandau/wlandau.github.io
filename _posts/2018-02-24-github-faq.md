@@ -80,6 +80,6 @@ Because the FAQ is an R package vignette, <a href="https://github.com/r-lib/pkgd
 
 This technique adds convenience and automation, but it is tough to set up from the beginning. I think I will nudge GitHub to support self-generating FAQs natively.
 
-<h3>Thanks/h3>
+<h3>Thanks</h3>
 
 Thanks to <a href="https://github.com/jennybc">Jenny Bryan</a>, <a href="https://github.com/maelle">Mäelle Salmon</a>, <a href="https://github.com/noamross">Noam Ross</a>, and <a href="https://github.com/jekriske">Jeff Kriske</a> for pointing me to the great tools to interact with the GitHub API.
