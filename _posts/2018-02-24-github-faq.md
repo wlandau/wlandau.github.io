@@ -11,11 +11,11 @@ For a <a href = "https://github.com/">GitHub</a> repository, the [issue tracker]
 1. Scrape these labeled issues from the tracker using [GitHub's REST API](https://developer.github.com/v3/).
 1. Compile an index of links to the original issues.
 
-<h3>An example</h3>
+<h3>Example</h3>
 
 In the <a href = "https://github.com/">GitHub</a> repo of the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>, I flag pedagogically useful issues with the <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">"frequently asked question" label</a>. I periodically run <a href="https://github.com/ropensci/drake/blob/master/docs.R">docs.R</a> to generate an <a href="https://github.com/ropensci/drake/blob/master/vignettes/faq.Rmd">FAQ vignette</a> and turn it into an <a href="https://ropensci.github.io/drake/articles/faq.html">online index</a> of links to the original issues.
 
-<h3>The code</h3>
+<h3>Code</h3>
 
 I use the <a href="https://github.com/r-lib/gh"><code>gh</code> package</a> to interact with GitHub.
 
