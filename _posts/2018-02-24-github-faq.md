@@ -8,8 +8,8 @@ tags:
 For a <a href = "https://github.com/">GitHub</a> repository, the [issue tracker](https://help.github.com/articles/about-issues/) is a searchable online forum where the community can ask questions and discuss development. Issue trackers are great because they help make projects self-documenting. For even more convenience, we can write some code to automatically generate an FAQ. Steps:
 
 1. [Label](https://help.github.com/articles/about-labels/) your favorite issues as frequently asked questions.
-1. Scrape these FAQ issues from the tracker using [GitHub's REST API](https://developer.github.com/v3/).
-1. Create a text vector of links to the FAQ issues.
+1. Scrape these labeled issues from the tracker using [GitHub's REST API](https://developer.github.com/v3/).
+1. Compile an index of links to the original issues.
 
 <h3>An example</h3>
 
