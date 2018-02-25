@@ -82,4 +82,4 @@ This technique adds convenience and automation, but it is tough to set up from t
 
 <h3>Thanks</h3>
 
-Thanks to <a href="https://github.com/jennybc">Jenny Bryan</a>, <a href="https://github.com/maelle">Mäelle Salmon</a>, <a href="https://github.com/noamross">Noam Ross</a>, and <a href="https://github.com/jekriske">Jeff Kriske</a> for pointing me to the great tools to interact with the GitHub API.
+Thanks to <a href="https://github.com/jennybc">Jenny Bryan</a>, <a href="https://github.com/maelle">Mäelle Salmon</a>, <a href="https://github.com/noamross">Noam Ross</a>, and <a href="https://github.com/jekriske">Jeff Kriske</a> for pointing me to great tools for interacting with the GitHub API.
