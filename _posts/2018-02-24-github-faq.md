@@ -43,7 +43,7 @@ Next, I scrape the issue tracker to get a list of FAQ issues.
   Filter(f = any_faq_label)
 </code></pre>
 
-I quickly hit my limit of <code>gh()</code> queries, so I followed <a href="https://gist.github.com/christopheranderton/8644743">this guide</a> to get a personal access token. Adding <code>Sys.setenv(GITHUB_TOKEN ="YOURAPITOKENWITHFUNKYNUMBERSHERE")</code> to my <code>.Rprofile</code> file seems to have solved the problem. The <code>gh()</code> function also has a <code>.token</code> argument. (<code>"YOURAPITOKENWITHFUNKYNUMBERSHERE"</code> is not my actual token.)
+I quickly hit my limit of <code>gh()</code> queries, and <a href="https://gist.github.com/christopheranderton/8644743">this guide</a> explains how to obtain a personal access token. Adding <code>Sys.setenv(GITHUB_TOKEN ="YOURAPITOKENWITHFUNKYNUMBERSHERE")</code> to my <code>.Rprofile</code> file seems to solve the problem. The <code>gh()</code> function also has a <code>.token</code> argument. (<code>"YOURAPITOKENWITHFUNKYNUMBERSHERE"</code> is not my actual token.)
 
 Next, I create a text vector of links to the actual issues.
 
