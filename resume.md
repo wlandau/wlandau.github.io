@@ -48,13 +48,14 @@ layout: default
 
 ## Open Source Software
 
-- <{{ site.blinda }} href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, a solution in R for reproducibility and high-performance computing. Currently  <{{ site.blinda }} href="https://github.com/ropensci/onboarding/issues/156">under review</{{ site.blinda }}> by <a href="https://ropensci.org">rOpenSci</a>.
+- <{{ site.blinda }} href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, an R-focused workflow manager for reproducibility and high-performance computing. Part of [rOpenSci](https://ropensci.org/).
 - <{{ site.blinda }} href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}>, and R package to toggle between the test and production versions of large workflows.
-- Infrastructure-related R package utilities <{{ site.blinda }} href="https://github.com/ropensci/eply">eply</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/grapes">grapes</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/wildcard">wildcard</{{ site.blinda }}>.
+- R packages <{{ site.blinda }} href="https://github.com/wlandau/fbseq">fbseq</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</{{ site.blinda }}> from dissertation research.
+- R utilities <{{ site.blinda }} href="https://github.com/wlandau/eply">eply</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/grapes">grapes</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/wildcard">wildcard</{{ site.blinda }}>.
 
 ## Awards
 
-- 2017 Lilly Innovator Award. During my first year at Lilly, I created and led a successful campaign to transform the company's open source software policies and procedures.
+- 2017 Lilly Innovator Award. Awarded for leading a successful team effort to modernize Lilly's internal process for contributing open source software.
 - <{{ site.blinda }} href="http://stat-computing.org/awards/student/winners.html">Student Paper Award</{{ site.blinda }}>, American Statistical Association Section on Statistical Computing, Jan 2016. Awarded for an early draft of the preprint at <{{ site.blinda }} class="{{ site.blind }}" href="http://arxiv.org/abs/1606.06659">arxiv.org/abs/1606.06659</{{ site.blinda }}>.
 - [Vince Sposito Statistical Computing Award](https://stat.iastate.edu/graduate-financial-support), Iowa State University, Aug 2013.
 - [GlaxoSmithKline Industrial Scholarship](https://stat.iastate.edu/graduate-financial-support), Iowa State University, Sep 2011.
@@ -66,15 +67,13 @@ layout: default
 - High-performance computing, R, R package development, general-purpose graphics processing unit (GPU) computing, CUDA, shell scripting, LaTeX, HTML, CSS.
 - Past experience with C/C++, MPI, OpenMP, Python, JavaScript, AWK, Fortran.
 
-## Research scientist
+## Research statistician
 - **October 2016 - Present**
 - [Eli Lilly and Company](http://www.lilly.com)
-- Advanced Analytics Immunology Hub
-- Used tree-based algorithms to help tailor new treatments of autoimmune diseases to patients.
-- Used modeling and simulation to help teams optimize clinical trial pipelines.
-- Created interactive R-powered web applications to deliver cogent real-time insights to clinical teams.
-- Created <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, an R package for reproducibility and high-performance computing. Currently  <{{ site.blinda\
- }} href="https://github.com/ropensci/onboarding/issues/156">under review</{{ site.blinda }}> by <a href="https://ropensci.org">rOpenSci</a>.
+- Helped design and plan early- and mid-phase clinical trials as the lead statistician for three new autoimmune therapies.
+- Supported late-phase clinical trial teams with advanced analytics, including clinical program simulation and tailored therapeutics.
+- Developed interactive [R Shiny](https://shiny.rstudio.com/) web applications to facilitate decision-making and simulation.
+- Created the <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/ropensci/drake">drake</{{ site.blinda }}> package to enhance reproducibility and high-performance computing in R.
 
 ## Research assistant
 - **May 2013 - Aug 2016**
@@ -112,6 +111,11 @@ R package to distribute the analysis method.
 - STAT 231: Engineering Probability.
 - STAT 105: Introduction to Engineering Statistics.
 
+## Leadership at Eli Lilly and Company
+
+- Led a successful team effort to modernize Lilly's internal procedure for contributing open source software.
+- Served as a volunteer moderator in the [2017 National Science Bowl (high school Indiana Regionals)](https://science.energy.gov/wdts/nsb/regional-competitions/high-school-regionals/in_indiana-regional-high-school-science-bowl/).
+
 ## Leadership at Iowa State University
 
 - Founder and leader, Cloud Computing Working Group, Sep - Dec 2015.
@@ -129,4 +133,4 @@ R package to distribute the analysis method.
 
 ## Hobbies
 
-- Sailing, windsurfing, climbing, CrossFit, Brazillian Jiu Jitsu.
+- Climbing, Brazillian Jiu Jitsu, sailing, windsurfing
