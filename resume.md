@@ -47,10 +47,10 @@ layout: default
 
 ## Open Source Software
 
-- <{{ site.blinda }} href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, an R-focused workflow manager for reproducibility and high-performance computing. Part of [rOpenSci](https://ropensci.org/).
+- <{{ site.blinda }} href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, an R-focused pipeline toolkit for reproducible computation and high-performance computing. Part of [rOpenSci](https://ropensci.org/).
 - <{{ site.blinda }} href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}>, and R package to toggle between the test and production versions of large workflows.
 - R packages <{{ site.blinda }} href="https://github.com/wlandau/fbseq">fbseq</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</{{ site.blinda }}> from dissertation research.
-- R utilities <{{ site.blinda }} href="https://github.com/wlandau/eply">eply</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/grapes">grapes</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/wildcard">wildcard</{{ site.blinda }}>.
+- R utilities <{{ site.blinda }} href="https://github.com/wlandau/eply">eply</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/grapes">grapes</{{ site.blinda }}>,  <{{ site.blinda }} href="https://github.com/wlandau/txtq">txtq</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/wildcard">wildcard</{{ site.blinda }}>.
 
 ## Awards
 
