@@ -1,9 +1,9 @@
 ---
 layout: page
-title:  Reproduciblity and high-performance computing
+title:  Reproducible computation and high-performance computing
 ---
 
-- [drake](https://github.com/ropensci/drake) R-focused workflow manager to save time and stay reproducible. Featured in the [rOpenSci blog](https://ropensci.org/blog/2018/02/06/drake/) and [R Podcast Episode 22](https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/).
+- [drake](https://github.com/ropensci/drake) an R-focused pipeline toolkit for data analysis projects. Featured in the [rOpenSci blog](https://ropensci.org/blog/2018/02/06/drake/) and [R Podcast Episode 22](https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/).
 - [downsize](https://github.com/wlandau/downsize) Ease the transition between testing and deploying data analysis workflows.
 
 ## Dissertation research
@@ -16,6 +16,7 @@ title:  Reproduciblity and high-performance computing
 
 - [eply](https://github.com/wlandau/eply) Like `apply()`, but for processing batches of quoted expressions.
 - [grapes](https:github.com/wlandau/grapes) Turn functions into binary operators.
+- [txtq](https://github.com/wlandau/txtq) A small message queue for parallel processes.
 - [wildcard](https://github.com/wlandau/wildcard) Generate data frames from templates.
 
 ## Support for [remake](https://github.com/richfitz/remake)
