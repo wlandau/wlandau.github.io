@@ -43,9 +43,9 @@ layout: default
 ## Open Source Software
 
 - <{{ site.blinda }} href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, an R-focused pipeline toolkit for reproducible computation and high-performance computing. Part of [rOpenSci](https://ropensci.org/).
+- <{{ site.blinda }} href="https://github.com/wlandau/txtq">txtq</{{ site.blinda }}>, a minimalist, serverless, socketless message queue for interprocess communication.
 - <{{ site.blinda }} href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}>, and R package to toggle between the test and production versions of large workflows.
-- R packages <{{ site.blinda }} href="https://github.com/wlandau/fbseq">fbseq</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</{{ site.blinda }}> from dissertation research.
-- R utilities <{{ site.blinda }} href="https://github.com/wlandau/eply">eply</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/grapes">grapes</{{ site.blinda }}>,  <{{ site.blinda }} href="https://github.com/wlandau/txtq">txtq</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/wildcard">wildcard</{{ site.blinda }}>.
+- R packages <{{ site.blinda }} href="https://github.com/wlandau/fbseq">fbseq</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</{{ site.blinda }}>. A toolkit for the fully Bayesian analysis of genomic count data.
 
 ## Awards
 
@@ -57,17 +57,17 @@ layout: default
 
 ## Skills
 
-- Reproducible research, hierarchical models, Bayesian methods, Markov chain Monte Carlo, statistical computing, high-dimensional data analysis, genomics data analysis, exploratory analysis, visualization, linear and nonlinear models, data mining, machine learning, predictive modeling, multivariate analysis.
+- Reproducible research, statistical computing, hierarchical models, Bayesian methods, Markov chain Monte Carlo, high-dimensional data analysis, genomics data analysis, exploratory analysis, visualization, linear and nonlinear models, data mining, machine learning, predictive modeling, multivariate analysis.
 - High-performance computing, R, R package development, general-purpose graphics processing unit (GPU) computing, CUDA, shell scripting, LaTeX, HTML, CSS.
 - Past experience with C/C++, MPI, OpenMP, Python, JavaScript, AWK, Fortran.
 
 ## Research statistician
 - **October 2016 - Present**
 - [Eli Lilly and Company](http://www.lilly.com)
-- Helped design and plan early- and mid-phase clinical trials as the lead statistician for three new autoimmune therapies.
+- Developed internal statistical tools and capabilities for the design, simulation, and analysis of clinical trials.
+- Served as the lead statistician in early-phase autoimmune asset teams.
 - Supported late-phase clinical trial teams with advanced analytics, including clinical program simulation and tailored therapeutics.
-- Developed interactive [R Shiny](https://shiny.rstudio.com/) web applications to facilitate decision-making and simulation.
-- Created the <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/ropensci/drake">drake</{{ site.blinda }}> package to enhance reproducibility and high-performance computing in R.
+- Published open-source software packages <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/ropensci/drake">drake</{{ site.blinda }}> and <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/txtq">txtq</{{ site.blinda }}> to improve  reproducibility and high-performance computing in R.
 
 ## Research assistant
 - **May 2013 - Aug 2016**
