@@ -1,10 +1,10 @@
 ## BLINDING FOR THE RESUME
-blind: "blind" 
-blinda: "span"
+#blind: "blind" 
+#blinda: "span"
 
 ## DEACTIVATE BLINDING
-#blind: ""
-#blinda: "a"
+blind: ""
+blinda: "a"
 
 ###################################
 ###################################
