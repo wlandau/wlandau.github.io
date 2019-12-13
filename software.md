@@ -5,6 +5,7 @@ title:  Reproducible computation and high-performance computing
 
 - [drake](https://github.com/ropensci/drake) an R-focused pipeline toolkit for data analysis projects. Featured in the [rOpenSci blog](https://ropensci.org/blog/2018/02/06/drake/) and [R Podcast Episode 22](https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/).
 - [txtq](https://github.com/wlandau/txtq) A small message queue for parallel processes.
+- [proffer](https://github.com/r-prof/proffer) A profiler for R code based on [`pprof`](https://github.com/google/pprof).
 - [downsize](https://github.com/wlandau/downsize) Ease the transition between testing and deploying data analysis workflows.
 
 ## Dissertation research

@@ -44,8 +44,9 @@ layout: default
 
 - <{{ site.blinda }} href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, an R-focused pipeline toolkit for reproducible computation and high-performance computing. Part of [rOpenSci](https://ropensci.org/).
 - <{{ site.blinda }} href="https://github.com/wlandau/txtq">txtq</{{ site.blinda }}>, a minimalist, serverless, socketless message queue for interprocess communication.
-- <{{ site.blinda }} href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}>, and R package to toggle between the test and production versions of large workflows.
+- <{{ site.blinda }} href="https://github.com/r-prof/proffer">proffer</{{ site.blinda }}>, a profiler for R code that interfaces with [`pprof`](https://github.com/google/pprof).
 - R packages <{{ site.blinda }} href="https://github.com/wlandau/fbseq">fbseq</{{ site.blinda }}>, <{{ site.blinda }} href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</{{ site.blinda }}>, and <{{ site.blinda }} href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</{{ site.blinda }}>. A toolkit for the fully Bayesian analysis of genomic count data.
+- <{{ site.blinda }} href="https://github.com/wlandau/downsize">downsize</{{ site.blinda }}>, and R package to toggle between the test and production versions of large workflows.
 
 ## Awards
 
@@ -68,7 +69,7 @@ layout: default
 - Developed internal statistical tools and capabilities for the design, simulation, and analysis of clinical trials.
 - Served as the lead statistician in early-phase autoimmune asset teams.
 - Supported late-phase clinical trial teams with advanced analytics, including clinical program simulation and tailored therapeutics.
-- Published open-source software packages <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/ropensci/drake">drake</{{ site.blinda }}> and <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/txtq">txtq</{{ site.blinda }}> to improve  reproducibility and high-performance computing in R.
+- Published open-source software packages <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/wlandau/txtq">txtq</{{ site.blinda }}>, and <{{ site.blinda }} class="{{ site.blind }}" href="https://github.com/r-prof/pprof">pprof</{{ site.blinda }}>.
 
 ## Research assistant
 - **May 2013 - Aug 2016**
