@@ -40,6 +40,15 @@ layout: default
 - Ratliff, B., Womack. C., Tang, X., <b class="{{ site.blind }}">Landau, W.</b>, Butler, L., and Szpunar, D. (2010), "Modeling the Rovibrationally Excited C2H4OH Radicals from the Photodissociation of 2-Bromoethanol at 193 nm," *Journal of Physical Chemistry*, 114, 4934-4945. Available at
 <{{ site.blinda }} href="http://www.ncbi.nlm.nih.gov/pubmed/20302318">ncbi.nlm.nih.gov</{{ site.blinda }}>.
 
+## Presentations
+
+- **Landau, W.** (2019) "Reproducible workflows at scale with drake", rOpenSci Community Call, <a href="https://ropensci.org/commcalls/2019-09-24/">https://ropensci.org/commcalls/2019-09-24/</a>.
+- **Landau, W.** (2019) "Machine learning workflow management with drake", invited 4-hour workshop, R/Pharma Conference.
+- **Landau, W.** (2019) "Reproducible Computation at Scale in R", Harverd DataFest.
+- **Landau, W.** (2018) "The drake R package: reproducible data analysis at scale", R/Pharma Conference.
+- **Landau, W.**, and Niemi, J. (2016), "A Fully Bayesian Strategy for High-Dimensional Hierarchical Modeling Using Massively Parallel Computing". *Joint Statistical Meetings*, Section on Statistical Computing, Section on Statistical Graphics, Statistical Computing and Graphics Student Awards — Topic Contributed Papers. <a href="https://ww2.amstat.org/meetings/jsm/2016/onlineprogram/AbstractDetails.cfm?abstractid=318764">https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645</a>.
+- **Landau, W.**, and Liu, P. (2013), "Dispersion Estimation and Its Effect on Test Performance in RNA-Seq Data Analysis". *Joint Statistical Meetings*,	Biometrics Section, contributed poster. <a href="https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645">https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645</a>.
+
 ## Open Source Software
 
 - <{{ site.blinda }} href="https://github.com/ropensci/drake">drake</{{ site.blinda }}>, an R-focused pipeline toolkit for reproducible computation and high-performance computing. Part of [rOpenSci](https://ropensci.org/).
