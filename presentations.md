@@ -3,6 +3,7 @@ layout: page
 title:  Presentations
 ---
 
+- **Landau, W.** (2020) "Reproducible computation at scale with drake", R/Medicine conference. <a href="https://wlandau.github.io/rmedicine2020">https://wlandau.github.io/rmedicine2020</a>.
 - **Landau, W.** (2019) "Reproducible workflows at scale with drake", rOpenSci Community Call, <a href="https://ropensci.org/commcalls/2019-09-24/">https://ropensci.org/commcalls/2019-09-24/</a>.
 - **Landau, W.** (2019) "Machine learning workflow management with drake", invited 4-hour workshop, R/Pharma Conference.
 - **Landau, W.** (2019) "Reproducible Computation at Scale in R", Harverd DataFest.
