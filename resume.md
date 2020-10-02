@@ -59,6 +59,7 @@ layout: default
 
 ## Awards
 
+- 2020 Lilly Innovator Award. Awarded for the development of efficient clinical trial simulation software needed for complex designs and trials of potential COVID-19 treatments.
 - 2019 NumFOCUS New Contributor Recognition. Awarded for inclusive and collaborative work with rOpenSci. <{{ site.blinda }} href="https://numfocus.org/blog/2019-numfocus-awards">https://numfocus.org/blog/2019-numfocus-awards</{{ site.blinda }}>.
 - 2017 Lilly Innovator Award. Awarded for leading a successful team effort to modernize Lilly's internal process for contributing open source software.
 - <{{ site.blinda }} href="http://stat-computing.org/awards/student/winners.html">Student Paper Award</{{ site.blinda }}>, American Statistical Association Section on Statistical Computing, Jan 2016. Awarded for an early draft of the preprint at <{{ site.blinda }} class="{{ site.blind }}" href="http://arxiv.org/abs/1606.06659">arxiv.org/abs/1606.06659</{{ site.blinda }}>.
