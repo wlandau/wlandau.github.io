@@ -13,7 +13,7 @@ For a <a href = "https://github.com/">GitHub</a> repository, the [issue tracker]
 
 <h3>Example</h3>
 
-In the <a href = "https://github.com/">GitHub</a> repo of the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>, I flag pedagogically useful issues with the <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">"frequently asked question" label</a>. I periodically run <a href="https://github.com/ropensci/drake/blob/master/docs.R">docs.R</a> to generate an <a href="https://github.com/ropensci/drake/blob/master/vignettes/faq.Rmd">FAQ vignette</a> and turn it into an <a href="https://ropensci.github.io/drake/articles/faq.html">online FAQ</a>.
+In the <a href = "https://github.com/">GitHub</a> repo of the <a href="https://github.com/ropensci/drake"><code>drake</code> R package</a>, I flag pedagogically useful issues with the <a href="https://github.com/ropensci/drake/issues?q=is%3Aissue+is%3Aclosed+label%3A%22frequently+asked+question%22">"frequently asked question" label</a>. I periodically run <a href="https://github.com/ropensci/drake/blob/main/docs.R">docs.R</a> to generate an <a href="https://github.com/ropensci/drake/blob/main/vignettes/faq.Rmd">FAQ vignette</a> and turn it into an <a href="https://ropensci.github.io/drake/articles/faq.html">online FAQ</a>.
 
 <h3>Code</h3>
 
@@ -57,7 +57,7 @@ urls <- combine_fields(faq, "html_url")
 links <- paste0("- [", titles, "](", urls, ")")
 </code></pre>
 
-Finally, I move <a href="https://github.com/ropensci/drake/blob/master/inst/stubs/faq.Rmd">this FAQ stub</a> to the <a href="https://github.com/ropensci/drake/tree/master/vignettes">vignettes folder</a> and append the links.
+Finally, I move <a href="https://github.com/ropensci/drake/blob/main/inst/stubs/faq.Rmd">this FAQ stub</a> to the <a href="https://github.com/ropensci/drake/tree/main/vignettes">vignettes folder</a> and append the links.
 
 <pre><code>starter <- system.file(
   file.path("stubs", "faq.Rmd"),
