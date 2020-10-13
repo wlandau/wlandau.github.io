@@ -3,6 +3,8 @@ layout: page
 title:  Presentations
 ---
 
+- **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, half-day short course, <a href="https://github.com/wlandau/targets-tutorial">https://github.com/wlandau/targets-tutorial</a>.
+- **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, presentation, <a href="https://github.com/wlandau/rpharma2020">https://github.com/wlandau/rpharma2020</a>.
 - **Landau, W.** (2020) "Reproducible computation at scale with drake", R/Medicine Conference. <a href="https://wlandau.github.io/rmedicine2020">https://wlandau.github.io/rmedicine2020</a>.
 - **Landau, W.** (2020) "Reproducible computation at scale with drake", useR! 2020 Conference, half-day short course, <a href="https://github.com/wlandau/learndrake">https://github.com/wlandau/learndrake</a>.
 - **Landau, W.** (2019) "Reproducible workflows at scale with drake", rOpenSci Community Call, <a href="https://ropensci.org/commcalls/2019-09-24/">https://ropensci.org/commcalls/2019-09-24/</a>.
