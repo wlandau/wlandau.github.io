@@ -9,7 +9,7 @@ output:
 categories:
   - rstats
   - rstudio
-preview: distill.png
+preview: preview.png
 ---
 
 ```{r, include = FALSE}

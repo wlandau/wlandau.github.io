@@ -1,7 +1,7 @@
 ---
 title: "The targetopia"
 description: |
-  An R package ecosystem for reproducible computation at scale
+  An R package ecosystem for democratizing reproducible pipelines
 date: 2020-12-14
 output:
   distill::distill_article:
@@ -9,10 +9,10 @@ output:
 categories:
   - rstats
   - targetopia
-preview: targetopia.png
+preview: preview.png
 ---
 
-```{r, include=FALSE}
+```{r, include = FALSE}
 unlink("_targets.R")
 unlink("_targets", recursive = TRUE)
 ```
@@ -35,7 +35,7 @@ example_target_factory <- function(data) {
 }
 ```
 
-Then, when users of your package write [`_targets.R`](https://wlandau.github.io/targets-manual/walkthrough.html#file-structure), the pipeline becomes much easier to write.
+Then, when users of your package write [`_targets.R`](https://wlandau.github.io/targets-manual/walkthrough.html#file-structure), the pipeline becomes much easier to express.
 
 ```{r, echo = TRUE, eval = FALSE}
 # _targets.R
@@ -65,15 +65,15 @@ tar_visnetwork(targets_only = TRUE)
 ```
 
 
-With target factories, a developer can pre-package a specialized pipeline to solve a targeted problem in any given field of study. Users do not need to write as much code, and they do not need to be familiar with the advanced features of [`targets`](https://wlandau.github.io/targets). 
+With pre-packaged target factories, end users do not need to write as much code, and they do not need to be familiar with the advanced features of [`targets`](https://wlandau.github.io/targets). 
 
 ```{r, echo = FALSE}
 knitr::include_graphics("targetopia.png")
 ```
 
-The [targetopia](wlandau.github.io/targetopia.html) is the Pandora's Box of low-hanging fruit growing from target factories, and it could finally democratize reproducible pipelines across the entire R community. It is a growing ecosystem of R packages that abstract away the most difficult parts in [`targets`](https://wlandau.github.io/targets) and make workflows simple and quick to write.
+The [targetopia](wlandau.github.io/targetopia.html) is the Pandora's Box of low-hanging fruit that dangles from target factories, and it could finally democratize reproducible pipelines across the entire R community. It is a growing ecosystem of R packages that abstract away the most difficult parts in [`targets`](https://wlandau.github.io/targets) and make workflows simple and quick to write.
 
-[`stantargets`](https://wlandau.github.io/stantargets), is a domain-specific workflow framework for Bayesian data analysis with Stan. With [`stantargets`](https://wlandau.github.io/stantargets), writing a complex [simulation study](https://wlandau.github.io/stantargets/articles/mcmc_rep.html) is as simple as a one call to [`tar_stan_mcmc_rep_summary()`](https://wlandau.github.io/stantargets/reference/tar_stan_mcmc_rep_summary.html). It condenses [this complicated pipeline](https://github.com/wlandau/targets-stan/blob/main/_targets.R) down to the simple one below. Not only is the code shorter, but advanced concepts like [file tracking](https://wlandau.github.io/targets-manual/files.html), [dynamic branching](https://wlandau.github.io/targets-manual/dynamic.html), and [batching](https://wlandau.github.io/targets-manual/dynamic.html#batching) are completely abstracted away so the user does not need to understand them. Bayesian statisticians spend less time on software development and more time on model development.
+At the time of writing, the newest [targetopia](wlandau.github.io/targetopia.html) package is [`stantargets`](https://wlandau.github.io/stantargets), a domain-specific workflow framework for Bayesian data analysis with Stan. With [`stantargets`](https://wlandau.github.io/stantargets), writing a complex [simulation study](https://wlandau.github.io/stantargets/articles/mcmc_rep.html) is as simple as a one call to [`tar_stan_mcmc_rep_summary()`](https://wlandau.github.io/stantargets/reference/tar_stan_mcmc_rep_summary.html). [This complicated pipeline](https://github.com/wlandau/targets-stan/blob/main/_targets.R) condenses down to the simple one below. Not only is the code shorter, but advanced concepts like [file tracking](https://wlandau.github.io/targets-manual/files.html), [dynamic branching](https://wlandau.github.io/targets-manual/dynamic.html), and [batching](https://wlandau.github.io/targets-manual/dynamic.html#batching) are completely abstracted far away from the user. Bayesian statisticians can spend less time on software development and more time on model development.
 
 ```{r, echo = TRUE, eval = FALSE}
 # _targets.R
@@ -93,7 +93,7 @@ stan_targets <- tar_stan_mcmc_rep_summary(
 tar_pipeline(stan_targets)
 ```
 
-[`tarchetypes`](https://wlandau.github.io/tarchetypes) is a more general [targetopia](wlandau.github.io/targetopia.html) package that simplifies general-purpose tasks, including parameterized R Markdown. As [described here](https://wlandau.github.io/targets-manual/files.html#multiple-parameter-sets), it is straightforward to reproducibly render a [parameterized R Markdown](https://rmarkdown.rstudio.com/developer_parameterized_reports.html%23parameter_types%2F) report repeatedly across a large grid of parameters.
+[`tarchetypes`](https://wlandau.github.io/tarchetypes) is a more general [targetopia](wlandau.github.io/targetopia.html) package that simplifies general-purpose tasks such as [static branching](https://wlandau.github.io/tarchetypes/reference/tar_map.html) and [parameterized R Markdown](https://rmarkdown.rstudio.com/developer_parameterized_reports.html%23parameter_types%2F). As [described here](https://wlandau.github.io/targets-manual/files.html#multiple-parameter-sets), it is straightforward to reproducibly render a [parameterized R Markdown](https://rmarkdown.rstudio.com/developer_parameterized_reports.html%23parameter_types%2F) report repeatedly across a large grid of parameters.
 
 ```{r, echo = TRUE, eval = FALSE}
 # _targets.R

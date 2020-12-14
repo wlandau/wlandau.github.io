@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <tr>
 <th>
-[<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png" height="139px">](https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png)
+[<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia/logo.png" height="139px">](https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png)
 </th>
 <th style="font-weight:normal;">
 The targetopia is an ecosystem of R packages for reproducible computation at scale. It accelerates development and reduces frustration for research papers, simulation studies, and other data science projects with copious workflows and demanding runtimes.<br><br>
