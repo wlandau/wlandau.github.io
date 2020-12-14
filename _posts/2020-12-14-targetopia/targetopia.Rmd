@@ -1,21 +1,123 @@
 ---
-title: "Targetopia"
+title: "The targetopia"
 description: |
   An R package ecosystem for reproducible computation at scale
 date: 2020-12-14
 output:
   distill::distill_article:
     self_contained: false
-    toc: true
-    toc_depth: 2
 categories:
   - rstats
   - targetopia
 preview: targetopia.png
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r, include=FALSE}
+unlink("_targets.R")
+unlink("_targets", recursive = TRUE)
 ```
 
-# targets <img src="" height = "139">
+```{r, echo = FALSE}
+knitr::include_graphics("targets.png")
+```
+
+The [`targets`](https://wlandau.github.io/targets) R package is a [Make](https://www.gnu.org/software/make/)-like pipeline toolkit for reproducible data science. It tackles copious workflows and demanding runtimes to accelerate research papers, simulation studies, and other computationally intense projects in fields such as Bayesian statistics and machine learning. [Relative to its predecessor](https://wlandau.github.io/targets/articles/need.html), [`drake`](https://docs.ropensci.org/drake), [`targets`](https://wlandau.github.io/targets) is not only more efficient, but also more extensible. The modular interface and object-oriented design allow package developers to write reusable target factories.^[In early 2020, my colleague [Richard Payne](https://www.linkedin.com/in/richard-d-payne-2b3b0b3b) wrote a package to create specialized [`drake`](https://docs.ropensci.org/drake) pipeline factories, an idea that I previously underestimated. His package helped users create pipelines of their own, but it struggled against the constraints of [`drake_plan()`](https://docs.ropensci.org/drake/reference/drake_plan.html), I decided to design [`targets`](https://wlandau.github.io/targets) with target factories in mind.] If you want to help other data scientists create a certain specialized kind of pipeline, you can write a function that creates a list of target objects.
+
+```{r, echo = TRUE}
+# yourExamplePackage/R/example_target_factory.R
+example_target_factory <- function(data) {
+  list(
+    tar_target_raw("file", data, format = "file"),
+    tar_target_raw("simple_model", quote(run_simple(file))),
+    tar_target_raw("flexible_model", quote(run_flexible(file))),
+    tar_target_raw("conclusions", quote(summarize(simple_model, flexible_model)))
+  )
+}
+```
+
+Then, when users of your package write [`_targets.R`](https://wlandau.github.io/targets-manual/walkthrough.html#file-structure), the pipeline becomes much easier to write.
+
+```{r, echo = TRUE, eval = FALSE}
+# _targets.R
+library(targets)
+library(yourExamplePackage)
+tar_pipeline(target_factory("dataset.csv"))
+```
+
+
+```{r, echo = FALSE}
+library(targets)
+tar_script({
+  target_factory <- function(data) {
+    list(
+      tar_target_raw("file", data, format = "file"),
+      tar_target_raw("simple_model", quote(run_simple(file))),
+      tar_target_raw("flexible_model", quote(run_flexible(file))),
+      tar_target_raw("conclusions", quote(summarize(simple_model, flexible_model)))
+    )
+  }
+  tar_pipeline(target_factory("dataset.csv"))
+})
+```
+
+```{r, echo = TRUE}
+tar_visnetwork(targets_only = TRUE)
+```
+
+
+With target factories, a developer can pre-package a specialized pipeline to solve a targeted problem in any given field of study. Users do not need to write as much code, and they do not need to be familiar with the advanced features of [`targets`](https://wlandau.github.io/targets). 
+
+```{r, echo = FALSE}
+knitr::include_graphics("targetopia.png")
+```
+
+The [targetopia](wlandau.github.io/targetopia.html) is the Pandora's Box of low-hanging fruit growing from target factories, and it could finally democratize reproducible pipelines across the entire R community. It is a growing ecosystem of R packages that abstract away the most difficult parts in [`targets`](https://wlandau.github.io/targets) and make workflows simple and quick to write.
+
+[`stantargets`](https://wlandau.github.io/stantargets), is a domain-specific workflow framework for Bayesian data analysis with Stan. With [`stantargets`](https://wlandau.github.io/stantargets), writing a complex [simulation study](https://wlandau.github.io/stantargets/articles/mcmc_rep.html) is as simple as a one call to [`tar_stan_mcmc_rep_summary()`](https://wlandau.github.io/stantargets/reference/tar_stan_mcmc_rep_summary.html). It condenses [this complicated pipeline](https://github.com/wlandau/targets-stan/blob/main/_targets.R) down to the simple one below. Not only is the code shorter, but advanced concepts like [file tracking](https://wlandau.github.io/targets-manual/files.html), [dynamic branching](https://wlandau.github.io/targets-manual/dynamic.html), and [batching](https://wlandau.github.io/targets-manual/dynamic.html#batching) are completely abstracted away so the user does not need to understand them. Bayesian statisticians spend less time on software development and more time on model development.
+
+```{r, echo = TRUE, eval = FALSE}
+# _targets.R
+library(targets)
+library(stantargets)
+stan_targets <- tar_stan_mcmc_rep_summary(
+  model,
+  "model.stan",
+  generate_stan_data(), # custom function
+  batches = 40, # Batching reduces overhead.
+  reps = 25, # reps per batch
+  variables = c("beta", "true_beta_value"),
+  summaries = list(
+    ~posterior::quantile2(.x, probs = c(0.025, 0.5, 0.975))
+  )
+)
+tar_pipeline(stan_targets)
+```
+
+[`tarchetypes`](https://wlandau.github.io/tarchetypes) is a more general [targetopia](wlandau.github.io/targetopia.html) package that simplifies general-purpose tasks, including parameterized R Markdown. As [described here](https://wlandau.github.io/targets-manual/files.html#multiple-parameter-sets), it is straightforward to reproducibly render a [parameterized R Markdown](https://rmarkdown.rstudio.com/developer_parameterized_reports.html%23parameter_types%2F) report repeatedly across a large grid of parameters.
+
+```{r, echo = TRUE, eval = FALSE}
+# _targets.R
+library(targets)
+library(tarchetypes)
+library(tibble)
+tar_pipeline(
+  tar_target(x, "value_of_x"),
+  tar_render_rep(
+    report,
+    "report.Rmd",
+    params = generate_large_param_grid(), # custom function
+    batches = 50 # Batching reduces overhead.
+  )
+)
+```
+
+I intend to grow this new ecosystem to encompass more packages and more methodologies. If you would like to contribute, please feel free to reach out.
+
+- `r fontawesome::fa("github")` [`@wlandau`](https://www.github.com/wlandau)
+- `r fontawesome::fa("twitter")` [`@wmlandau`](https://www.twitter.com/wmlandau)
+- `r fontawesome::fa("linkedin")` [`@wlandau`](linkedin.com/in/wlandau)
+
+```{r, echo = FALSE}
+unlink("_targets.R")
+unlink("_targets", recursive = TRUE)
+```

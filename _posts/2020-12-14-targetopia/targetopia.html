@@ -86,7 +86,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Targetopia</title>
+  <title>The targetopia</title>
   
   <meta property="description" itemprop="description" content="An R package ecosystem for reproducible computation at scale"/>
   
@@ -96,26 +96,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="article:created" itemprop="dateCreated" content="2020-12-14"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Targetopia"/>
+  <meta property="og:title" content="The targetopia"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="An R package ecosystem for reproducible computation at scale"/>
   <meta property="og:locale" content="en_US"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Targetopia"/>
+  <meta property="twitter:title" content="The targetopia"/>
   <meta property="twitter:description" content="An R package ecosystem for reproducible computation at scale"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Targetopia"]},{"type":"character","attributes":{},"value":["An R package ecosystem for reproducible computation at scale\n"]},{"type":"character","attributes":{},"value":["2020-12-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["rstats","targetopia"]},{"type":"character","attributes":{},"value":["targetopia.png"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["The targetopia"]},{"type":"character","attributes":{},"value":["An R package ecosystem for reproducible computation at scale\n"]},{"type":"character","attributes":{},"value":["2020-12-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["rstats","targetopia"]},{"type":"character","attributes":{},"value":["targetopia.png"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["targetopia_files/anchor-4.2.2/anchor.min.js","targetopia_files/bowser-1.9.3/bowser.min.js","targetopia_files/distill-2.2.21/template.v2.js","targetopia_files/jquery-1.11.3/jquery.min.js","targetopia_files/webcomponents-2.0.0/webcomponents.js","targetopia.png"]}
+  {"type":"character","attributes":{},"value":["targetopia_files/anchor-4.2.2/anchor.min.js","targetopia_files/bowser-1.9.3/bowser.min.js","targetopia_files/distill-2.2.21/template.v2.js","targetopia_files/htmlwidgets-1.5.3/htmlwidgets.js","targetopia_files/jquery-1.11.3/jquery.min.js","targetopia_files/vis-4.20.1/img/network/acceptDeleteIcon.png","targetopia_files/vis-4.20.1/img/network/addNodeIcon.png","targetopia_files/vis-4.20.1/img/network/backIcon.png","targetopia_files/vis-4.20.1/img/network/connectIcon.png","targetopia_files/vis-4.20.1/img/network/cross.png","targetopia_files/vis-4.20.1/img/network/cross2.png","targetopia_files/vis-4.20.1/img/network/deleteIcon.png","targetopia_files/vis-4.20.1/img/network/downArrow.png","targetopia_files/vis-4.20.1/img/network/editIcon.png","targetopia_files/vis-4.20.1/img/network/leftArrow.png","targetopia_files/vis-4.20.1/img/network/minus.png","targetopia_files/vis-4.20.1/img/network/plus.png","targetopia_files/vis-4.20.1/img/network/rightArrow.png","targetopia_files/vis-4.20.1/img/network/upArrow.png","targetopia_files/vis-4.20.1/img/network/zoomExtends.png","targetopia_files/vis-4.20.1/vis.css","targetopia_files/vis-4.20.1/vis.min.js","targetopia_files/visNetwork-binding-2.0.9/visNetwork.js","targetopia_files/webcomponents-2.0.0/webcomponents.js","targetopia.png","targets.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1403,6 +1403,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
   
   <!--/radix_placeholder_distill-->
+  <script src="targetopia_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+  <link href="targetopia_files/vis-4.20.1/vis.css" rel="stylesheet" />
+  <script src="targetopia_files/vis-4.20.1/vis.min.js"></script>
+  <script src="targetopia_files/visNetwork-binding-2.0.9/visNetwork.js"></script>
   <script src="targetopia_files/jquery-1.11.3/jquery.min.js"></script>
   <script src="targetopia_files/anchor-4.2.2/anchor.min.js"></script>
   <script src="targetopia_files/bowser-1.9.3/bowser.min.js"></script>
@@ -1419,7 +1423,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Targetopia","description":"An R package ecosystem for reproducible computation at scale","authors":[],"publishedDate":"2020-12-14T00:00:00.000-05:00"}
+{"title":"The targetopia","description":"An R package ecosystem for reproducible computation at scale","authors":[],"publishedDate":"2020-12-14T00:00:00.000-05:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1429,7 +1433,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Targetopia</h1>
+<h1>The targetopia</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
 <div class="dt=tag">rstats</div>
@@ -1441,8 +1445,115 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<p>Post under construction…</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="targets.png" width="120" /></p>
+</div>
+<p>The <a href="https://wlandau.github.io/targets"><code>targets</code></a> R package is a <a href="https://www.gnu.org/software/make/">Make</a>-like pipeline toolkit for reproducible data science. It tackles copious workflows and demanding runtimes to accelerate research papers, simulation studies, and other computationally intense projects in fields such as Bayesian statistics and machine learning. <a href="https://wlandau.github.io/targets/articles/need.html">Relative to its predecessor</a>, <a href="https://docs.ropensci.org/drake"><code>drake</code></a>, <a href="https://wlandau.github.io/targets"><code>targets</code></a> is not only more effiient, but also more extensible. The modular interface and object-oriented design allow package developers to write reusable target factories.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> If you want to help other data scientists create a certain specialized kind of pipeline, you can write a function that creates a list of target objects.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='co'># yourExamplePackage/R/example_target_factory.R</span>
+<span class='va'>example_target_factory</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+    <span class='fu'>tar_target_raw</span><span class='op'>(</span><span class='st'>"file"</span>, <span class='va'>data</span>, format <span class='op'>=</span> <span class='st'>"file"</span><span class='op'>)</span>,
+    <span class='fu'>tar_target_raw</span><span class='op'>(</span><span class='st'>"simple_model"</span>, <span class='fu'><a href='https://rdrr.io/r/base/substitute.html'>quote</a></span><span class='op'>(</span><span class='fu'>run_simple</span><span class='op'>(</span><span class='va'>file</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,
+    <span class='fu'>tar_target_raw</span><span class='op'>(</span><span class='st'>"flexible_model"</span>, <span class='fu'><a href='https://rdrr.io/r/base/substitute.html'>quote</a></span><span class='op'>(</span><span class='fu'>run_flexible</span><span class='op'>(</span><span class='va'>file</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,
+    <span class='fu'>tar_target_raw</span><span class='op'>(</span><span class='st'>"conclusions"</span>, <span class='fu'><a href='https://rdrr.io/r/base/substitute.html'>quote</a></span><span class='op'>(</span><span class='fu'>summarize</span><span class='op'>(</span><span class='va'>simple_model</span>, <span class='va'>flexible_model</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<p>Then, when users of your package write <a href="https://wlandau.github.io/targets-manual/walkthrough.html#file-structure"><code>_targets.R</code></a>, the pipeline becomes much easier to write.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='co'># _targets.R</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/targets/'>targets</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>yourExamplePackage</span><span class='op'>)</span>
+<span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_pipeline.html'>tar_pipeline</a></span><span class='op'>(</span><span class='fu'>target_factory</span><span class='op'>(</span><span class='st'>"dataset.csv"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_visnetwork.html'>tar_visnetwork</a></span><span class='op'>(</span>targets_only <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div id="htmlwidget-d70ab6b7855aca56465b" style="width:624px;height:384px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d70ab6b7855aca56465b">{"x":{"nodes":{"name":["conclusions","file","flexible_model","simple_model"],"type":["stem","stem","stem","stem"],"status":["outdated","outdated","outdated","outdated"],"seconds":[null,null,null,null],"bytes":[null,null,null,null],"branches":[null,null,null,null],"id":["conclusions","file","flexible_model","simple_model"],"label":["conclusions","file","flexible_model","simple_model"],"font.size":[20,20,20,20],"level":[3,1,2,2],"color":["#5BBCD6","#5BBCD6","#5BBCD6","#5BBCD6"],"shape":["dot","dot","dot","dot"]},"edges":{"from":["flexible_model","simple_model","file","file"],"to":["conclusions","conclusions","simple_model","flexible_model"],"arrows":["to","to","to","to"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"smooth":{"type":"cubicBezier","forceDirection":"horizontal"}},"layout":{"hierarchical":{"enabled":true,"direction":"LR"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":{"text":"","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":false,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"legend":{"width":0.2,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Outdated","Stem"],"color":["#5BBCD6","#899DA4"],"shape":["dot","dot"],"font.size":[20,20]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>With target factories, a developer can pre-package a specialized pipeline to solve a targeted problem in any given field of study. Users do not need to write as much code, and they do not need to be familiar with the advanced features of <a href="https://wlandau.github.io/targets"><code>targets</code></a>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="targetopia.png" width="120" /></p>
+</div>
+<p>The <a href="wlandau.github.io/targetopia.html">targetopia</a> is the Pandora’s Box of low-hanging fruit growing from target factories, and it could finally democratize reproducible pipelines across the entire R community. It is a growing ecosystem of R packages that abstract away the most difficult parts in <a href="https://wlandau.github.io/targets"><code>targets</code></a> and make workflows simple and quick to write.</p>
+<p><a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a>, is a domain-specific workflow framework for Bayesian data analysis with Stan. With <a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a>, writing a complex <a href="https://wlandau.github.io/stantargets/articles/mcmc_rep.html">simulation study</a> is as simple as a one call to <a href="https://wlandau.github.io/stantargets/reference/tar_stan_mcmc_rep_summary.html"><code>tar_stan_mcmc_rep_summary()</code></a>. It condenses <a href="https://github.com/wlandau/targets-stan/blob/main/_targets.R">this complicated pipeline</a> down to the simple one below. Not only is the code shorter, but advanced concepts like <a href="https://wlandau.github.io/targets-manual/files.html">file tracking</a>, <a href="https://wlandau.github.io/targets-manual/dynamic.html">dynamic branching</a>, and <a href="https://wlandau.github.io/targets-manual/dynamic.html#batching">batching</a> are completely abstracted away so the user does not need to understand them. Bayesian statisticians spend less time on software development and more time on model development.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='co'># _targets.R</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/targets/'>targets</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/stantargets/'>stantargets</a></span><span class='op'>)</span>
+<span class='va'>stan_targets</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://wlandau.github.io/stantargets/reference/tar_stan_mcmc_rep_summary.html'>tar_stan_mcmc_rep_summary</a></span><span class='op'>(</span>
+  <span class='va'>model</span>,
+  <span class='st'>"model.stan"</span>,
+  <span class='fu'>generate_stan_data</span><span class='op'>(</span><span class='op'>)</span>, <span class='co'># custom function</span>
+  batches <span class='op'>=</span> <span class='fl'>40</span>, <span class='co'># Batching reduces overhead.</span>
+  reps <span class='op'>=</span> <span class='fl'>25</span>, <span class='co'># reps per batch</span>
+  variables <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"beta"</span>, <span class='st'>"true_beta_value"</span><span class='op'>)</span>,
+  summaries <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+    <span class='op'>~</span><span class='fu'>posterior</span><span class='fu'>::</span><span class='fu'><a href='https://mc-stan.org/posterior/reference/quantile2.html'>quantile2</a></span><span class='op'>(</span><span class='va'>.x</span>, probs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.025</span>, <span class='fl'>0.5</span>, <span class='fl'>0.975</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='op'>)</span>
+<span class='op'>)</span>
+<span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_pipeline.html'>tar_pipeline</a></span><span class='op'>(</span><span class='va'>stan_targets</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p><a href="https://wlandau.github.io/tarchetypes"><code>tarchetypes</code></a> is a more general <a href="wlandau.github.io/targetopia.html">targetopia</a> package that simplifies general-purpose tasks, including parameterized R Markdown. As <a href="https://wlandau.github.io/targets-manual/files.html#multiple-parameter-sets">described here</a>, it is straightforward to reproducibly render a <a href="https://rmarkdown.rstudio.com/developer_parameterized_reports.html%23parameter_types%2F">parameterized R Markdown</a> report repeatedly across a large grid of parameters.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='co'># _targets.R</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/targets/'>targets</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/tarchetypes/'>tarchetypes</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tibble.tidyverse.org/'>tibble</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_pipeline.html'>tar_pipeline</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='st'>"value_of_x"</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://wlandau.github.io/tarchetypes/reference/tar_render_rep.html'>tar_render_rep</a></span><span class='op'>(</span>
+    <span class='va'>report</span>,
+    <span class='st'>"report.Rmd"</span>,
+    params <span class='op'>=</span> <span class='fu'>generate_large_param_grid</span><span class='op'>(</span><span class='op'>)</span>, <span class='co'># custom function</span>
+    batches <span class='op'>=</span> <span class='fl'>50</span> <span class='co'># Batching reduces overhead.</span>
+  <span class='op'>)</span>
+<span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>I intend to grow this new ecosystem to encompass more packages and more methodologies. If you would like to contribute, please feel free to reach out.</p>
+<ul>
+<li><svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512">
+<path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+</svg>
+<a href="https://www.github.com/wlandau"><code>@wlandau</code></a></li>
+<li><svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512">
+<path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+</svg>
+<a href="https://www.twitter.com/wmlandau"><code>@wmlandau</code></a></li>
+<li><svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 448 512">
+<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+</svg>
+<a href="linkedin.com/in/wlandau"><code>@wlandau</code></a></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>In early 2020, my colleague <a href="https://www.linkedin.com/in/richard-d-payne-2b3b0b3b">Richard Payne</a> wrote a package to create specialized <a href="https://docs.ropensci.org/drake"><code>drake</code></a> pipeline factories, an idea that I previously underestimated. His package helped users create pipelines of their own, but it struggled against the constraints of <a href="https://docs.ropensci.org/drake/reference/drake_plan.html"><code>drake_plan()</code></a>, I decided to design <a href="https://wlandau.github.io/targets"><code>targets</code></a> with target factories in mind.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
