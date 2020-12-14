@@ -48,7 +48,7 @@ The targetopia is an ecosystem of R packages for reproducible computation at sca
 
 <tr>
 <th>
-<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/images/jagstargets.png" height="139px">
+<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/jagstargets.png" height="139px">
 </th>
 <th style="font-weight:normal;">
 <br>
