@@ -1,1 +1,0 @@
-Personal website and portfolio.
