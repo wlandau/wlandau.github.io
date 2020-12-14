@@ -3,7 +3,6 @@
 *.out
 *.log
 *.blg
-_site
 .DS_Store
 .sass-cache/
 .Rhistory
