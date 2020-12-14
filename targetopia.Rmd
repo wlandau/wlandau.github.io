@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <tr>
 <th>
-[<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia/logo.png" height="139px">](https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png)
+[<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia/logo.png#1" height="139px">](https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png)
 </th>
 <th style="font-weight:normal;">
 The targetopia is an ecosystem of R packages for democratized reproducible pipelines at scale. [Make](https://www.gnu.org/software/make/)-like pipelines accelerate development and reduce frustration for research papers, simulation studies, and other data science projects with copious workflows and demanding runtimes. As [this post](https://wlandau.github.io/posts/2020-12-14-targetopia/) explains, the goal of the targetopia is to make powerful pipelines accessible and friendly.<br><br>
@@ -20,7 +20,7 @@ The targetopia is an ecosystem of R packages for democratized reproducible pipel
 
 <tr>
 <th>
-[<img src="https://raw.githubusercontent.com/wlandau/targets/main/man/figures/logo.png" height="139px">](https://wlandau.github.io/targets)
+[<img src="https://raw.githubusercontent.com/wlandau/targets/main/man/figures/logo.png#1" height="139px">](https://wlandau.github.io/targets)
 </th>
 <th style="font-weight:normal;">
 <br>[`targets`](https://wlandau.github.io/targets) is the core engine of the targetopia. It learns the components of your data analysis project, runs the work with distributed computing, and skips steps that are already up to date. It reduces the runtime of successive runs, and it shows tangible evidence that your results match the underlying code and data.<br><br>
@@ -30,7 +30,7 @@ The targetopia is an ecosystem of R packages for democratized reproducible pipel
 
 <tr>
 <th>
-[<img src="https://raw.githubusercontent.com/wlandau/tarchetypes/main/man/figures/logo.png" height="139px">](https://wlandau.github.io/tarchetypes)
+[<img src="https://raw.githubusercontent.com/wlandau/tarchetypes/main/man/figures/logo.png#1" height="139px">](https://wlandau.github.io/tarchetypes)
 </th>
 <th style="font-weight:normal;">
 <br>[`tarchetypes`](https://wlandau.github.io/tarchetypes) makes it easy to add certain kinds of common tasks to reproducible pipelines. Most of its [functions](https://wlandau.github.io/tarchetypes/reference/index.html) create families of targets for [parameterized R Markdown](https://wlandau.github.io/tarchetypes/reference/tar_render_rep.html), [simulation studies](https://wlandau.github.io/tarchetypes/reference/tar_rep.html), and other general-purpose scenarios.<br><br>
@@ -38,7 +38,7 @@ The targetopia is an ecosystem of R packages for democratized reproducible pipel
 
 <tr>
 <th>
-[<img src="https://raw.githubusercontent.com/wlandau/stantargets/main/man/figures/logo.png" height="139px">](https://wlandau.github.io/stantargets)
+[<img src="https://raw.githubusercontent.com/wlandau/stantargets/main/man/figures/logo.png#1" height="139px">](https://wlandau.github.io/stantargets)
 </th>
 <th style="font-weight:normal;">
 <br>
@@ -48,7 +48,7 @@ The targetopia is an ecosystem of R packages for democratized reproducible pipel
 
 <tr>
 <th>
-<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/jagstargets.png" height="139px">
+<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/jagstargets.png#1" height="139px">
 </th>
 <th style="font-weight:normal;">
 <br>
