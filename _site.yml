@@ -19,12 +19,12 @@ navbar:
       menu:
       - text: "Publications"
         href: publications.html
+      - text: "Software"
+        href: software.html
       - text: "Presentations"
         href: presentations.html
       - text: "Resume"
         href: resume.html
-      - text: "Software"
-        href: software.html
     - text: "Old"
       menu:
       - text: "Early career"
