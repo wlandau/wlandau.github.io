@@ -52,7 +52,7 @@ The targetopia is an ecosystem of R packages for reproducible computation at sca
 </th>
 <th style="font-weight:normal;">
 <br>
-`jagstargets` is under construction and is not yet available in the open source community. When implemented, it will do for [JAGS](http://mcmc-jags.sourceforge.net/) what [`stantargets`](https://wlandau.github.io/stantargets) does for [`cmdstanr`](https://mc-stan.org/cmdstanr/). 
+`jagstargets` is under construction and not yet available in the open source community. When implemented, it will do for [JAGS](http://mcmc-jags.sourceforge.net/) what [`stantargets`](https://wlandau.github.io/stantargets) does for [`cmdstanr`](https://mc-stan.org/cmdstanr/). 
 <br><br>
 </th>
 
