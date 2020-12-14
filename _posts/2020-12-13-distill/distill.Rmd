@@ -16,11 +16,11 @@ preview: distill.png
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r}
-knitr::include_graphics("distill.png")
-```
+# Rstudio's distill package <img src="https://raw.githubusercontent.com/rstudio/distill/master/man/figures/logo.png" align="right" height="139">
 
 [Rstudio](https://rstudio.com/) just announced the [CRAN](https://cran.r-project.org) release of [`distill`](https://rstudio.github.io/distill/), an R package for formatting scientific and technical websites.^[Hex logo from https://github.com/rstudio/distill. Copyright RStudio, PBC.] Like all [RStudio](https://rstudio.com/) tools, [`distill`](https://rstudio.github.io/distill/) is super easy to use. It took only a few minutes to convert [my old portfolio](https://wlandau.github.io/portfolio2020) into a nicer-looking [personal website](https://wlandau.github.io/).
+
+# A fresh start
 
 The release of [`distill`](https://rstudio.github.io/distill/) is timely. After a challenging 2020, it is nice to have a little nudge to refresh and regroup for 2021.
 
