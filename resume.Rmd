@@ -1,6 +1,5 @@
 ---
 title: Resume
-description: Resume
 ---
 
 ```{r setup, include=FALSE}

@@ -1,6 +1,5 @@
 ---
 title: Publications
-description: Publications
 ---
 
 ```{r setup, include=FALSE}

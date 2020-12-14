@@ -1,6 +1,5 @@
 ---
 title: Presentations
-description: Presentations
 ---
 
 ```{r setup, include=FALSE}
