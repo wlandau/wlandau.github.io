@@ -1,7 +1,7 @@
 ---
 title: "The targetopia"
 description: |
-  An R package ecosystem for democratizing reproducible pipelines
+  An R package ecosystem for democratized reproducible pipelines at scale
 date: 2020-12-14
 output:
   distill::distill_article:
