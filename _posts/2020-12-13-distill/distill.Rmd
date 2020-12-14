@@ -2,9 +2,6 @@
 title: "Distill"
 description: |
   A fresh start using RStudio's latest web format
-author:
-  - name: Will Landau 
-    url: https://wlandau.github.io/
 date: 2020-12-13
 output:
   distill::distill_article:

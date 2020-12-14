@@ -86,28 +86,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Will Landau</title>
+  <title>Will Landau: Targetopia</title>
   
   
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Will Landau"/>
+  <meta property="og:title" content="Will Landau: Targetopia"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Will Landau"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Will Landau"/>
+  <meta property="twitter:title" content="Will Landau: Targetopia"/>
   <meta property="twitter:site" content="@wmlandau"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Will Landau"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Targetopia"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1999,12 +1999,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Will Landau","authors":[]}
+{"title":"Targetopia","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2059,184 +2059,9 @@ Archive
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Will Landau">Will Landau</h1>
-<a href="posts/2020-12-13-distill/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["rstats"]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 13, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Will Landau</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Distill</h2>
-<div class="dt-tags">
-<div class="dt-tag">rstats</div>
-</div>
-<p>A fresh start using RStudio's latest web format</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:articles">articles</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:rstats">rstats</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Will Landau</h1>
+<h1>Targetopia</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2244,6 +2069,45 @@ function init_posts_list() {
 
 
 <div class="d-article">
+<table>
+<tr>
+<th>
+<a href="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png"><img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png" height="139px"></a>
+</th>
+<th style="font-weight:normal;">
+The targetopia is an ecosystem of R packages for reproducible computation at scale. It accelerates development and reduces frustration for research papers, simulation studies, and other data science projects with copious workflows and demanding runtimes.<br><br>
+</th>
+</tr>
+<tr>
+<th>
+<a href="https://wlandau.github.io/targets"><img src="https://raw.githubusercontent.com/wlandau/targets/main/man/figures/logo.png" height="139px"></a>
+</th>
+<th style="font-weight:normal;">
+<br><a href="https://wlandau.github.io/targets"><code>targets</code></a> is the core engine of the targetopia. It learns the components of your data analysis project, runs the work with distributed computing, and skips steps that are already up to date. It reduces the runtime of successive runs, and it shows tangible evidence that your results match the underlying code and data.<br><br>
+</th>
+<tr>
+<tr>
+<th>
+<a href="https://wlandau.github.io/tarchetypes"><img src="https://raw.githubusercontent.com/wlandau/tarchetypes/main/man/figures/logo.png" height="139px"></a>
+</th>
+<th style="font-weight:normal;">
+<br><a href="https://wlandau.github.io/tarchetypes"><code>tarchetypes</code></a> makes it easy to add certain kinds of common tasks to reproducible pipelines. Most of its <a href="https://wlandau.github.io/tarchetypes/reference/index.html">functions</a> create families of targets for <a href="https://wlandau.github.io/tarchetypes/reference/tar_render_rep.html">parameterized R Markdown</a>, <a href="https://wlandau.github.io/tarchetypes/reference/tar_rep.html">simulation studies</a>, and other general-purpose scenarios.<br><br>
+</th>
+<tr>
+<th>
+<a href="https://wlandau.github.io/stantargets"><img src="https://raw.githubusercontent.com/wlandau/stantargets/main/man/figures/logo.png" height="139px"></a>
+</th>
+<th style="font-weight:normal;">
+<br> <a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a> is a workflow framework for Bayesian data analysis with <a href="https://mc-stan.org/cmdstanr/"><code>cmdstanr</code></a>. With concise, easy-to-use syntax, it defines versatile families of targets tailored to Bayesian statistics, from a <a href="https://wlandau.github.io/stantargets/articles/mcmc.html">single MCMC run with postprocessing</a> to <a href="https://wlandau.github.io/stantargets/articles/mcmc_rep.html">large simulation studies</a>. <br><br>
+</th>
+<tr>
+<th>
+<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/images/jagstargets.png" height="139px">
+</th>
+<th style="font-weight:normal;">
+<br> <code>jagstargets</code> is under construction and is not yet available in the open source community. When implemented, it will do for <a href="http://mcmc-jags.sourceforge.net/">JAGS</a> what <a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a> does for <a href="https://mc-stan.org/cmdstanr/"><code>cmdstanr</code></a>. <br><br>
+</th>
+</table>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

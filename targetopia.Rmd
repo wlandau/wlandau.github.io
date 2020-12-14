@@ -1,0 +1,59 @@
+---
+title: "Targetopia"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<table>
+
+<tr>
+<th>
+[<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png" height="139px">](https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/targetopia.png)
+</th>
+<th style="font-weight:normal;">
+The targetopia is an ecosystem of R packages for reproducible computation at scale. It accelerates development and reduces frustration for research papers, simulation studies, and other data science projects with copious workflows and demanding runtimes.<br><br>
+</th>
+</tr>
+
+<tr>
+<th>
+[<img src="https://raw.githubusercontent.com/wlandau/targets/main/man/figures/logo.png" height="139px">](https://wlandau.github.io/targets)
+</th>
+<th style="font-weight:normal;">
+<br>[`targets`](https://wlandau.github.io/targets) is the core engine of the targetopia. It learns the components of your data analysis project, runs the work with distributed computing, and skips steps that are already up to date. It reduces the runtime of successive runs, and it shows tangible evidence that your results match the underlying code and data.<br><br>
+</th>
+
+<tr>
+
+<tr>
+<th>
+[<img src="https://raw.githubusercontent.com/wlandau/tarchetypes/main/man/figures/logo.png" height="139px">](https://wlandau.github.io/tarchetypes)
+</th>
+<th style="font-weight:normal;">
+<br>[`tarchetypes`](https://wlandau.github.io/tarchetypes) makes it easy to add certain kinds of common tasks to reproducible pipelines. Most of its [functions](https://wlandau.github.io/tarchetypes/reference/index.html) create families of targets for [parameterized R Markdown](https://wlandau.github.io/tarchetypes/reference/tar_render_rep.html), [simulation studies](https://wlandau.github.io/tarchetypes/reference/tar_rep.html), and other general-purpose scenarios.<br><br>
+</th>
+
+<tr>
+<th>
+[<img src="https://raw.githubusercontent.com/wlandau/stantargets/main/man/figures/logo.png" height="139px">](https://wlandau.github.io/stantargets)
+</th>
+<th style="font-weight:normal;">
+<br>
+[`stantargets`](https://wlandau.github.io/stantargets) is a workflow framework for Bayesian data analysis with [`cmdstanr`](https://mc-stan.org/cmdstanr/). With concise, easy-to-use syntax, it defines versatile families of targets tailored to Bayesian statistics, from a [single MCMC run with postprocessing](https://wlandau.github.io/stantargets/articles/mcmc.html) to [large simulation studies](https://wlandau.github.io/stantargets/articles/mcmc_rep.html).
+<br><br>
+</th>
+
+<tr>
+<th>
+<img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/images/jagstargets.png" height="139px">
+</th>
+<th style="font-weight:normal;">
+<br>
+`jagstargets` is under construction and is not yet available in the open source community. When implemented, it will do for [JAGS](http://mcmc-jags.sourceforge.net/) what [`stantargets`](https://wlandau.github.io/stantargets) does for [`cmdstanr`](https://mc-stan.org/cmdstanr/). 
+<br><br>
+</th>
+
+</table>
