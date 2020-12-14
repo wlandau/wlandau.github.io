@@ -1,7 +1,11 @@
 ---
-layout: page
-title:  Publications
+title: Publications
+description: Publications
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 
 - **Landau, W.**, Niemi, J., and Nettleton, D. (2019), "Fully Bayesian analysis of RNA-seq counts for the detection of gene expression heterosis". *Journal of the American Statistical Association*,  114(526), 610-621. <a href="https://doi.org/10.1080/01621459.2018.1497496">https://doi.org/10.1080/01621459.2018.1497496</a>.
 - **Landau, W.** (2018), "The drake R package: a pipeline toolkit for reproducibility and high-performance computing". *Journal of Open Source Software*, 3(21), 550, <a href="https://doi.org/10.21105/joss.00550">https://doi.org/10.21105/joss.00550</a>.

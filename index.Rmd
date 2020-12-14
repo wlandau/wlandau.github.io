@@ -1,0 +1,6 @@
+---
+title: "Will Landau"
+site: distill::distill_website
+---
+
+I am a statistician and software developer in the life sciences industry, and I am the creator and maintainer of the [`drake`](https://github.com/ropensci/drake) and [`targets`](https://github.com/wlandau/targets) R packages.

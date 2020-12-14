@@ -1,7 +1,11 @@
 ---
-layout: page
-title:  Presentations
+title: Presentations
+description: Presentations
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 
 - **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, half-day short course, <a href="https://github.com/wlandau/targets-tutorial">https://github.com/wlandau/targets-tutorial</a>.
 - **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, presentation, <a href="https://github.com/wlandau/rpharma2020">https://github.com/wlandau/rpharma2020</a>.
