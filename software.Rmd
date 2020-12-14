@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - [`targets`](https://github.com/wlandau/targets), dynamic function-oriented Make-like workflows for R. Long-term successor to [`drake`](https://github.com/ropensci/drake).
 - [`tarchetypes`](https://github.com/wlandau/tarchetypes), general-use archetypes for targets and pipelines, including [parameterized R Markdown at scale](https://wlandau.github.io/tarchetypes/reference/tar_render_rep.html).
-- [`stantargets](), Reproducible Bayesian data analysis pipelines with [`targets`](https://github.com/wlandau/targets) and [`cmdstanr`](https://github.com/stan-dev/cmdstanr). 
+- [`stantargets](https://github.com/wlandau/stantargets), Reproducible Bayesian data analysis pipelines with [`targets`](https://github.com/wlandau/targets) and [`cmdstanr`](https://github.com/stan-dev/cmdstanr). 
 ## Early career R packages
 
 - [`drake`](https://github.com/ropensci/drake) an R-focused pipeline toolkit for data analysis projects. Featured in the [rOpenSci blog](https://ropensci.org/blog/2018/02/06/drake/) and [R Podcast Episode 22](https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/).
