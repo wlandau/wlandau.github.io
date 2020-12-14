@@ -1,12 +1,18 @@
-name: "wlandau.github.io"
+name: "."
 title: "Will Landau"
 description: |
-  Blog and portfolio
-output_dir: "docs"
+  Portfolio and blog
+output: distill::distill_article
+output_dir: "_site"
+collections:
+  posts:
+    feed_items_max: 100
 navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "About"
+      href: about.html
     - text: "Software"
       href: software.html
     - text: "Publications"
@@ -15,10 +21,3 @@ navbar:
       href: presentations.html
     - text: "Resume"
       href: resume.html
-    - text: "Blog"
-      href: blog.html
-  source_url: https://github.com/wlandau/wlandau.github.io
-output: distill::distill_article
-collections:
-  posts:
-    feed_items_max: 100

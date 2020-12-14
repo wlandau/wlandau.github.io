@@ -1,0 +1,11 @@
+---
+title: "About this blog"
+description: |
+  Some additional details about the blog
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I am a statistician and software developer in the life sciences industry. I specialize in the computational aspects of Bayesian statistics and reproducible research, and I am the creator and maintainer of the [`targets`](https://github.com/wlandau/targets) and [`drake`](https://github.com/ropensci/drake) R packages.
