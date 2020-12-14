@@ -1,0 +1,21 @@
+---
+title: "Targetopia"
+description: |
+  An R package ecosystem for reproducible computation at scale
+date: 2020-12-13
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+categories:
+  - rstats
+  - targetopia
+preview: targetopia.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Post under construction...
