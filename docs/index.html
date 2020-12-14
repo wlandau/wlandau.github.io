@@ -1994,8 +1994,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  .posts-list .post-preview .thumbnail img {
+    max-height: 55%;
+    max-width: 55%;
+  }
+  
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="style.css" type="text/css"/>
 
 </head>
 
@@ -2194,27 +2202,10 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Will Landau">Will Landau</h1>
-<a href="posts/2020-12-13-distill/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["rstats"]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 13, 2020</div>
-<div class="dt-authors"></div>
-</div>
-<div class="thumbnail">
-<img src="posts/2020-12-13-distill/distill.png"/>
-</div>
-<div class="description">
-<h2>RStudio distill</h2>
-<div class="dt-tags">
-<div class="dt-tag">rstats</div>
-</div>
-<p>A fresh start using RStudio's latest web format</p>
-</div>
-</a>
 <a href="posts/2020-12-14-targetopia/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["rstats","targetopia"]}</script>
 <div class="metadata">
-<div class="publishedDate">Dec. 13, 2020</div>
+<div class="publishedDate">Dec. 14, 2020</div>
 <div class="dt-authors"></div>
 </div>
 <div class="thumbnail">
@@ -2229,6 +2220,24 @@ function init_posts_list() {
 <p>An R package ecosystem for reproducible computation at scale</p>
 </div>
 </a>
+<a href="posts/2020-12-13-distill/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["rstats","rstudio"]}</script>
+<div class="metadata">
+<div class="publishedDate">Dec. 13, 2020</div>
+<div class="dt-authors"></div>
+</div>
+<div class="thumbnail">
+<img src="posts/2020-12-13-distill/distill.png"/>
+</div>
+<div class="description">
+<h2>RStudio distill</h2>
+<div class="dt-tags">
+<div class="dt-tag">rstats</div>
+<div class="dt-tag">rstudio</div>
+</div>
+<p>A fresh start using RStudio's latest web format</p>
+</div>
+</a>
 </div>
 <div class="posts-sidebar">
 <div class="sidebar-section categories">
@@ -2241,6 +2250,10 @@ function init_posts_list() {
 <li>
 <a href="#category:rstats">rstats</a>
 <span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:rstudio">rstudio</a>
+<span class="category-count">(1)</span>
 </li>
 <li>
 <a href="#category:targetopia">targetopia</a>

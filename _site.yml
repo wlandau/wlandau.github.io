@@ -3,10 +3,12 @@ title: "Will Landau"
 description: |
   Portfolio and blog
 creative_commons: CC BY
-output: distill::distill_article
-output_dir: "docs"
 twitter:
   site: "@wmlandau"
+output_dir: "docs"
+output:
+  distill::distill_article:
+    css: style.css
 collections:
   posts:
     feed_items_max: 100
