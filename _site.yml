@@ -19,7 +19,7 @@ navbar:
       - text: "About"
         href: about.html
     - text: "Targetopia"
-      href: targets.html
+      href: targetopia.html
     - text: "Portfolio"
       menu:
       - text: "Publications"
