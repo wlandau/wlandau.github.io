@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Dissertation research
 
 - [fbseq](https://github.com/wlandau/fbseq) Fully-Bayesian GPU-accelerated analysis of RNA-seq data ([arXiv preprint](http://arxiv.org/abs/1606.06659)).
-- [fbseqCUDA](https://github.com/wlandau/fbseqCUDA) CUDA GPU support for [fbseq]({{ "/fbseq" | prepend: site.github }}).
+- [fbseqCUDA](https://github.com/wlandau/fbseqCUDA) CUDA GPU support for [fbseq](https://github.com/wlandau/fbseq).
 - [fbseqOpenMP](https://github.com/wlandau/fbseqOpenMP) OpenMP support for [fbseq](https://github.com/wlandau/fbseq).
 
 ## Support for [remake](https://github.com/richfitz/remake)
