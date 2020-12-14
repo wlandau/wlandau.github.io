@@ -1,5 +1,5 @@
 ---
-title: "William Michael Landau"
+title: "Posts"
 site: distill::distill_website
 listing: posts
 ---
