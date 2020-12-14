@@ -10,14 +10,24 @@ collections:
 navbar:
   right:
     - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
-    - text: "Software"
-      href: software.html
-    - text: "Publications"
-      href: publications.html
-    - text: "Presentations"
-      href: presentations.html
-    - text: "Resume"
-      href: resume.html
+      menu:
+      - text: "Posts"
+        href: index.html
+      - text: "About"
+        href: about.html
+    - text: "Portfolio"
+      menu:
+      - text: "Publications"
+        href: publications.html
+      - text: "Presentations"
+        href: presentations.html
+      - text: "Resume"
+        href: resume.html
+      - text: "Software"
+        href: software.html
+    - text: "Old"
+      menu:
+      - text: "Early career"
+        href: https://wlandau.github.io/portfolio2020
+      - text: "Graduate studies"
+        href: https://wlandau.github.io/grad_school_portfolio/
