@@ -113,9 +113,9 @@ tar_pipeline(
 
 I intend to grow this new ecosystem to encompass more packages and more methodologies. If you would like to contribute, please feel free to reach out.
 
-- `r fontawesome::fa("github")` [`@wlandau`](https://www.github.com/wlandau)
-- `r fontawesome::fa("twitter")` [`@wmlandau`](https://www.twitter.com/wmlandau)
-- `r fontawesome::fa("linkedin")` [`@wlandau`](linkedin.com/in/wlandau)
+- `r fontawesome::fa("github")` [`@wlandau`](https://github.com/wlandau)
+- `r fontawesome::fa("twitter")` [`@wmlandau`](https://twitter.com/wmlandau)
+- `r fontawesome::fa("linkedin")` [`@wlandau`](https://linkedin.com/in/wlandau)
 
 ```{r, echo = FALSE}
 unlink("_targets.R")

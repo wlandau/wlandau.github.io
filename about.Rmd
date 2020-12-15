@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 I am a statistician and software developer in the life sciences industry. I specialize in the computational aspects of Bayesian statistics and reproducible research, and I am the creator and maintainer of the [`targets`](https://github.com/wlandau/targets) and [`drake`](https://github.com/ropensci/drake) R packages.
 
-- `r fontawesome::fa("github")` [`@wlandau`](https://www.github.com/wlandau)
-- `r fontawesome::fa("linkedin")` [`@wlandau`](linkedin.com/in/wlandau)
-- `r fontawesome::fa("twitter")` [`@wmlandau`](https://www.twitter.com/wmlandau)
+- `r fontawesome::fa("github")` [`@wlandau`](https://github.com/wlandau)
+- `r fontawesome::fa("linkedin")` [`@wlandau`](https://linkedin.com/in/wlandau)
+- `r fontawesome::fa("twitter")` [`@wmlandau`](https://twitter.com/wmlandau)
 - `r fontawesome::fa("researchgate")` [`William_Landau2`](https://www.researchgate.net/profile/William_Landau2)
