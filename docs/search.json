@@ -12,7 +12,7 @@
       "title": "Posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-15T12:42:48-05:00"
+      "last_modified": "2020-12-15T12:44:49-05:00"
     },
     {
       "path": "presentations.html",
@@ -46,8 +46,8 @@
       "path": "targetopia.html",
       "title": "Targetopia",
       "author": [],
-      "contents": "\n\n\n\n\nThe targetopia is an ecosystem of R packages for democratized reproducible pipelines at scale. Make-like pipelines accelerate development and reduce frustration for research papers, simulation studies, and other data science projects with copious workflows and demanding runtimes. As this post explains, the goal of the targetopia is to make powerful pipelines accessible and friendly.\n\n\n\n\ntargets is the core engine of the targetopia. It learns the components of your data analysis project, runs the work with distributed computing, and skips steps that are already up to date. It reduces the runtime of successive runs, and it shows tangible evidence that your results match the underlying code and data.\n\n\n\n\ntarchetypes makes it easy to add certain kinds of common tasks to reproducible pipelines. Most of its functions create families of targets for parameterized R Markdown, simulation studies, and other general-purpose scenarios.\n\n\n\n\nstantargets is a workflow framework for Bayesian data analysis with cmdstanr. With concise, easy-to-use syntax, it defines versatile families of targets tailored to Bayesian statistics, from a single MCMC run with postprocessing to large simulation studies. \n\n\n\njagstargets is under construction and not yet available in the open source community. When implemented, it will do for JAGS what stantargets does for cmdstanr. \n\n\n\n",
-      "last_modified": "2020-12-15T12:42:50-05:00"
+      "contents": "\n\n\n\n\nThe targetopia is an ecosystem of R packages for democratized reproducible pipelines at scale. Make-like pipelines accelerate development and reduce frustration for research papers, simulation studies, and other data science projects with copious workflows and demanding runtimes. As this post explains, the goal of the targetopia is to make powerful pipelines accessible and friendly.\n\n\n\n\ntargets is the core engine of the targetopia. It learns the components of your data analysis project, runs the work with distributed computing, and skips steps that are already up to date. It reduces the runtime of successive runs, and it shows tangible evidence that your results match the underlying code and data.\n\n\n\n\ntarchetypes makes it easy to add certain kinds of common tasks to reproducible pipelines. Most of its functions create families of targets for parameterized R Markdown, simulation studies, and other general-purpose scenarios.\n\n\n\n\nstantargets is a workflow framework for Bayesian data analysis with cmdstanr. With concise, easy-to-use syntax, it defines versatile families of targets tailored to Bayesian statistics, from a single MCMC run with postprocessing to large simulation studies. \n\n\n\njagstargets is just beginning development and is not yet available in the open source community. When implemented, it will do for JAGS what stantargets does for cmdstanr. \n\n\n\n Please consider contributing a your own targetopia package for your subfield of data science or Statistics. As this post explains, all you need is a function that calls tar_target_raw(). Functions substitute(), tar_sub(), and/or tar_eval() can help create the command argument. Functions tar_manifest(), tar_network(), tar_dir(), and tar_test() help write examples and tests.\n\n\n\n\n\n",
+      "last_modified": "2020-12-15T23:30:00-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
