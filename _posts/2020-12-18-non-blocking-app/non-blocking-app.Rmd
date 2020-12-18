@@ -17,7 +17,7 @@ preview: app-run.png
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 
-## Example app
+## An example
 
 The [`targets`](https://wlandau.github.io/targets) package has a new Shiny app to monitor progress.^[The full source code of the [`tar_watch()`](https://wlandau.github.io/targets/reference/tar_watch.html) app is [available in the `targets` package](https://github.com/wlandau/targets/blob/252c9c9d7dadad680a58289a75d2f563c6c1f768/R/tar_watch.R). To embed this feature in your own app as a Shiny module, see functions [`tar_watch_ui()`](https://wlandau.github.io/targets/reference/tar_watch_ui.html) and [`tar_watch_server()`](https://wlandau.github.io/targets/reference/tar_watch_server.html)] To try it out, set up a new pipeline.
 
