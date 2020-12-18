@@ -2098,7 +2098,7 @@ Archive
 
 <div class="d-article">
 <h2 id="the-app">The app</h2>
-<p>The <a href="https://wlandau.github.io/targets"><code>targets</code></a> package has a new Shiny app to monitor progress. To try it out, set up a new pipeline.</p>
+<p>The <a href="https://wlandau.github.io/targets"><code>targets</code></a> package has a new Shiny app to monitor progress.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> To try it out, set up a new pipeline.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='co'># Write in _targets.R:</span>
@@ -2114,7 +2114,7 @@ Archive
 </code></pre>
 </div>
 </div>
-<p>Then, launch the app in your R console.</p>
+<p>Then launch the app in your R console.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/targets/'>targets</a></span><span class='op'>)</span>
@@ -2125,7 +2125,7 @@ Archive
 </code></pre>
 </div>
 </div>
-<p>A new browser window should show a <a href="http://datastorm-open.github.io/visNetwork"><code>visNetwork</code></a> graph that refreshes every 10 seconds.</p>
+<p>A new browser window should show a <a href="http://datastorm-open.github.io/visNetwork"><code>visNetwork</code></a> graph that reloads every 10 seconds.</p>
 <p><img src="app-start.png" /></p>
 <p>The app does not block your R session, so your R console is free to run the pipeline.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2140,7 +2140,7 @@ Archive
 <p>As the pipeline progresses, the <a href="http://datastorm-open.github.io/visNetwork"><code>visNetwork</code></a> graph should periodically refresh and show you the latest status of each target.</p>
 <p><img src="app-run.png" /></p>
 <h2 id="the-challenge">The challenge</h2>
-<p>Shiny functions <code>shinyApp()</code> and <code>runApp()</code> both block the R console. While they are running, your R session cannot do anything else.</p>
+<p>Shiny functions <a href="https://shiny.rstudio.com/reference/shiny/1.5.0/shinyApp.html"><code>shinyApp()</code></a> and <a href="https://shiny.rstudio.com/reference/shiny/1.5.0/runApp.html"><code>runApp()</code></a> both block the R console. While they are running, your R session cannot do anything else.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;</span><span class="st"> </span><span class="kw">runApp</span>()</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
@@ -2148,7 +2148,7 @@ Archive
 </div>
 <p>So how is it possible to run <a href="https://wlandau.github.io/targets/reference/tar_watch.html"><code>tar_watch()</code></a> and <a href="https://wlandau.github.io/targets/reference/tar_make.html"><code>tar_make()</code></a> at the same time?</p>
 <h2 id="a-convenient-solution">A convenient solution</h2>
-<p>First, write a function that actually runs the app at a given IP address<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and TCP port.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> The <code>options</code> argument of <code>sshinyApp()</code> is key.</p>
+<p>First, write a function that actually runs the app at a given IP address<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and TCP port.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The <code>options</code> argument of <a href="https://shiny.rstudio.com/reference/shiny/1.5.0/shinyApp.html"><code>shinyApp()</code></a> is key.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='va'>run_app</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>host</span> <span class='op'>=</span> <span class='st'>"127.0.0.1"</span>, <span class='va'>port</span> <span class='op'>=</span> <span class='fl'>49152</span><span class='op'>)</span> <span class='op'>{</span>
@@ -2167,7 +2167,7 @@ Archive
 </code></pre>
 </div>
 </div>
-<p>Wait until the app initializes.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>Wait until the app initializes.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='kw'>while</span><span class='op'>(</span><span class='op'>!</span><span class='fu'>pingr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/pingr/man/ping_port.html'>is_up</a></span><span class='op'>(</span>destination <span class='op'>=</span> <span class='st'>"127.0.0.1"</span>, port <span class='op'>=</span> <span class='fl'>49152</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
@@ -2191,9 +2191,10 @@ Archive
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>Most users can use localhost (<code>host = "127.0.0.1"</code>). If your web browser is running on a different computer than the one running the app, use <code>host = "0.0.0.0"</code> and ensure the two computers share the same local network.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>For a personal app like this, I recommend choosing a port in the dynamic range between 49152 and 65535 so it does not conflict with critical infrastructure on your computer.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3" role="doc-endnote"><p>This loop may take few seconds, so a <a href="https://cli.r-lib.org/reference/make_spinner.html"><code>cli</code> spinner</a> is a nice touch.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>The full source code of the <a href="https://wlandau.github.io/targets/reference/tar_watch.html"><code>tar_watch()</code></a> app is <a href="https://github.com/wlandau/targets/blob/252c9c9d7dadad680a58289a75d2f563c6c1f768/R/tar_watch.R">available in the <code>targets</code> package</a>. To embed this feature in your own app as a Shiny module, see functions <a href="https://wlandau.github.io/targets/reference/tar_watch_ui.html"><code>tar_watch_ui()</code></a> and <a href="https://wlandau.github.io/targets/reference/tar_watch_server.html"><code>tar_watch_server()</code></a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Most users can use <code>localhost</code> (<code>host = "127.0.0.1"</code>). If your web browser is running on a different computer than the one running the app, use <code>host = "0.0.0.0"</code> and ensure the two computers share the same local network.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>For a personal app like this, I recommend choosing a port in the dynamic range between 49152 and 65535 so it does not conflict with critical infrastructure on your computer.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>This loop may take few seconds, so a <a href="https://cli.r-lib.org/reference/make_spinner.html"><code>cli</code> spinner</a> is a nice touch.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->

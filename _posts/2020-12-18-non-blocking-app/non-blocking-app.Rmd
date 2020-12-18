@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 ## The app
 
-The [`targets`](https://wlandau.github.io/targets) package has a new Shiny app to monitor progress. To try it out, set up a new pipeline.
+The [`targets`](https://wlandau.github.io/targets) package has a new Shiny app to monitor progress.^[The full source code of the [`tar_watch()`](https://wlandau.github.io/targets/reference/tar_watch.html) app is [available in the `targets` package](https://github.com/wlandau/targets/blob/252c9c9d7dadad680a58289a75d2f563c6c1f768/R/tar_watch.R). To embed this feature in your own app as a Shiny module, see functions [`tar_watch_ui()`](https://wlandau.github.io/targets/reference/tar_watch_ui.html) and [`tar_watch_server()`](https://wlandau.github.io/targets/reference/tar_watch_server.html)] To try it out, set up a new pipeline.
 
 ```{r}
 # Write in _targets.R:
@@ -34,7 +34,7 @@ tar_pipeline(
 )
 ```
 
-Then, launch the app in your R console.
+Then launch the app in your R console.
 
 ```{r}
 library(targets)
@@ -44,7 +44,7 @@ tar_watch(targets_only = TRUE, outdated = FALSE, seconds = 10)
 #> ● port: 57726
 ```
 
-A new browser window should show a [`visNetwork`](http://datastorm-open.github.io/visNetwork) graph that refreshes every 10 seconds.
+A new browser window should show a [`visNetwork`](http://datastorm-open.github.io/visNetwork) graph that reloads every 10 seconds.
 
 ![](./app-start.png)
 
@@ -63,7 +63,7 @@ As the pipeline progresses, the [`visNetwork`](http://datastorm-open.github.io/v
 
 ## The challenge
 
-Shiny functions `shinyApp()` and `runApp()` both block the R console. While they are running, your R session cannot do anything else.
+Shiny functions [`shinyApp()`](https://shiny.rstudio.com/reference/shiny/1.5.0/shinyApp.html) and [`runApp()`](https://shiny.rstudio.com/reference/shiny/1.5.0/runApp.html) both block the R console. While they are running, your R session cannot do anything else.
 
 ```{r}
 > runApp()
@@ -75,7 +75,7 @@ So how is it possible to run [`tar_watch()`](https://wlandau.github.io/targets/r
 
 ## A convenient solution
 
-First, write a function that actually runs the app at a given IP address^[Most users can use localhost (`host = "127.0.0.1"`). If your web browser is running on a different computer than the one running the app, use `host = "0.0.0.0"` and ensure the two computers share the same local network.] and TCP port.^[For a personal app like this, I recommend choosing a port in the dynamic range between 49152 and 65535 so it does not conflict with critical infrastructure on your computer.] The `options` argument of `sshinyApp()` is key.
+First, write a function that actually runs the app at a given IP address^[Most users can use `localhost` (`host = "127.0.0.1"`). If your web browser is running on a different computer than the one running the app, use `host = "0.0.0.0"` and ensure the two computers share the same local network.] and TCP port.^[For a personal app like this, I recommend choosing a port in the dynamic range between 49152 and 65535 so it does not conflict with critical infrastructure on your computer.] The `options` argument of [`shinyApp()`](https://shiny.rstudio.com/reference/shiny/1.5.0/shinyApp.html) is key.
 
 ```{r}
 run_app <- function(host = "127.0.0.1", port = 49152) {
