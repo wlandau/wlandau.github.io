@@ -1,7 +1,7 @@
 ---
-title: "A non-blocking Shiny app"
+title: "Straightforward non-blocking Shiny apps"
 description: |
-  How to launch a Shiny app without blocking your R console.
+  A convenient way to launch a Shiny app without blocking your R session.
 author: Will Landau
 date: 12-18-2020
 output:
@@ -92,7 +92,7 @@ args <- list(host = "127.0.0.1", port = 49152)
 handle <- callr::r_bg(func = run_app, args = args, supervise = TRUE)
 ```
 
-Wait until the app initializes.^[This loop may take few seconds, so a [`cli` spinner](https://cli.r-lib.org/reference/make_spinner.html) is a nice touch.]
+At this point, the app may take an unpredictable length of time to initialize. With  [`pingr`](https://github.com/r-lib/pingr), we can wait until the app comes online.^[This loop may take few seconds, so a [`cli` spinner](https://cli.r-lib.org/reference/make_spinner.html) is a nice touch.]
 
 ```{r}
 while(!pingr::is_up(destination = "127.0.0.1", port = 49152)) {
@@ -100,7 +100,7 @@ while(!pingr::is_up(destination = "127.0.0.1", port = 49152)) {
 }
 ```
 
-After this loop completes, you can open the app in a web browser.
+After the loop completes, you can open the app in a web browser.
 
 ```{r}
 browseURL("http://127.0.0.1:49152")

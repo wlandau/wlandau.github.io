@@ -85,9 +85,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>William Michael Landau: A non-blocking Shiny app</title>
+<title>William Michael Landau: Straightforward non-blocking Shiny apps</title>
 
-<meta property="description" itemprop="description" content="How to launch a Shiny app without blocking your R console."/>
+<meta property="description" itemprop="description" content="A convenient way to launch a Shiny app without blocking your R session."/>
 
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
@@ -97,23 +97,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="Will Landau"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="William Michael Landau: A non-blocking Shiny app"/>
+<meta property="og:title" content="William Michael Landau: Straightforward non-blocking Shiny apps"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="How to launch a Shiny app without blocking your R console."/>
+<meta property="og:description" content="A convenient way to launch a Shiny app without blocking your R session."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="William Michael Landau"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="William Michael Landau: A non-blocking Shiny app"/>
-<meta property="twitter:description" content="How to launch a Shiny app without blocking your R console."/>
+<meta property="twitter:title" content="William Michael Landau: Straightforward non-blocking Shiny apps"/>
+<meta property="twitter:description" content="A convenient way to launch a Shiny app without blocking your R session."/>
 <meta property="twitter:site" content="@wmlandau"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["A non-blocking Shiny app"]},{"type":"character","attributes":{},"value":["How to launch a Shiny app without blocking your R console."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Will Landau"]}]}]},{"type":"character","attributes":{},"value":["12-18-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["rstats","shiny"]},{"type":"character","attributes":{},"value":["app-run.png"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Straightforward non-blocking Shiny apps"]},{"type":"character","attributes":{},"value":["A convenient way to launch a Shiny app without blocking your R session."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Will Landau"]}]}]},{"type":"character","attributes":{},"value":["12-18-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["rstats","shiny"]},{"type":"character","attributes":{},"value":["app-run.png"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2022,7 +2022,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"A non-blocking Shiny app","description":"How to launch a Shiny app without blocking your R console.","authors":[{"author":"Will Landau","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-18T00:00:00.000+00:00","citationText":"Landau, 2020"}
+{"title":"Straightforward non-blocking Shiny apps","description":"A convenient way to launch a Shiny app without blocking your R session.","authors":[{"author":"Will Landau","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-18T00:00:00.000+00:00","citationText":"Landau, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2079,14 +2079,14 @@ Archive
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>A non-blocking Shiny app</h1>
+<h1>Straightforward non-blocking Shiny apps</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:rstats" class="dt-tag">rstats</a>
   <a href="../../index.html#category:shiny" class="dt-tag">shiny</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>How to launch a Shiny app without blocking your R console.</p></p>
+<p><p>A convenient way to launch a Shiny app without blocking your R session.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2167,7 +2167,7 @@ Archive
 </code></pre>
 </div>
 </div>
-<p>Wait until the app initializes.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>At this point, the app may take an unpredictable length of time to initialize. With <a href="https://github.com/r-lib/pingr"><code>pingr</code></a>, we can wait until the app comes online.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='kw'>while</span><span class='op'>(</span><span class='op'>!</span><span class='fu'>pingr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/pingr/man/ping_port.html'>is_up</a></span><span class='op'>(</span>destination <span class='op'>=</span> <span class='st'>"127.0.0.1"</span>, port <span class='op'>=</span> <span class='fl'>49152</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
@@ -2176,7 +2176,7 @@ Archive
 </code></pre>
 </div>
 </div>
-<p>After this loop completes, you can open the app in a web browser.</p>
+<p>After the loop completes, you can open the app in a web browser.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='fu'><a href='https://rdrr.io/r/utils/browseURL.html'>browseURL</a></span><span class='op'>(</span><span class='st'>"http://127.0.0.1:49152"</span><span class='op'>)</span>
