@@ -2093,7 +2093,7 @@ Archive
 <th style="font-weight:normal;">
 <br> <a href="https://www.repostatus.org/#active"><img src="https://www.repostatus.org/badges/latest/active.svg" /></a> <a href="https://wlandau.github.io/targets"><code>targets</code></a> is the core engine of the targetopia. It learns the components of your data analysis project, runs the work with distributed computing, and skips steps that are already up to date. It reduces the runtime of successive runs, and it shows tangible evidence that your results match the underlying code and data.<br><br>
 </th>
-<tr>
+</tr>
 <tr>
 <th>
 <a href="https://wlandau.github.io/tarchetypes"><img src="https://raw.githubusercontent.com/wlandau/tarchetypes/main/man/figures/logo.png#1" height="139px"></a>
@@ -2101,6 +2101,7 @@ Archive
 <th style="font-weight:normal;">
 <br> <a href="https://www.repostatus.org/#active"><img src="https://www.repostatus.org/badges/latest/active.svg" /></a> <a href="https://wlandau.github.io/tarchetypes"><code>tarchetypes</code></a> makes it easy to add certain kinds of common tasks to reproducible pipelines. Most of its <a href="https://wlandau.github.io/tarchetypes/reference/index.html">functions</a> create families of targets for <a href="https://wlandau.github.io/tarchetypes/reference/tar_render_rep.html">parameterized R Markdown</a>, <a href="https://wlandau.github.io/tarchetypes/reference/tar_rep.html">simulation studies</a>, and other general-purpose scenarios.<br><br>
 </th>
+</tr>
 <tr>
 <th>
 <a href="https://wlandau.github.io/stantargets"><img src="https://raw.githubusercontent.com/wlandau/stantargets/main/man/figures/logo.png#1" height="139px"></a>
@@ -2108,6 +2109,7 @@ Archive
 <th style="font-weight:normal;">
 <br> <a href="https://www.repostatus.org/#active"><img src="https://www.repostatus.org/badges/latest/active.svg" /></a> <a href="https://wlandau.github.io/targets"><code>targets</code></a> <a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a> is a workflow framework for Bayesian data analysis with <a href="https://mc-stan.org/cmdstanr/"><code>cmdstanr</code></a>. With concise, easy-to-use syntax, it defines versatile families of targets tailored to Bayesian statistics, from a <a href="https://wlandau.github.io/stantargets/articles/mcmc.html">single MCMC run with postprocessing</a> to <a href="https://wlandau.github.io/stantargets/articles/mcmc_rep.html">large simulation studies</a>. <br><br>
 </th>
+</tr>
 <tr>
 <th>
 <img src="https://raw.githubusercontent.com/wlandau/wlandau.github.io/main/images/jagstargets.png#1" height="139px">
@@ -2115,26 +2117,39 @@ Archive
 <th style="font-weight:normal;">
 <br> <a href="https://www.repostatus.org/#wip"><img src="https://www.repostatus.org/badges/latest/wip.svg" /></a> <a href="https://wlandau.github.io/targets"><code>targets</code></a> <code>jagstargets</code> is just beginning development and is not yet publicly available. When implemented, it will do for <a href="http://mcmc-jags.sourceforge.net/">JAGS</a> what <a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a> does for <a href="https://mc-stan.org/cmdstanr/"><code>cmdstanr</code></a>. <br><br>
 </th>
-<tr>
-<th style="text-align: center">
-<code>tarmarkdown</code>
-</th>
-<th style="font-weight:normal;">
-<br> <a href="https://www.repostatus.org/#concept"><img src="https://www.repostatus.org/badges/latest/concept.svg" /></a> <code>tarmarkdown</code> is an idea first proposed <a href="https://github.com/wlandau/tarchetypes/issues/23#issuecomment-748329846">here</a>, and implementation has not started. The goal is to accommodate dependency-aware literate programming workflows, where computationally intense targets build upstream and inexpensive R Markdown reports render downstream. Functions in <a href="https://github.com/wlandau/tarchetypes"><code>tarchetypes</code></a> already achieve this to a limited degree, but there is not currently functionality to handle more complicated use cases such as <a href="https://bookdown.org"><code>bookdown</code></a> books, <a href="https://rmarkdown.rstudio.com/lesson-13.html">R Markdown sites</a>, or <a href="https://jdblischak.github.io/workflowr/"><code>workflowr</code></a> projects. <br><br>
-</th>
+</tr>
 <tr>
 <th style="text-align: center">
 <code>brmstargets</code>
 </th>
 <th style="font-weight:normal;">
-<br> <a href="https://www.repostatus.org/#concept"><img src="https://www.repostatus.org/badges/latest/concept.svg" /></a> <code>brmstargets</code> is an idea first proposed <a href="https://github.com/wlandau/stantargets/issues/12#issuecomment-747836678">here</a>, and implementation has not started. The goal is to accommodate <a href="https://github.com/paul-buerkner/brms"><code>brms</code></a>-powered Bayesian data analysis workflows just as <a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a> enhances <a href="https://mc-stan.org/cmdstanr/"><code>cmdstanr</code></a>. <br><br>
+<br> <a href="https://www.repostatus.org/#concept"><img src="https://www.repostatus.org/badges/latest/concept.svg" /></a> <code>brmstargets</code> is an idea first proposed <a href="https://github.com/wlandau/stantargets/issues/12#issuecomment-747836678">here</a>. An implementation is planned, but no work has started. The goal is to accommodate <a href="https://github.com/paul-buerkner/brms"><code>brms</code></a>-powered Bayesian data analysis workflows just as <a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a> enhances <a href="https://mc-stan.org/cmdstanr/"><code>cmdstanr</code></a>. <br><br>
 </th>
+</tr>
+<tr>
+<th style="text-align: center">
+<code>tarmarkdown</code>
+</th>
+<th style="font-weight:normal;">
+<br> <a href="https://www.repostatus.org/#concept"><img src="https://www.repostatus.org/badges/latest/concept.svg" /></a> <code>tarmarkdown</code> is an idea first proposed <a href="https://github.com/wlandau/tarchetypes/issues/23#issuecomment-748329846">here</a>. An implementation has not started, and no formal commitment has been made. The goal is to accommodate dependency-aware literate programming workflows, where computationally intense targets build upstream and inexpensive R Markdown reports render downstream. Functions in <a href="https://github.com/wlandau/tarchetypes"><code>tarchetypes</code></a> already achieve this to a limited degree, but there is not currently functionality to handle more complicated use cases such as <a href="https://bookdown.org"><code>bookdown</code></a> books, <a href="https://rmarkdown.rstudio.com/lesson-13.html">R Markdown sites</a>, or <a href="https://jdblischak.github.io/workflowr/"><code>workflowr</code></a> projects. <br><br>
+</th>
+</tr>
+<tr>
+<th style="text-align: center">
+<img src="images/ideas.png" height="139px">
+</th>
+<th style="font-weight:normal;">
+<br> Following precedent of <a href="https://wlandau.github.io/stantargets"><code>stantargets</code></a>, it should be possible to create a targetopia package tailored to each of the most popular methodology packages whose users face with intense computation, long runtimes, and rapid changes. Possibilities include <a href="https://greta-stats.org"><code>greta</code></a>, <a href="https://r-nimble.org"><code>nimble</code></a>, <a href="https://keras.rstudio.com"><code>keras</code></a>, <a href="https://torch.mlverse.org"><code>torch</code></a>, <a href="https://github.com/mlverse/torchvision"><code>torchvision</code></a>, <a href="https://github.com/tidymodels/tidymodels"><code>tidymodels</code></a>, and <a href="https://github.com/nlmixrdevelopment/nlmixr"><code>nlmixr</code></a>.
+</ul>
+<br><br>
+</th>
+</tr>
 <tr>
 <th>
 <img src="https://openclipart.org/image/2000px/188840" height="139px">
 </th>
 <th style="font-weight:normal;">
-<p><br> If you love <a href="https://r-pkgs.org/">R packages</a> and are eager to contribute to any of the above, let’s get in touch.</p>
+<br> If you love <a href="https://r-pkgs.org/">R packages</a> and are eager to contribute to any of the above, let’s get in touch.
 <ul>
 <li>
 <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512">
@@ -2157,6 +2172,7 @@ Archive
 </ul>
 <br><br>
 </th>
+</tr>
 </table>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
