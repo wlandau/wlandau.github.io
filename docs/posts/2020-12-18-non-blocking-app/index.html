@@ -85,40 +85,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>William Michael Landau: RStudio distill</title>
+<title>William Michael Landau: A non-blocking Shiny app</title>
 
-<meta property="description" itemprop="description" content="A fresh start using RStudio&#39;s latest web format"/>
+<meta property="description" itemprop="description" content="How to launch a Shiny app without blocking your R console."/>
 
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2020-12-13"/>
-<meta property="article:created" itemprop="dateCreated" content="2020-12-13"/>
+<meta property="article:published" itemprop="datePublished" content="2020-12-18"/>
+<meta property="article:created" itemprop="dateCreated" content="2020-12-18"/>
 <meta name="article:author" content="Will Landau"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="William Michael Landau: RStudio distill"/>
+<meta property="og:title" content="William Michael Landau: A non-blocking Shiny app"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="A fresh start using RStudio&#39;s latest web format"/>
+<meta property="og:description" content="How to launch a Shiny app without blocking your R console."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="William Michael Landau"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="William Michael Landau: RStudio distill"/>
-<meta property="twitter:description" content="A fresh start using RStudio&#39;s latest web format"/>
+<meta property="twitter:title" content="William Michael Landau: A non-blocking Shiny app"/>
+<meta property="twitter:description" content="How to launch a Shiny app without blocking your R console."/>
 <meta property="twitter:site" content="@wmlandau"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["RStudio distill"]},{"type":"character","attributes":{},"value":["A fresh start using RStudio's latest web format"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Will Landau"]}]}]},{"type":"character","attributes":{},"value":["2020-12-13"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["rstats","rstudio"]},{"type":"character","attributes":{},"value":["preview.png"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["A non-blocking Shiny app"]},{"type":"character","attributes":{},"value":["How to launch a Shiny app without blocking your R console."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Will Landau"]}]}]},{"type":"character","attributes":{},"value":["12-18-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["shiny","rstats"]},{"type":"character","attributes":{},"value":["app.png"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["distill_files/anchor-4.2.2/anchor.min.js","distill_files/bowser-1.9.3/bowser.min.js","distill_files/distill-2.2.21/template.v2.js","distill_files/header-attrs-2.5/header-attrs.js","distill_files/jquery-1.11.3/jquery.min.js","distill_files/webcomponents-2.0.0/webcomponents.js","distill.png","preview.png"]}
+  {"type":"character","attributes":{},"value":["app-run.png","app-start.png","non-blocking-app_files/anchor-4.2.2/anchor.min.js","non-blocking-app_files/bowser-1.9.3/bowser.min.js","non-blocking-app_files/distill-2.2.21/template.v2.js","non-blocking-app_files/header-attrs-2.5/header-attrs.js","non-blocking-app_files/jquery-1.11.3/jquery.min.js","non-blocking-app_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2022,7 +2022,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"RStudio distill","description":"A fresh start using RStudio's latest web format","authors":[{"author":"Will Landau","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-13T00:00:00.000+00:00","citationText":"Landau, 2020"}
+{"title":"A non-blocking Shiny app","description":"How to launch a Shiny app without blocking your R console.","authors":[{"author":"Will Landau","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-18T00:00:00.000+00:00","citationText":"Landau, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2079,35 +2079,121 @@ Archive
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>RStudio distill</h1>
+<h1>A non-blocking Shiny app</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
+  <a href="../../index.html#category:shiny" class="dt-tag">shiny</a>
   <a href="../../index.html#category:rstats" class="dt-tag">rstats</a>
-  <a href="../../index.html#category:rstudio" class="dt-tag">rstudio</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>A fresh start using RStudio’s latest web format</p></p>
+<p><p>How to launch a Shiny app without blocking your R console.</p></p>
 </div>
 
 <div class="d-byline">
   
   Will Landau
   
-<br/>2020-12-13
+<br/>12-18-2020
 </div>
 
 <div class="d-article">
+<h2 id="the-app">The app</h2>
+<p>The <a href="https://wlandau.github.io/targets"><code>targets</code></a> package has a new Shiny app to monitor progress. To try it out, set up a new pipeline.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="distill.png" width="120" /></p>
+<div class="sourceCode">
+<pre><code><span class='co'># Write in _targets.R:</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/targets/'>targets</a></span><span class='op'>)</span>
+<span class='va'>sleep_run</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>
+<span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_pipeline.html'>tar_pipeline</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>data1</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>data2</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>model1</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='va'>data1</span><span class='op'>)</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>model2</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='va'>data2</span><span class='op'>)</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>conclusions</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>model1</span>, <span class='va'>model2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>)</span>
+</code></pre>
 </div>
-<p><a href="https://rstudio.com/">Rstudio</a> just announced the <a href="https://cran.r-project.org">CRAN</a> release of <a href="https://rstudio.github.io/distill/"><code>distill</code></a>, an R package for formatting scientific and technical websites.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Like all <a href="https://rstudio.com/">RStudio</a> tools, <a href="https://rstudio.github.io/distill/"><code>distill</code></a> is super easy to use. It took only a few minutes to convert <a href="https://wlandau.github.io/portfolio2020">my old portfolio</a> into a nicer-looking <a href="https://wlandau.github.io/">personal website</a>.</p>
-<p>The release of <a href="https://rstudio.github.io/distill/"><code>distill</code></a> is timely. After a challenging 2020, it is nice to have a little nudge to refresh and regroup for 2021.</p>
-<p>For me personally, this is the right time to rebuild my website. It has been four years since I started my career, and I now have a better understanding of how I fit into my professional community.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+</div>
+<p>Then, launch the app in your R console.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/targets/'>targets</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_watch.html'>tar_watch</a></span><span class='op'>(</span>targets_only <span class='op'>=</span> <span class='cn'>TRUE</span>, outdated <span class='op'>=</span> <span class='cn'>FALSE</span>, seconds <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>
+<span class='co'>#&gt; ● url: http://127.0.0.1:57726</span>
+<span class='co'>#&gt; ● host: 127.0.0.1</span>
+<span class='co'>#&gt; ● port: 57726</span>
+</code></pre>
+</div>
+</div>
+<p>A new browser window should show a <a href="http://datastorm-open.github.io/visNetwork"><code>visNetwork</code></a> graph that refreshes every 10 seconds.</p>
+<p><img src="app-start.png" /></p>
+<p>The app does not block your R session, so your R console is free to run the pipeline.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_make.html'>tar_make</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='co'>#&gt; ● run target data1</span>
+<span class='co'>#&gt; ● run target data2</span>
+<span class='co'>#&gt; ● run target model1</span>
+</code></pre>
+</div>
+</div>
+<p>As the pipeline progresses, the <a href="http://datastorm-open.github.io/visNetwork"><code>visNetwork</code></a> graph should periodically refresh and show you the latest status of each target.</p>
+<p><img src="app-run.png" /></p>
+<h2 id="the-challenge">The challenge</h2>
+<p>Shiny functions <code>shinyApp()</code> and <code>runApp()</code> both block the R console. While they are running, your R session cannot do anything else.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;</span><span class="st"> </span><span class="kw">runApp</span>()</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>Listening on http<span class="op">:</span><span class="er">//</span><span class="dv">127</span>.<span class="dv">0</span>.<span class="fl">0.1</span><span class="op">:</span><span class="dv">5160</span></span></code></pre></div>
+</div>
+<p>So how is it possible to run <a href="https://wlandau.github.io/targets/reference/tar_watch.html"><code>tar_watch()</code></a> and <a href="https://wlandau.github.io/targets/reference/tar_make.html"><code>tar_make()</code></a> at the same time?</p>
+<h2 id="a-convenient-solution">A convenient solution</h2>
+<p>First, write a function that actually runs the app at a given IP address<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and TCP port.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> The <code>options</code> argument of <code>sshinyApp()</code> is key.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>run_app</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>host</span> <span class='op'>=</span> <span class='st'>"127.0.0.1"</span>, <span class='va'>port</span> <span class='op'>=</span> <span class='fl'>49152</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='va'>ui</span> <span class='op'>&lt;-</span> <span class='fu'>bs4Dash</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/bs4Dash/man/bs4DashPage.html'>bs4DashPage</a></span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span> <span class='co'># bs4Dash creates nice-looking Shiny UIs.</span>
+  <span class='va'>server</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>input</span>, <span class='va'>output</span>, <span class='va'>session</span><span class='op'>)</span> <span class='op'>{</span><span class='va'>...</span><span class='op'>}</span>
+  <span class='fu'>shiny</span><span class='fu'>::</span><span class='fu'><a href='https://shiny.rstudio.com/reference/shiny/latest/shinyApp.html'>shinyApp</a></span><span class='op'>(</span><span class='va'>ui</span>, <span class='va'>server</span>, options <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>host <span class='op'>=</span> <span class='va'>host</span>, port <span class='op'>=</span> <span class='va'>port</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<p>Next, launch the app in a <a href="https://callr.r-lib.org/reference/r_bg.html"><code>callr::r_bg()</code></a> background process.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>args</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>host <span class='op'>=</span> <span class='st'>"127.0.0.1"</span>, port <span class='op'>=</span> <span class='fl'>49152</span><span class='op'>)</span>
+<span class='va'>handle</span> <span class='op'>&lt;-</span> <span class='fu'>callr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/callr/man/r_bg.html'>r_bg</a></span><span class='op'>(</span>func <span class='op'>=</span> <span class='va'>run_app</span>, args <span class='op'>=</span> <span class='va'>args</span>, supervise <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Wait until the app initializes.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='kw'>while</span><span class='op'>(</span><span class='op'>!</span><span class='fu'>pingr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/pingr/man/ping_port.html'>is_up</a></span><span class='op'>(</span>destination <span class='op'>=</span> <span class='st'>"127.0.0.1"</span>, port <span class='op'>=</span> <span class='fl'>49152</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='op'>(</span><span class='fl'>0.01</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<p>After this loop completes, you can open the app in a web browser.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/browseURL.html'>browseURL</a></span><span class='op'>(</span><span class='st'>"http://127.0.0.1:49152"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Now, you can use the app and the R console at the same time.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span><span class="st"> </span><span class="co"># Ready for input.</span></span></code></pre></div>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>Hex logo from <a href="https://github.com/rstudio/distill" class="uri">https://github.com/rstudio/distill</a>. Copyright RStudio, PBC.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>Most users can use localhost (<code>host = "127.0.0.1"</code>). If your web browser is running on a different computer than the one running the app, use <code>host = "0.0.0.0"</code> and ensure the two computers share the same local network.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>For a personal app like this, I recommend choosing a port in the dynamic range between 49152 and 65535 so it does not conflict with critical infrastructure on your computer.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>This loop may take few seconds, so a <a href="https://cli.r-lib.org/reference/make_spinner.html"><code>cli</code> spinner</a> is a nice touch.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->

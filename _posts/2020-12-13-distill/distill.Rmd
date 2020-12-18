@@ -2,6 +2,7 @@
 title: "RStudio distill"
 description: |
   A fresh start using RStudio's latest web format
+author: Will Landau
 date: 2020-12-13
 output:
   distill::distill_article:

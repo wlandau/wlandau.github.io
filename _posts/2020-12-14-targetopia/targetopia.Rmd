@@ -2,6 +2,7 @@
 title: "The targetopia"
 description: |
   An R package ecosystem for democratized reproducible pipelines at scale
+author: Will Landau
 date: 2020-12-14
 output:
   distill::distill_article:

@@ -93,6 +93,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--  https://schema.org/Article -->
   <meta property="article:published" itemprop="datePublished" content="2020-12-14"/>
   <meta property="article:created" itemprop="dateCreated" content="2020-12-14"/>
+  <meta name="article:author" content="Will Landau"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="The targetopia"/>
@@ -109,7 +110,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["The targetopia"]},{"type":"character","attributes":{},"value":["An R package ecosystem for democratized reproducible pipelines at scale\n"]},{"type":"character","attributes":{},"value":["2020-12-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["rstats","targetopia"]},{"type":"character","attributes":{},"value":["preview.png"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["The targetopia"]},{"type":"character","attributes":{},"value":["An R package ecosystem for democratized reproducible pipelines at scale\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Will Landau"]}]}]},{"type":"character","attributes":{},"value":["2020-12-14"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["rstats","targetopia"]},{"type":"character","attributes":{},"value":["preview.png"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1423,7 +1424,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"The targetopia","description":"An R package ecosystem for democratized reproducible pipelines at scale","authors":[],"publishedDate":"2020-12-14T00:00:00.000+00:00"}
+{"title":"The targetopia","description":"An R package ecosystem for democratized reproducible pipelines at scale","authors":[{"author":"Will Landau","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-14T00:00:00.000+00:00","citationText":"Landau, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1443,6 +1444,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><p>An R package ecosystem for democratized reproducible pipelines at scale</p></p>
 </div>
 
+<div class="d-byline">
+  
+  Will Landau
+  
+<br/>2020-12-14
+</div>
 
 <div class="d-article">
 <div class="layout-chunk" data-layout="l-body">
@@ -1481,8 +1488,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <pre><code><span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_visnetwork.html'>tar_visnetwork</a></span><span class='op'>(</span>targets_only <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
 </div>
-<div id="htmlwidget-109131a23d5949628bf0" style="width:624px;height:384px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-109131a23d5949628bf0">{"x":{"nodes":{"name":["conclusions","file","flexible_model","simple_model"],"type":["stem","stem","stem","stem"],"status":["outdated","outdated","outdated","outdated"],"seconds":[null,null,null,null],"bytes":[null,null,null,null],"branches":[null,null,null,null],"id":["conclusions","file","flexible_model","simple_model"],"label":["conclusions","file","flexible_model","simple_model"],"font.size":[20,20,20,20],"level":[3,1,2,2],"color":["#5BBCD6","#5BBCD6","#5BBCD6","#5BBCD6"],"shape":["dot","dot","dot","dot"]},"edges":{"from":["flexible_model","simple_model","file","file"],"to":["conclusions","conclusions","simple_model","flexible_model"],"arrows":["to","to","to","to"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"smooth":{"type":"cubicBezier","forceDirection":"horizontal"}},"layout":{"hierarchical":{"enabled":true,"direction":"LR"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":{"text":"","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":false,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"legend":{"width":0.2,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Outdated","Stem"],"color":["#5BBCD6","#899DA4"],"shape":["dot","dot"],"font.size":[20,20]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0db4c0d771e6ba17e01c" style="width:624px;height:384px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0db4c0d771e6ba17e01c">{"x":{"nodes":{"name":["conclusions","file","flexible_model","simple_model"],"type":["stem","stem","stem","stem"],"status":["outdated","outdated","outdated","outdated"],"seconds":[null,null,null,null],"bytes":[null,null,null,null],"branches":[null,null,null,null],"id":["conclusions","file","flexible_model","simple_model"],"label":["conclusions","file","flexible_model","simple_model"],"font.size":[20,20,20,20],"level":[3,1,2,2],"color":["#78B7C5","#78B7C5","#78B7C5","#78B7C5"],"shape":["dot","dot","dot","dot"]},"edges":{"from":["flexible_model","simple_model","file","file"],"to":["conclusions","conclusions","simple_model","flexible_model"],"arrows":["to","to","to","to"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"smooth":{"type":"cubicBezier","forceDirection":"horizontal"}},"layout":{"hierarchical":{"enabled":true,"direction":"LR"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":{"text":"","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:20px;text-align:center;"},"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":false,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"legend":{"width":0.2,"useGroups":false,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"nodes":{"label":["Outdated","Stem"],"color":["#78B7C5","#899DA4"],"shape":["dot","dot"],"font.size":[20,20]},"nodesToDataframe":true}},"evals":[],"jsHooks":[]}</script>
 </div>
 <p>With pre-packaged target factories, end users do not need to write as much code, and they do not need to be familiar with the advanced features of <a href="https://wlandau.github.io/targets"><code>targets</code></a>.</p>
 <div class="layout-chunk" data-layout="l-body">
