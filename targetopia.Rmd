@@ -52,8 +52,20 @@ The targetopia is an ecosystem of R packages for democratized reproducible pipel
 </th>
 <th style="font-weight:normal;">
 <br>
-`jagstargets` is under construction and not yet available in the open source community. When implemented, it will do for [JAGS](http://mcmc-jags.sourceforge.net/) what [`stantargets`](https://wlandau.github.io/stantargets) does for [`cmdstanr`](https://mc-stan.org/cmdstanr/). 
+`jagstargets` is just beginning development and is not yet available in the open source community. When implemented, it will do for [JAGS](http://mcmc-jags.sourceforge.net/) what [`stantargets`](https://wlandau.github.io/stantargets) does for [`cmdstanr`](https://mc-stan.org/cmdstanr/). 
 <br><br>
 </th>
+
+<tr>
+<th>
+<img src="https://openclipart.org/image/2000px/188840" height="139px">
+</th>
+<th style="font-weight:normal;">
+<br>
+If you like developing [R packages](https://r-pkgs.org/), please consider contributing a targetopia package for your own field of data science. All you need is a [target factory](https://wlandau.github.io/posts/2020-12-14-targetopia/) that calls  [`tar_target_raw()`](https://wlandau.github.io/targets/reference/tar_target_raw.html). Functions [`substitute()`](http://adv-r.had.co.nz/Computing-on-the-language.html#substitute), [`tar_sub()`](https://wlandau.github.io/tarchetypes/reference/tar_sub.html), and [`tar_eval()`](https://wlandau.github.io/tarchetypes/reference/tar_eval.html) can help create [language objects](http://adv-r.had.co.nz/Computing-on-the-language.html#capturing-expressions) for the `command` argument of [`tar_target_raw()`](https://wlandau.github.io/targets/reference/tar_target_raw.html). Functions [`tar_manifest()`](https://wlandau.github.io/targets/reference/tar_manifest.html), [`tar_network()`](https://wlandau.github.io/targets/reference/tar_network.html), [`tar_dir()`](https://wlandau.github.io/targets/reference/tar_dir.html), and [`tar_test()`](https://wlandau.github.io/targets/reference/tar_test.html) help write [examples](https://r-pkgs.org/man.html?q=examples#man-workflow) and [tests](https://testthat.r-lib.org/). Feel free to borrow the source code of [`tarchetypes`](https://github.com/wlandau/tarchetypes) or [`stantargets`](https://github.com/wlandau/stantargets).
+</ul>
+<br><br>
+</th>
+
 
 </table>
