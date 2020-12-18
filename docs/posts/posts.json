@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2020-12-18-non-blocking-app/",
-    "title": "Straightforward non-blocking Shiny apps",
+    "title": "Non-blocking Shiny apps",
     "description": "A convenient way to launch a Shiny app without blocking your R session.",
     "author": [
       {
@@ -16,7 +16,7 @@
     ],
     "contents": "\nThe app\nThe targets package has a new Shiny app to monitor progress.1 To try it out, set up a new pipeline.\n\n\n# Write in _targets.R:\nlibrary(targets)\nsleep_run <- function(...) Sys.sleep(10)\ntar_pipeline(\n  tar_target(data1, sleep_run()),\n  tar_target(data2, sleep_run()),\n  tar_target(model1, sleep_run(data1)),\n  tar_target(model2, sleep_run(data2)),\n  tar_target(conclusions, sleep_run(c(model1, model2)))\n)\n\n\n\nThen launch the app in your R console.\n\n\nlibrary(targets)\ntar_watch(targets_only = TRUE, outdated = FALSE, seconds = 10)\n#> ● url: http://127.0.0.1:57726\n#> ● host: 127.0.0.1\n#> ● port: 57726\n\n\n\nA new browser window should show a visNetwork graph that reloads every 10 seconds.\n\nThe app does not block your R session, so your R console is free to run the pipeline.\n\n\ntar_make()\n#> ● run target data1\n#> ● run target data2\n#> ● run target model1\n\n\n\nAs the pipeline progresses, the visNetwork graph should periodically refresh and show you the latest status of each target.\n\nThe challenge\nShiny functions shinyApp() and runApp() both block the R console. While they are running, your R session cannot do anything else.\n\n> runApp()\n\nListening on http://127.0.0.1:5160\n\nSo how is it possible to run tar_watch() and tar_make() at the same time?\nA convenient solution\nFirst, write a function that actually runs the app at a given IP address2 and TCP port.3 The options argument of shinyApp() is key.\n\n\nrun_app <- function(host = \"127.0.0.1\", port = 49152) {\n  ui <- bs4Dash::bs4DashPage(...) # bs4Dash creates nice-looking Shiny UIs.\n  server <- function(input, output, session) {...}\n  shiny::shinyApp(ui, server, options = list(host = host, port = port))\n}\n\n\n\nNext, launch the app in a callr::r_bg() background process.\n\n\nargs <- list(host = \"127.0.0.1\", port = 49152)\nhandle <- callr::r_bg(func = run_app, args = args, supervise = TRUE)\n\n\n\nAt this point, the app may take an unpredictable length of time to initialize. With pingr, we can wait until the app comes online.4\n\n\nwhile(!pingr::is_up(destination = \"127.0.0.1\", port = 49152)) {\n  Sys.sleep(0.01)\n}\n\n\n\nAfter the loop completes, you can open the app in a web browser.\n\n\nbrowseURL(\"http://127.0.0.1:49152\")\n\n\n\nNow, you can use the app and the R console at the same time.\n\n> # Ready for input.\n\n\nThe full source code of the tar_watch() app is available in the targets package. To embed this feature in your own app as a Shiny module, see functions tar_watch_ui() and tar_watch_server()↩︎\nMost users can use localhost (host = \"127.0.0.1\"). If your web browser is running on a different computer than the one running the app, use host = \"0.0.0.0\" and ensure the two computers share the same local network.↩︎\nFor a personal app like this, I recommend choosing a port in the dynamic range between 49152 and 65535 so it does not conflict with critical infrastructure on your computer.↩︎\nThis loop may take few seconds, so a cli spinner is a nice touch.↩︎\n",
     "preview": "posts/2020-12-18-non-blocking-app/app-run.png",
-    "last_modified": "2020-12-18T15:23:30-05:00",
+    "last_modified": "2020-12-18T15:27:47-05:00",
     "input_file": {}
   },
   {

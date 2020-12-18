@@ -1,5 +1,5 @@
 ---
-title: "Straightforward non-blocking Shiny apps"
+title: "Non-blocking Shiny apps"
 description: |
   A convenient way to launch a Shiny app without blocking your R session.
 author: Will Landau
