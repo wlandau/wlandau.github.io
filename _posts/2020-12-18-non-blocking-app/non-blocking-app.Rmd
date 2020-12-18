@@ -8,9 +8,9 @@ output:
   distill::distill_article:
     self_contained: false
 categories:
-  - shiny
   - rstats
-preview: app.png
+  - shiny
+preview: app-run.png
 ---
 
 ```{r, include = FALSE}
