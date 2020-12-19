@@ -20,18 +20,19 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -51,7 +52,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
@@ -1998,7 +1999,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.5/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
@@ -2022,7 +2022,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Non-blocking Shiny apps","description":"A convenient way to launch a Shiny app without blocking your R session.","authors":[{"author":"Will Landau","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-18T00:00:00.000+00:00","citationText":"Landau, 2020"}
+{"title":"Non-blocking Shiny apps","description":"A convenient way to launch a Shiny app without blocking your R session.","authors":[{"author":"Will Landau","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-12-18T00:00:00.000-05:00","citationText":"Landau, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2163,20 +2163,21 @@ Archive
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='va'>args</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>host <span class='op'>=</span> <span class='st'>"127.0.0.1"</span>, port <span class='op'>=</span> <span class='fl'>49152</span><span class='op'>)</span>
-<span class='va'>handle</span> <span class='op'>&lt;-</span> <span class='fu'>callr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/callr/man/r_bg.html'>r_bg</a></span><span class='op'>(</span>func <span class='op'>=</span> <span class='va'>run_app</span>, args <span class='op'>=</span> <span class='va'>args</span>, supervise <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='va'>process</span> <span class='op'>&lt;-</span> <span class='fu'>callr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/callr/man/r_bg.html'>r_bg</a></span><span class='op'>(</span>func <span class='op'>=</span> <span class='va'>run_app</span>, args <span class='op'>=</span> <span class='va'>args</span>, supervise <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
-<p>At this point, the app may take an unpredictable length of time to initialize. With <a href="https://github.com/r-lib/pingr"><code>pingr</code></a>, we can wait until the app comes online.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>At this point, the app may take an unpredictable length of time to initialize. With <a href="https://github.com/r-lib/pingr"><code>pingr</code></a>, we can wait until the app comes online.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> We also check if the background process quit early and forward any errors to the parent process.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='kw'>while</span><span class='op'>(</span><span class='op'>!</span><span class='fu'>pingr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/pingr/man/ping_port.html'>is_up</a></span><span class='op'>(</span>destination <span class='op'>=</span> <span class='st'>"127.0.0.1"</span>, port <span class='op'>=</span> <span class='fl'>49152</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='va'>process</span><span class='op'>$</span><span class='fu'>is_alive</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/stop.html'>stop</a></span><span class='op'>(</span><span class='va'>process</span><span class='op'>$</span><span class='fu'>read_all_error</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
   <span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='op'>(</span><span class='fl'>0.01</span><span class='op'>)</span>
 <span class='op'>}</span>
 </code></pre>
 </div>
 </div>
-<p>After the loop completes, you can open the app in a web browser.</p>
+<p>After the loop completes, open the app in a web browser.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='fu'><a href='https://rdrr.io/r/utils/browseURL.html'>browseURL</a></span><span class='op'>(</span><span class='st'>"http://127.0.0.1:49152"</span><span class='op'>)</span>
@@ -2195,6 +2196,7 @@ Archive
 <li id="fn2" role="doc-endnote"><p>Most users can use <code>localhost</code> (<code>host = "127.0.0.1"</code>). If your web browser is running on a different computer than the one running the app, use <code>host = "0.0.0.0"</code> and ensure the two computers share the same local network.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3" role="doc-endnote"><p>For a personal app like this, I recommend choosing a port in the dynamic range between 49152 and 65535 so it does not conflict with critical infrastructure on your computer.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4" role="doc-endnote"><p>This loop may take few seconds, so a <a href="https://cli.r-lib.org/reference/make_spinner.html"><code>cli</code> spinner</a> is a nice touch.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>Thanks <a href="https://github.com/krlmlr/">Kirill Müller</a> for <a href="https://twitter.com/krlmlr/status/1340165944732250113">thinking of this</a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->

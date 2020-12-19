@@ -89,18 +89,19 @@ Next, launch the app in a  [`callr::r_bg()`](https://callr.r-lib.org/reference/r
 
 ```{r}
 args <- list(host = "127.0.0.1", port = 49152)
-handle <- callr::r_bg(func = run_app, args = args, supervise = TRUE)
+process <- callr::r_bg(func = run_app, args = args, supervise = TRUE)
 ```
 
-At this point, the app may take an unpredictable length of time to initialize. With  [`pingr`](https://github.com/r-lib/pingr), we can wait until the app comes online.^[This loop may take few seconds, so a [`cli` spinner](https://cli.r-lib.org/reference/make_spinner.html) is a nice touch.]
+At this point, the app may take an unpredictable length of time to initialize. With  [`pingr`](https://github.com/r-lib/pingr), we can wait until the app comes online.^[This loop may take few seconds, so a [`cli` spinner](https://cli.r-lib.org/reference/make_spinner.html) is a nice touch.] We also check if the background process quit early and forward any errors to the parent process.^[Thanks [Kirill Müller](https://github.com/krlmlr/) for [thinking of this](https://twitter.com/krlmlr/status/1340165944732250113).]
 
 ```{r}
 while(!pingr::is_up(destination = "127.0.0.1", port = 49152)) {
+  if (!process$is_alive()) stop(process$read_all_error())
   Sys.sleep(0.01)
 }
 ```
 
-After the loop completes, you can open the app in a web browser.
+After the loop completes, open the app in a web browser.
 
 ```{r}
 browseURL("http://127.0.0.1:49152")
