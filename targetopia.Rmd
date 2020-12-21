@@ -46,7 +46,7 @@ The targetopia is an ecosystem of R packages for democratized reproducible pipel
 </th>
 <th style="font-weight:normal;">
 <br>
-[![](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [`targets`](https://wlandau.github.io/targets)
+[![](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) 
 [`stantargets`](https://wlandau.github.io/stantargets) is a workflow framework for Bayesian data analysis with [`cmdstanr`](https://mc-stan.org/cmdstanr/). With concise, easy-to-use syntax, it defines versatile families of targets tailored to Bayesian statistics, from a [single MCMC run with postprocessing](https://wlandau.github.io/stantargets/articles/mcmc.html) to [large simulation studies](https://wlandau.github.io/stantargets/articles/mcmc_rep.html).
 <br><br>
 </th>
@@ -58,8 +58,7 @@ The targetopia is an ecosystem of R packages for democratized reproducible pipel
 </th>
 <th style="font-weight:normal;">
 <br>
-[![](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) [`targets`](https://wlandau.github.io/targets)
-`jagstargets` is just beginning development and is not yet publicly available. When implemented, it will do for [JAGS](http://mcmc-jags.sourceforge.net/) what [`stantargets`](https://wlandau.github.io/stantargets) does for [`cmdstanr`](https://mc-stan.org/cmdstanr/). 
+[![](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) `jagstargets` is fully implemented, but it will not be publicly available until January 2021. Similar to [`stantargets`](https://wlandau.github.io/stantargets), `jagstargets` is a workflow framework for Bayesian data analysis, with support for both single MCMC runs and large-scale simulation studies. It invokes [JAGS](http://mcmc-jags.sourceforge.net/) through the [`R2jags`](https://github.com/suyusung/R2jags) package, which has nice features such as the ability to parallelize multiple chains across multiple local R processes.
 <br><br>
 </th>
 </tr>
