@@ -26,7 +26,7 @@ The [`targets`](https://wlandau.github.io/targets) R package is a [Make](https:/
 
 ```{r, echo = TRUE}
 # yourExamplePackage/R/example_target_factory.R
-example_target_factory <- function(data) {
+target_factory <- function(data) {
   list(
     tar_target_raw("file", data, format = "file"),
     tar_target_raw("simple_model", quote(run_simple(file))),
