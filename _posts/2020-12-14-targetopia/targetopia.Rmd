@@ -10,7 +10,7 @@ output:
 categories:
   - rstats
   - targetopia
-preview: preview.png
+preview: preview2.png
 ---
 
 ```{r, include = FALSE}
