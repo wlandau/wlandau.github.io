@@ -25,7 +25,7 @@ The [`targets`](https://wlandau.github.io/targets) package has a new Shiny app t
 # Write in _targets.R:
 library(targets)
 sleep_run <- function(...) Sys.sleep(10)
-tar_pipeline(
+list(
   tar_target(data1, sleep_run()),
   tar_target(data2, sleep_run()),
   tar_target(model1, sleep_run(data1)),
