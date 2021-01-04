@@ -1,0 +1,9 @@
+---
+title: "R Targetopia"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The R Targetopia website has [moved here](https://wlandau.github.io/targetopia/).

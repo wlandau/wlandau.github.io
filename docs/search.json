@@ -41,6 +41,13 @@
       "author": [],
       "contents": "\nReproducible computation at scale in R\ntargets, dynamic function-oriented Make-like workflows for R. Long-term successor to drake.\ntarchetypes, general-use archetypes for targets and pipelines, including parameterized R Markdown at scale.\nstantargets, Reproducible Bayesian data analysis pipelines with targets and cmdstanr.\ndrake an R-focused pipeline toolkit for data analysis projects. Featured in the rOpenSci blog and R Podcast Episode 22.\nremakeGenerator Generate large remake-style workflows.\nparallelRemake Parallel computing support for remake.\nR packages with utilities and infrastructure\nproffer A pprof-based profiler for R code.\ntxtq A small message queue for parallel processes.\ndownsize Ease the transition between testing and deploying data analysis workflows.\nDissertation research\nfbseq Fully-Bayesian GPU-accelerated analysis of RNA-seq data (arXiv preprint).\nfbseqCUDA CUDA GPU support for fbseq.\nfbseqOpenMP OpenMP support for fbseq.\n\n\n\n",
       "last_modified": "2021-01-04T09:40:17-05:00"
+    },
+    {
+      "path": "targetopia.html",
+      "title": "R Targetopia",
+      "author": [],
+      "contents": "\nThe R Targetopia website has moved here.\n\n\n\n",
+      "last_modified": "2021-01-04T09:53:23-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
