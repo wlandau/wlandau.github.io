@@ -21,7 +21,7 @@ navbar:
       - text: "About"
         href: about.html
     - text: "R Targetopia"
-      href: targetopia.html
+      href: https://wlandau.github.io/targetopia/
     - text: "Portfolio"
       menu:
       - text: "Publications"
