@@ -49,7 +49,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Open Source Software
 
-- [`targets`](https://github.com/wlandau/targets), [`tarchetypes`](https://github.com/wlandau/tarchetypes), [`stantargets`](https://github.com/wlandau/stantargets), and [`drake`](https://github.com/ropesci/drake), R packages for reproducible computation and high-performance computing. [`drake`](https://github.com/ropesci/drake) is part of [rOpenSci](https://ropensci.org/).
+- [`targets`](https://github.com/ropensci/targets), [`tarchetypes`](https://github.com/ropensci/tarchetypes), [`stantargets`](https://github.com/wlandau/stantargets), and [`drake`](https://github.com/ropesci/drake), R packages for reproducible computation and high-performance computing. [`drake`](https://github.com/ropesci/drake) is part of [rOpenSci](https://ropensci.org/).
 - <a href="https://github.com/wlandau/txtq">txtq</a>, a minimalist, serverless, socketless message queue for interprocess communication.
 - <a href="https://github.com/r-prof/proffer">proffer</a>, a [pprof](https://github.com/google/pprof)-based profiler for R code.
 - R packages <a href="https://github.com/wlandau/fbseq">fbseq</a>, <a href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</a>, and <a href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</a>. A toolkit for the fully Bayesian analysis of genomic count data.

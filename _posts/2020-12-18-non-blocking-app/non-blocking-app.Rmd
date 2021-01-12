@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 ## An example
 
-The [`targets`](https://wlandau.github.io/targets) package has a new Shiny app to monitor progress.^[The full source code of the [`tar_watch()`](https://wlandau.github.io/targets/reference/tar_watch.html) app is [available in the `targets` package](https://github.com/wlandau/targets/blob/252c9c9d7dadad680a58289a75d2f563c6c1f768/R/tar_watch.R). To embed this feature in your own app as a Shiny module, see functions [`tar_watch_ui()`](https://wlandau.github.io/targets/reference/tar_watch_ui.html) and [`tar_watch_server()`](https://wlandau.github.io/targets/reference/tar_watch_server.html)] To try it out, set up a new pipeline.
+The [`targets`](https://docs.ropensci.org/targets) package has a new Shiny app to monitor progress.^[The full source code of the [`tar_watch()`](https://docs.ropensci.org/targets/reference/tar_watch.html) app is [available in the `targets` package](https://github.com/wlandau/targets/blob/252c9c9d7dadad680a58289a75d2f563c6c1f768/R/tar_watch.R). To embed this feature in your own app as a Shiny module, see functions [`tar_watch_ui()`](https://docs.ropensci.org/targets/reference/tar_watch_ui.html) and [`tar_watch_server()`](https://docs.ropensci.org/targets/reference/tar_watch_server.html)] To try it out, set up a new pipeline.
 
 ```{r}
 # Write in _targets.R:
@@ -71,7 +71,7 @@ Shiny functions [`shinyApp()`](https://shiny.rstudio.com/reference/shiny/1.5.0/s
 Listening on http://127.0.0.1:5160
 ```
 
-So how is it possible to run [`tar_watch()`](https://wlandau.github.io/targets/reference/tar_watch.html) and [`tar_make()`](https://wlandau.github.io/targets/reference/tar_make.html) at the same time?
+So how is it possible to run [`tar_watch()`](https://docs.ropensci.org/targets/reference/tar_watch.html) and [`tar_make()`](https://docs.ropensci.org/targets/reference/tar_make.html) at the same time?
 
 ## A convenient solution
 

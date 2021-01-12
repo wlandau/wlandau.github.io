@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["app-run.png","app-start.png","non-blocking-app_files/anchor-4.2.2/anchor.min.js","non-blocking-app_files/bowser-1.9.3/bowser.min.js","non-blocking-app_files/distill-2.2.21/template.v2.js","non-blocking-app_files/header-attrs-2.5/header-attrs.js","non-blocking-app_files/jquery-1.11.3/jquery.min.js","non-blocking-app_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["app-run.png","app-start.png","non-blocking-app_files/anchor-4.2.2/anchor.min.js","non-blocking-app_files/bowser-1.9.3/bowser.min.js","non-blocking-app_files/distill-2.2.21/template.v2.js","non-blocking-app_files/header-attrs-2.5/header-attrs.js","non-blocking-app_files/header-attrs-2.6/header-attrs.js","non-blocking-app_files/jquery-1.11.3/jquery.min.js","non-blocking-app_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1449,18 +1449,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="an-example">An example</h2>
-<p>The <a href="https://wlandau.github.io/targets"><code>targets</code></a> package has a new Shiny app to monitor progress.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> To try it out, set up a new pipeline.</p>
+<p>The <a href="https://docs.ropensci.org/targets"><code>targets</code></a> package has a new Shiny app to monitor progress.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> To try it out, set up a new pipeline.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre><code><span class='co'># Write in _targets.R:</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/targets/'>targets</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://docs.ropensci.org/targets/'>targets</a></span><span class='op'>)</span>
 <span class='va'>sleep_run</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>data1</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>,
-  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>data2</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>,
-  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>model1</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='va'>data1</span><span class='op'>)</span><span class='op'>)</span>,
-  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>model2</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='va'>data2</span><span class='op'>)</span><span class='op'>)</span>,
-  <span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>conclusions</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>model1</span>, <span class='va'>model2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://docs.ropensci.org/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>data1</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://docs.ropensci.org/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>data2</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://docs.ropensci.org/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>model1</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='va'>data1</span><span class='op'>)</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://docs.ropensci.org/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>model2</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='va'>data2</span><span class='op'>)</span><span class='op'>)</span>,
+  <span class='fu'><a href='https://docs.ropensci.org/targets/reference/tar_target.html'>tar_target</a></span><span class='op'>(</span><span class='va'>conclusions</span>, <span class='fu'>sleep_run</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>model1</span>, <span class='va'>model2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 <span class='op'>)</span>
 </code></pre>
 </div>
@@ -1468,8 +1468,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Then launch the app in your R console.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://wlandau.github.io/targets/'>targets</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_watch.html'>tar_watch</a></span><span class='op'>(</span>targets_only <span class='op'>=</span> <span class='cn'>TRUE</span>, outdated <span class='op'>=</span> <span class='cn'>FALSE</span>, seconds <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>
+<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://docs.ropensci.org/targets/'>targets</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://docs.ropensci.org/targets/reference/tar_watch.html'>tar_watch</a></span><span class='op'>(</span>targets_only <span class='op'>=</span> <span class='cn'>TRUE</span>, outdated <span class='op'>=</span> <span class='cn'>FALSE</span>, seconds <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>
 <span class='co'>#&gt; ● url: http://127.0.0.1:57726</span>
 <span class='co'>#&gt; ● host: 127.0.0.1</span>
 <span class='co'>#&gt; ● port: 57726</span>
@@ -1481,7 +1481,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>The app does not block your R session, so your R console is free to run the pipeline.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://wlandau.github.io/targets/reference/tar_make.html'>tar_make</a></span><span class='op'>(</span><span class='op'>)</span>
+<pre><code><span class='fu'><a href='https://docs.ropensci.org/targets/reference/tar_make.html'>tar_make</a></span><span class='op'>(</span><span class='op'>)</span>
 <span class='co'>#&gt; ● run target data1</span>
 <span class='co'>#&gt; ● run target data2</span>
 <span class='co'>#&gt; ● run target model1</span>
@@ -1497,7 +1497,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a>Listening on http<span class="op">:</span><span class="er">//</span><span class="dv">127</span>.<span class="dv">0</span>.<span class="fl">0.1</span><span class="op">:</span><span class="dv">5160</span></span></code></pre></div>
 </div>
-<p>So how is it possible to run <a href="https://wlandau.github.io/targets/reference/tar_watch.html"><code>tar_watch()</code></a> and <a href="https://wlandau.github.io/targets/reference/tar_make.html"><code>tar_make()</code></a> at the same time?</p>
+<p>So how is it possible to run <a href="https://docs.ropensci.org/targets/reference/tar_watch.html"><code>tar_watch()</code></a> and <a href="https://docs.ropensci.org/targets/reference/tar_make.html"><code>tar_make()</code></a> at the same time?</p>
 <h2 id="a-convenient-solution">A convenient solution</h2>
 <p>First, write a function that actually runs the app at a given IP address<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and TCP port.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The <code>options</code> argument of <a href="https://shiny.rstudio.com/reference/shiny/1.5.0/shinyApp.html"><code>shinyApp()</code></a> is key.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1543,7 +1543,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>The full source code of the <a href="https://wlandau.github.io/targets/reference/tar_watch.html"><code>tar_watch()</code></a> app is <a href="https://github.com/wlandau/targets/blob/252c9c9d7dadad680a58289a75d2f563c6c1f768/R/tar_watch.R">available in the <code>targets</code> package</a>. To embed this feature in your own app as a Shiny module, see functions <a href="https://wlandau.github.io/targets/reference/tar_watch_ui.html"><code>tar_watch_ui()</code></a> and <a href="https://wlandau.github.io/targets/reference/tar_watch_server.html"><code>tar_watch_server()</code></a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>The full source code of the <a href="https://docs.ropensci.org/targets/reference/tar_watch.html"><code>tar_watch()</code></a> app is <a href="https://github.com/wlandau/targets/blob/252c9c9d7dadad680a58289a75d2f563c6c1f768/R/tar_watch.R">available in the <code>targets</code> package</a>. To embed this feature in your own app as a Shiny module, see functions <a href="https://docs.ropensci.org/targets/reference/tar_watch_ui.html"><code>tar_watch_ui()</code></a> and <a href="https://docs.ropensci.org/targets/reference/tar_watch_server.html"><code>tar_watch_server()</code></a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2" role="doc-endnote"><p>Most users can use <code>localhost</code> (<code>host = "127.0.0.1"</code>). If your web browser is running on a different computer than the one running the app, use <code>host = "0.0.0.0"</code> and ensure the two computers share the same local network.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3" role="doc-endnote"><p>For a personal app like this, I recommend choosing a port in the dynamic range between 49152 and 65535 so it does not conflict with critical infrastructure on your computer.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4" role="doc-endnote"><p>This loop may take few seconds, so a <a href="https://cli.r-lib.org/reference/make_spinner.html"><code>cli</code> spinner</a> is a nice touch.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
