@@ -1,0 +1,9 @@
+---
+title: "Some pages have moved."
+---
+
+From | To | When
+---|---|---
+<https://wlandau.github.io/targetopia.html> | <https://wlandau.github.io/targetopia/> | 2021-01-04
+<https://wlandau.github.io/targets> | <https://docs.ropensci.org/targets/> | 2021-01-12
+<https://wlandau.github.io/tarchetypes> | <https://docs.ropensci.org/tarchetypes/> | 2021-01-12
