@@ -7,3 +7,5 @@ From | To | When
 <https://wlandau.github.io/targetopia.html> | <https://wlandau.github.io/targetopia/> | 2021-01-04
 <https://wlandau.github.io/targets> | <https://docs.ropensci.org/targets/> | 2021-01-12
 <https://wlandau.github.io/tarchetypes> | <https://docs.ropensci.org/tarchetypes/> | 2021-01-12
+<https://wlandau.github.io/targets-manual> | <https://books.ropensci.org/targets/> | 2021-01-14
+<https://wlandau.github.io/targets-design> | <https://books.ropensci.org/targets-design/> | 2021-01-14
