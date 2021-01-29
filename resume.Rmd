@@ -28,6 +28,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <h2 style="clear: both">Publications</h2>
 
+- Chakladar, S., Liao, R., **Landau, W.**, Gamalo, M., Wang, Y. (2021). "Discrete Time Multi-State Model with Regime Switching for Modelling COVID-19 Disease Progression and Clinical Outcomes." *Statistics in Biopharmaceutical Research*, accepted, <https://doi.org/10.1080/19466315.2021.1880966>.
 - <b>Landau, W.</b>, Niemi, J., and Nettleton, D., "Fully Bayesian analysis of RNA-seq counts for the detection of gene expression heterosis". *Journal of the American Statistical Association*,  <a href="https://doi.org/10.1080/01621459.2018.1497496">https://doi.org/10.1080/01621459.2018.1497496</a>.
 - <b>Landau, W.</b> (2018), "The drake R package: a pipeline toolkit for reproducibility and high-performance computing". *Journal of Open Source Software*, 3(21), 550, <a href="https://doi.org/10.21105/joss.00550">https://doi.org/10.21105/joss.00550</a>.
 - Niemi, J., Mittman, E., <b>Landau, W.</b>, and Nettleton, D. (2015), "Empirical Bayes Analysis of RNA-seq Data for Detection of Gene Expression Heterosis," *Journal of Agricultural, Biological, and Environmental Statistics*, 20, 1-15. Available at
