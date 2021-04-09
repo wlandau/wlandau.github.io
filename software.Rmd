@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - [`targets`](https://github.com/ropensci/targets), dynamic function-oriented Make-like workflows for R. Long-term successor to [`drake`](https://github.com/ropensci/drake).
 - [`tarchetypes`](https://github.com/ropensci/tarchetypes), general-use archetypes for targets and pipelines, including [parameterized R Markdown at scale](https://docs.ropensci.org/tarchetypes/reference/tar_render_rep.html).
-- [`stantargets`](https://github.com/wlandau/stantargets), Reproducible Bayesian data analysis pipelines with [`targets`](https://github.com/ropensci/targets) and [`cmdstanr`](https://github.com/stan-dev/cmdstanr). 
+- [`stantargets`](https://github.com/ropensci/stantargets), Reproducible Bayesian data analysis pipelines with [`targets`](https://github.com/ropensci/targets) and [`cmdstanr`](https://github.com/stan-dev/cmdstanr). 
 - [`drake`](https://github.com/ropensci/drake) an R-focused pipeline toolkit for data analysis projects. Featured in the [rOpenSci blog](https://ropensci.org/blog/2018/02/06/drake/) and [R Podcast Episode 22](https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/).
 - [`remakeGenerator`](https://www.github.com/wlandau/remakeGenerator) Generate large [`remake`](https://github.com/richfitz/remake)-style workflows.
 - [`parallelRemake`](https://www.github.com/wlandau/parallelRemake) Parallel computing support for [`remake`](https://github.com/richfitz/remake).
