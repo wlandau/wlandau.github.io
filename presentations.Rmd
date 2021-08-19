@@ -6,7 +6,9 @@ title: Presentations
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-- **Landau, W.** (2020) "Reproducible computation at scale with targets", New york Open Statistical Programming Meetup, <https://github.com/wlandau/nyhackr2020>.
+- **Landau, W.** (2021) "Target Markdown and {stantargets} for Bayesian model validation pipelines", R/Medicine 2021 Conference, <https://github.com/wlandau/rmedicine2021-slides>.
+- **Landau, W.** (2021) "Reproducible computation at scale in R with targets", Lille R User Meetup Group, <https://github.com/wlandau/r-lille-2021>.
+- **Landau, W.** (2020) "Reproducible computation at scale with targets", New York Open Statistical Programming Meetup, <https://github.com/wlandau/nyhackr2020>.
 - **Landau, W.** (2020) "Reproducible computation at scale with targets", Los Angeles R Users Meetup, <https://github.com/wlandau/larug2020>.
 - **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, half-day short course, <a href="https://github.com/wlandau/targets-tutorial">https://github.com/wlandau/targets-tutorial</a>.
 - **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, presentation, <a href="https://github.com/wlandau/rpharma2020">https://github.com/wlandau/rpharma2020</a>.
