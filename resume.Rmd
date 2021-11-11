@@ -41,6 +41,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Presentations
 
+- **Landau, W.** (2021) "Reproducible computation at scale in R with targets", PharmaSUG 2021 Conference, half-day short course, <a href="https://github.com/wlandau/targets-tutorial">https://github.com/wlandau/targets-tutorial</a>.
+- **Landau, W.** (2021) "Reproducible computation at scale in R with targets", UK National Health Service R Community Conference 2021, half-day short course, <a href="https://github.com/wlandau/targets-tutorial">https://github.com/wlandau/targets-tutorial</a>.
+- **Landau, W.** (2021) "stantargets and Target Markdown for Bayesian model validation pipelines", Bayes@Lund Meetup, <a href="https://github.com/wlandau/bayes-lund-2021">https://github.com/wlandau/bayes-lund-2021</a>.
+- **Landau, W.** (2021) "Target Markdown and stantargets for Bayesian model validation pipelines", R/Medicine 2021 Conference, <a href="https://github.com/wlandau/rmedicine2021-slides">https://github.com/wlandau/rmedicine2021-slides</a>.
 - **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, half-day short course, <a href="https://github.com/wlandau/targets-tutorial">https://github.com/wlandau/targets-tutorial</a>.
 - **Landau, W.** (2019) "Reproducible workflows at scale with drake", rOpenSci Community Call, <a href="https://ropensci.org/commcalls/2019-09-24/">https://ropensci.org/commcalls/2019-09-24/</a>.
 - **Landau, W.** (2019) "Machine learning workflow management with drake", invited 4-hour workshop, R/Pharma Conference.
@@ -59,6 +63,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Awards
 
+- 2021 Lilly Innovator Award. Awarded for creating the R package [`targets`](https://docs.ropensci.org/targets) and its associated ecosystem to track workflow that empowers reproducible analytical research with efficiency.
 - 2020 Lilly Innovator Award. Awarded for the development of efficient clinical trial simulation software needed for complex designs and trials of potential COVID-19 treatments.
 - 2019 NumFOCUS New Contributor Recognition. Awarded for inclusive and collaborative work with rOpenSci. <a href="https://numfocus.org/blog/2019-numfocus-awards">https://numfocus.org/blog/2019-numfocus-awards</a>.
 - 2017 Lilly Innovator Award. Awarded for leading a successful team effort to modernize Lilly's internal process for contributing open source software.
