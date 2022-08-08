@@ -6,15 +6,18 @@ title: Presentations
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+- **Landau, W.** (2022) "Data version control for reproducible analysis pipelines in R." useR! 2022 Conference, <https://github.com/wlandau/user-conf-2022/>.
 - **Landau, W.** (2021) "Target Markdown and {stantargets} for Bayesian model validation pipelines", R/Medicine 2021 Conference, <https://github.com/wlandau/rmedicine2021-slides>.
 - **Landau, W.** (2021) "Reproducible computation at scale in R with targets", Lille R User Meetup Group, <https://github.com/wlandau/r-lille-2021>.
+* **Landau, W.** (2021) "Reproducible computation at scale in R with targets", UK National Health Service R Community Conference 2021, half-day short course, <a href="https://github.com/wlandau/targets-tutorial">https://github.com/wlandau/targets-tutorial</a>.
+* **Landau, W.** (2021) "stantargets and Target Markdown for Bayesian model validation pipelines", Bayes@Lund Meetup, <https://github.com/wlandau/bayes-lund-2021>.
 - **Landau, W.** (2020) "Reproducible computation at scale with targets", New York Open Statistical Programming Meetup, <https://github.com/wlandau/nyhackr2020>.
 - **Landau, W.** (2020) "Reproducible computation at scale with targets", Los Angeles R Users Meetup, <https://github.com/wlandau/larug2020>.
-- **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, half-day short course, <a href="https://github.com/wlandau/targets-tutorial">https://github.com/wlandau/targets-tutorial</a>.
-- **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, presentation, <a href="https://github.com/wlandau/rpharma2020">https://github.com/wlandau/rpharma2020</a>.
-- **Landau, W.** (2020) "Reproducible computation at scale with drake", R/Medicine Conference. <a href="https://wlandau.github.io/rmedicine2020">https://wlandau.github.io/rmedicine2020</a>.
-- **Landau, W.** (2020) "Reproducible computation at scale with drake", useR! 2020 Conference, half-day short course, <a href="https://github.com/wlandau/learndrake">https://github.com/wlandau/learndrake</a>.
-- **Landau, W.** (2019) "Reproducible workflows at scale with drake", rOpenSci Community Call, <a href="https://ropensci.org/commcalls/2019-09-24/">https://ropensci.org/commcalls/2019-09-24/</a>.
+- **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, half-day short course, <https://github.com/wlandau/targets-tutorial>.
+- **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, presentation, <https://github.com/wlandau/rpharma2020>.
+- **Landau, W.** (2020) "Reproducible computation at scale with drake", R/Medicine Conference. <https://wlandau.github.io/rmedicine2020>.
+- **Landau, W.** (2020) "Reproducible computation at scale with drake", useR! 2020 Conference, half-day short course, <https://github.com/wlandau/learndrake>.
+- **Landau, W.** (2019) "Reproducible workflows at scale with drake", rOpenSci Community Call, <https://ropensci.org/commcalls/2019-09-24/>h.
 - **Landau, W.** (2019) "Machine learning workflow management with drake", invited 4-hour workshop, R/Pharma Conference.
 - **Landau, W.** (2019) "Reproducible Computation at Scale in R", Harverd DataFest.
 - **Landau, W.** (2018) "The drake R package: reproducible data analysis at scale", R/Pharma Conference.
