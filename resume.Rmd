@@ -45,13 +45,11 @@ knitr::opts_chunk$set(echo = FALSE)
 - **Landau, W.**, and Niemi, J. (2016), "A Fully Bayesian Strategy for High-Dimensional Hierarchical Modeling Using Massively Parallel Computing". *Joint Statistical Meetings*, Section on Statistical Computing, Section on Statistical Graphics, Statistical Computing and Graphics Student Awards — Topic Contributed Papers. <a href="https://ww2.amstat.org/meetings/jsm/2016/onlineprogram/AbstractDetails.cfm?abstractid=318764">https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645</a>.
 - **Landau, W.**, and Liu, P. (2013), "Dispersion Estimation and Its Effect on Test Performance in RNA-Seq Data Analysis". *Joint Statistical Meetings*,	Biometrics Section, contributed poster. <a href="https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645">https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645</a>.
 
-## Open Source Software
+## Select open-source software
 
-* [rOpenSci](https://ropensci.org/) packages [`targets`](https://github.com/ropensci/targets), [`tarchetypes`](https://github.com/ropensci/tarchetypes), [`stantargets`](https://github.com/ropensci/stantargets), [`jagstargets`](https://github.com/ropensci/jagstargets), and [`gittargets`](https://github.com/ropensci/gittargets) for reproducible analysis pipelines.
-* [`proffer`](https://github.com/r-prof/proffer), profiling visualization R package.
-* [`txtq`](https://github.com/wlandau/txtq), a minimalist, serverless, socketless message queue for interprocess communication.
-* R packages <a href="https://github.com/wlandau/fbseq">fbseq</a>, <a href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</a>, and <a href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</a>. A toolkit for the fully Bayesian analysis of genomic count data.
-* <a href="https://github.com/wlandau/downsize">downsize</a>, and R package to toggle between the test and production versions of large workflows.
+* [rOpenSci](https://ropensci.org/) packages [`targets`](https://github.com/ropensci/targets), [`tarchetypes`](https://github.com/ropensci/tarchetypes), and [`gittargets`](https://github.com/ropensci/gittargets) for general-purpose reproducible analysis pipelines.
+* [`stantargets`](https://github.com/ropensci/stantargets) and [`jagstargets`](https://github.com/ropensci/jagstargets) for Bayesian data analysis pipelines.
+* [`historicalborrow`](https://github.com/wlandau/historicalborrow) and [`historicalborrowlong`](https://github.com/wlandau/historicalborrowlong) for Bayesian historical borrowing methods for clinical trials.
 
 ## Awards
 
@@ -66,8 +64,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Skills
 
-- Bayesian Statistics, Markov chain Monte Carlo, hierarchical models, high-dimensional data analysis, genomics data analysis, exploratory analysis, visualization, linear and nonlinear models.
-- Reproducible analysis pipelines, high-performance computing, R, package development.
+- Bayesian methods, Markov chain Monte Carlo, hierarchical models, high-dimensional data analysis, linear and nonlinear models, clinical trial simulation and design.
+- Reproducible analysis pipelines, high-performance computing, R, package development, Stan, JAGS.
 - Past experience with machine learning, C++, C, CUDA, Python, JavaScript, Fortran.
 
 ## Senior Research Scientist

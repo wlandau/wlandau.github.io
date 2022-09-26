@@ -6,28 +6,40 @@ title: Software
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Reproducible analysis pipelines in R
+## Select works
+
+### Reproducible analysis pipelines in R
 
 - [`targets`](https://github.com/ropensci/targets), dynamic function-oriented Make-like workflows for R. Long-term successor to [`drake`](https://github.com/ropensci/drake).
 - [`tarchetypes`](https://github.com/ropensci/tarchetypes), general-use archetypes for targets and pipelines, including [parameterized R Markdown at scale](https://docs.ropensci.org/tarchetypes/reference/tar_render_rep.html).
-- [`stantargets`](https://github.com/ropensci/stantargets), Reproducible Bayesian data analysis pipelines with [`targets`](https://github.com/ropensci/targets) and [`cmdstanr`](https://github.com/stan-dev/cmdstanr). 
-- [`jagstargets`](https://github.com/ropensci/stantargets), Reproducible Bayesian data analysis pipelines with [`targets`](https://github.com/ropensci/targets) and [`R2jags`](https://github.com/suyusung/R2jags).
 - [`gittargets`](https://github.com/ropensci/gittargets), local data version control for the [`targets`](https://github.com/ropensci/targets) R package.
 
-## Prior work on reproducible analysis pipelines
+### Bayesian statistics pipelines
 
-- [`drake`](https://github.com/ropensci/drake) an R-focused pipeline toolkit for data analysis projects. Featured in the [rOpenSci blog](https://ropensci.org/blog/2018/02/06/drake/) and [R Podcast Episode 22](https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/).
-- [`remakeGenerator`](https://www.github.com/wlandau/remakeGenerator) Generate large [`remake`](https://github.com/richfitz/remake)-style workflows.
-- [`parallelRemake`](https://www.github.com/wlandau/parallelRemake) Parallel computing support for [`remake`](https://github.com/richfitz/remake).
+- [`stantargets`](https://github.com/ropensci/stantargets), Reproducible Bayesian data analysis pipelines with [`targets`](https://github.com/ropensci/targets) and [`cmdstanr`](https://github.com/stan-dev/cmdstanr). 
+- [`jagstargets`](https://github.com/ropensci/stantargets), Reproducible Bayesian data analysis pipelines with [`targets`](https://github.com/ropensci/targets) and [`R2jags`](https://github.com/suyusung/R2jags).
 
-## R packages with utilities and infrastructure
+### Bayesian methods for historical borrowing in clinical trials
+
+- [`historicalborrow`](https://github.com/wlandau/historicalborrow): non-longitudinal hierarchical and mixture models for historical borrowing.
+- [`historicalborrowlong`](https://github.com/wlandau/historicalborrowlong): a longitudinal hierarchical model for historical borrowing.
+
+## Other packages
+
+### R package utilities and infrastructure
 
 - [`proffer`](https://github.com/r-prof/proffer) A [`pprof`](https://github.com/google/pprof)-based profiler for R code.
 - [`txtq`](https://github.com/wlandau/txtq) A small message queue for parallel processes.
 - [`downsize`](https://github.com/wlandau/downsize) Ease the transition between testing and deploying data analysis workflows.
 
-## Dissertation research
+### Dissertation research
 
 - [fbseq](https://github.com/wlandau/fbseq) Fully-Bayesian GPU-accelerated analysis of RNA-seq data ([arXiv preprint](http://arxiv.org/abs/1606.06659)).
 - [fbseqCUDA](https://github.com/wlandau/fbseqCUDA) CUDA GPU support for [fbseq](https://github.com/wlandau/fbseq).
 - [fbseqOpenMP](https://github.com/wlandau/fbseqOpenMP) OpenMP support for [fbseq](https://github.com/wlandau/fbseq).
+
+### Prior work on reproducible analysis pipelines
+
+- [`drake`](https://github.com/ropensci/drake) an R-focused pipeline toolkit for data analysis projects. Featured in the [rOpenSci blog](https://ropensci.org/blog/2018/02/06/drake/) and [R Podcast Episode 22](https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/).
+- [`remakeGenerator`](https://www.github.com/wlandau/remakeGenerator) Generate large [`remake`](https://github.com/richfitz/remake)-style workflows.
+- [`parallelRemake`](https://www.github.com/wlandau/parallelRemake) Parallel computing support for [`remake`](https://github.com/richfitz/remake).

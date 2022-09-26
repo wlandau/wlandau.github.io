@@ -787,6 +787,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1859,15 +1860,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -2066,7 +2073,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2159,83 +2166,43 @@ Archive
 
 
 <div class="d-article">
-<h2 id="reproducible-analysis-pipelines-in-r">Reproducible analysis
-pipelines in R</h2>
+<h2 id="select-works">Select works</h2>
+<h3 id="reproducible-analysis-pipelines-in-r">Reproducible analysis pipelines in R</h3>
 <ul>
-<li><a
-href="https://github.com/ropensci/targets"><code>targets</code></a>,
-dynamic function-oriented Make-like workflows for R. Long-term successor
-to <a
-href="https://github.com/ropensci/drake"><code>drake</code></a>.</li>
-<li><a
-href="https://github.com/ropensci/tarchetypes"><code>tarchetypes</code></a>,
-general-use archetypes for targets and pipelines, including <a
-href="https://docs.ropensci.org/tarchetypes/reference/tar_render_rep.html">parameterized
-R Markdown at scale</a>.</li>
-<li><a
-href="https://github.com/ropensci/stantargets"><code>stantargets</code></a>,
-Reproducible Bayesian data analysis pipelines with <a
-href="https://github.com/ropensci/targets"><code>targets</code></a> and
-<a
-href="https://github.com/stan-dev/cmdstanr"><code>cmdstanr</code></a>.</li>
-<li><a
-href="https://github.com/ropensci/stantargets"><code>jagstargets</code></a>,
-Reproducible Bayesian data analysis pipelines with <a
-href="https://github.com/ropensci/targets"><code>targets</code></a> and
-<a
-href="https://github.com/suyusung/R2jags"><code>R2jags</code></a>.</li>
-<li><a
-href="https://github.com/ropensci/gittargets"><code>gittargets</code></a>,
-local data version control for the <a
-href="https://github.com/ropensci/targets"><code>targets</code></a> R
-package.</li>
+<li><a href="https://github.com/ropensci/targets"><code>targets</code></a>, dynamic function-oriented Make-like workflows for R. Long-term successor to <a href="https://github.com/ropensci/drake"><code>drake</code></a>.</li>
+<li><a href="https://github.com/ropensci/tarchetypes"><code>tarchetypes</code></a>, general-use archetypes for targets and pipelines, including <a href="https://docs.ropensci.org/tarchetypes/reference/tar_render_rep.html">parameterized R Markdown at scale</a>.</li>
+<li><a href="https://github.com/ropensci/gittargets"><code>gittargets</code></a>, local data version control for the <a href="https://github.com/ropensci/targets"><code>targets</code></a> R package.</li>
 </ul>
-<h2 id="prior-work-on-reproducible-analysis-pipelines">Prior work on
-reproducible analysis pipelines</h2>
+<h3 id="bayesian-statistics-pipelines">Bayesian statistics pipelines</h3>
 <ul>
-<li><a href="https://github.com/ropensci/drake"><code>drake</code></a>
-an R-focused pipeline toolkit for data analysis projects. Featured in
-the <a href="https://ropensci.org/blog/2018/02/06/drake/">rOpenSci
-blog</a> and <a
-href="https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/">R
-Podcast Episode 22</a>.</li>
-<li><a
-href="https://www.github.com/wlandau/remakeGenerator"><code>remakeGenerator</code></a>
-Generate large <a
-href="https://github.com/richfitz/remake"><code>remake</code></a>-style
-workflows.</li>
-<li><a
-href="https://www.github.com/wlandau/parallelRemake"><code>parallelRemake</code></a>
-Parallel computing support for <a
-href="https://github.com/richfitz/remake"><code>remake</code></a>.</li>
+<li><a href="https://github.com/ropensci/stantargets"><code>stantargets</code></a>, Reproducible Bayesian data analysis pipelines with <a href="https://github.com/ropensci/targets"><code>targets</code></a> and <a href="https://github.com/stan-dev/cmdstanr"><code>cmdstanr</code></a>.</li>
+<li><a href="https://github.com/ropensci/stantargets"><code>jagstargets</code></a>, Reproducible Bayesian data analysis pipelines with <a href="https://github.com/ropensci/targets"><code>targets</code></a> and <a href="https://github.com/suyusung/R2jags"><code>R2jags</code></a>.</li>
 </ul>
-<h2 id="r-packages-with-utilities-and-infrastructure">R packages with
-utilities and infrastructure</h2>
+<h3 id="bayesian-methods-for-historical-borrowing-in-clinical-trials">Bayesian methods for historical borrowing in clinical trials</h3>
 <ul>
-<li><a href="https://github.com/r-prof/proffer"><code>proffer</code></a>
-A <a href="https://github.com/google/pprof"><code>pprof</code></a>-based
-profiler for R code.</li>
-<li><a href="https://github.com/wlandau/txtq"><code>txtq</code></a> A
-small message queue for parallel processes.</li>
-<li><a
-href="https://github.com/wlandau/downsize"><code>downsize</code></a>
-Ease the transition between testing and deploying data analysis
-workflows.</li>
+<li><a href="https://github.com/wlandau/historicalborrow"><code>historicalborrow</code></a>: non-longitudinal hierarchical and mixture models for historical borrowing.</li>
+<li><a href="https://github.com/wlandau/historicalborrowlong"><code>historicalborrowlong</code></a>: a longitudinal hierarchical model for historical borrowing.</li>
 </ul>
-<h2 id="dissertation-research">Dissertation research</h2>
+<h2 id="other-packages">Other packages</h2>
+<h3 id="r-package-utilities-and-infrastructure">R package utilities and infrastructure</h3>
 <ul>
-<li><a href="https://github.com/wlandau/fbseq">fbseq</a> Fully-Bayesian
-GPU-accelerated analysis of RNA-seq data (<a
-href="http://arxiv.org/abs/1606.06659">arXiv preprint</a>).</li>
-<li><a href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</a> CUDA
-GPU support for <a
-href="https://github.com/wlandau/fbseq">fbseq</a>.</li>
-<li><a href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</a>
-OpenMP support for <a
-href="https://github.com/wlandau/fbseq">fbseq</a>.</li>
+<li><a href="https://github.com/r-prof/proffer"><code>proffer</code></a> A <a href="https://github.com/google/pprof"><code>pprof</code></a>-based profiler for R code.</li>
+<li><a href="https://github.com/wlandau/txtq"><code>txtq</code></a> A small message queue for parallel processes.</li>
+<li><a href="https://github.com/wlandau/downsize"><code>downsize</code></a> Ease the transition between testing and deploying data analysis workflows.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h3 id="dissertation-research">Dissertation research</h3>
+<ul>
+<li><a href="https://github.com/wlandau/fbseq">fbseq</a> Fully-Bayesian GPU-accelerated analysis of RNA-seq data (<a href="http://arxiv.org/abs/1606.06659">arXiv preprint</a>).</li>
+<li><a href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</a> CUDA GPU support for <a href="https://github.com/wlandau/fbseq">fbseq</a>.</li>
+<li><a href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</a> OpenMP support for <a href="https://github.com/wlandau/fbseq">fbseq</a>.</li>
+</ul>
+<h3 id="prior-work-on-reproducible-analysis-pipelines">Prior work on reproducible analysis pipelines</h3>
+<ul>
+<li><a href="https://github.com/ropensci/drake"><code>drake</code></a> an R-focused pipeline toolkit for data analysis projects. Featured in the <a href="https://ropensci.org/blog/2018/02/06/drake/">rOpenSci blog</a> and <a href="https://r-podcast.org/episode/022-diving-in-to-drake-with-will-landau/">R Podcast Episode 22</a>.</li>
+<li><a href="https://www.github.com/wlandau/remakeGenerator"><code>remakeGenerator</code></a> Generate large <a href="https://github.com/richfitz/remake"><code>remake</code></a>-style workflows.</li>
+<li><a href="https://www.github.com/wlandau/parallelRemake"><code>parallelRemake</code></a> Parallel computing support for <a href="https://github.com/richfitz/remake"><code>remake</code></a>.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
