@@ -6,6 +6,7 @@ title: Presentations
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+- Scott, E., and Nitta, J., and **Landau, W.**. (2023) "{targets} in Action." rOpenSci Community Call, <https://ropensci.org/commcalls/jan2023-targets/>.
 - **Landau, W.**, and Man, A., and Kemmer, P., and Chatterjee, S., and Bian, F., and Zhao, H., and Zhao, Z. (2022) "Bayesian methods for placebo borrowing in master protocols." Bayesian Biostatistics 2022 Conference, <https://bayes-pharma.org/>.
 - **Landau, W.** (2022) "Data version control for reproducible analysis pipelines in R." useR! 2022 Conference, <https://github.com/wlandau/user-conf-2022/>.
 - **Landau, W.** (2021) "Target Markdown and {stantargets} for Bayesian model validation pipelines", R/Medicine 2021 Conference, <https://github.com/wlandau/rmedicine2021-slides>.

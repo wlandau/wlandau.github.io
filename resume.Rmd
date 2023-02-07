@@ -37,14 +37,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Select presentations
 
-- **Landau, W.**, and Man, A., and Kemmer, P., and Chatterjee, S., and Bian, F., and Zhao, H., and Zhao, Z. (2022) "Bayesian methods for placebo borrowing in master protocols." Bayesian Biostatistics 2022 Conference, <https://bayes-pharma.org/>.
-- **Landau, W.** (2022) "Data version control for reproducible analysis pipelines in R." useR! 2022 Conference, <https://github.com/wlandau/user-conf-2022/>.
-- **Landau, W.** (2021) "Target Markdown and {stantargets} for Bayesian model validation pipelines", R/Medicine 2021 Conference, <https://github.com/wlandau/rmedicine2021-slides>.
-- **Landau, W.** (2020) "Reproducible computation at scale with targets", New York Open Statistical Programming Meetup, <https://github.com/wlandau/nyhackr2020>.
-- **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, half-day short course, <https://github.com/wlandau/targets-tutorial>.
-- **Landau, W.** (2019) "Machine learning workflow management with drake", invited 4-hour workshop, R/Pharma Conference.
-- **Landau, W.**, and Niemi, J. (2016), "A Fully Bayesian Strategy for High-Dimensional Hierarchical Modeling Using Massively Parallel Computing". *Joint Statistical Meetings*, Section on Statistical Computing, Section on Statistical Graphics, Statistical Computing and Graphics Student Awards — Topic Contributed Papers. <a href="https://ww2.amstat.org/meetings/jsm/2016/onlineprogram/AbstractDetails.cfm?abstractid=318764">https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645</a>.
-- **Landau, W.**, and Liu, P. (2013), "Dispersion Estimation and Its Effect on Test Performance in RNA-Seq Data Analysis". *Joint Statistical Meetings*,	Biometrics Section, contributed poster. <a href="https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645">https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645</a>.
+* Scott, E., and Nitta, J., and **Landau, W.**. (2023) "{targets} in Action." rOpenSci Community Call, <https://ropensci.org/commcalls/jan2023-targets/>.
+* **Landau, W.**, and Man, A., and Kemmer, P., and Chatterjee, S., and Bian, F., and Zhao, H., and Zhao, Z. (2022) "Bayesian methods for placebo borrowing in master protocols." Bayesian Biostatistics 2022 Conference, <https://bayes-pharma.org/>.
+* **Landau, W.** (2022) "Data version control for reproducible analysis pipelines in R." useR! 2022 Conference, <https://github.com/wlandau/user-conf-2022/>.
+* **Landau, W.** (2021) "Target Markdown and {stantargets} for Bayesian model validation pipelines", R/Medicine 2021 Conference, <https://github.com/wlandau/rmedicine2021-slides>.
+* **Landau, W.** (2020) "Reproducible computation at scale with targets", New York Open Statistical Programming Meetup, <https://github.com/wlandau/nyhackr2020>.
+* **Landau, W.** (2020) "Reproducible computation at scale with targets", R/Pharma 2020 Conference, half-day short course, <https://github.com/wlandau/targets-tutorial>.
+* **Landau, W.** (2019) "Machine learning workflow management with drake", invited 4-hour workshop, R/Pharma Conference.
+* **Landau, W.**, and Niemi, J. (2016), "A Fully Bayesian Strategy for High-Dimensional Hierarchical Modeling Using Massively Parallel Computing". *Joint Statistical Meetings*, Section on Statistical Computing, Section on Statistical Graphics, Statistical Computing and Graphics Student Awards — Topic Contributed Papers. <a href="https://ww2.amstat.org/meetings/jsm/2016/onlineprogram/AbstractDetails.cfm?abstractid=318764">https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645</a>.
+* **Landau, W.**, and Liu, P. (2013), "Dispersion Estimation and Its Effect on Test Performance in RNA-Seq Data Analysis". *Joint Statistical Meetings*,	Biometrics Section, contributed poster. <a href="https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645">https://ww2.amstat.org/meetings/jsm/2013/onlineprogram/AbstractDetails.cfm?abstractid=307645</a>.
 
 ## Select open-source software
 
