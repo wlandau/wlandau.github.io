@@ -51,6 +51,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * [rOpenSci](https://ropensci.org/) packages [`targets`](https://github.com/ropensci/targets), [`tarchetypes`](https://github.com/ropensci/tarchetypes), and [`gittargets`](https://github.com/ropensci/gittargets) for general-purpose reproducible analysis pipelines.
 * [`stantargets`](https://github.com/ropensci/stantargets) and [`jagstargets`](https://github.com/ropensci/jagstargets) for Bayesian data analysis pipelines.
+- [`crew`](https://github.com/wlandau/crew): a [`mirai`](https://github.com/shikokuchuo/mirai)-powered worker launcher framework.
+- [`crew.cluster`](https://github.com/wlandau/crew.cluster): [`crew`](https://github.com/wlandau/crew) launcher plugins for traditional clusters.
 * [`historicalborrow`](https://github.com/wlandau/historicalborrow) and [`historicalborrowlong`](https://github.com/wlandau/historicalborrowlong) for Bayesian historical borrowing methods for clinical trials.
 
 ## Awards
@@ -100,7 +102,6 @@ R package to distribute the analysis method.
 <a href="http://wlandau.github.io/parallelRemake">parallelRemake</a>, and 
 <a href="http://wlandau.github.io/downsize">downsize</a> packages to manage, ameliorate, expedite, and accelerate computationally heavy reproducible workflows that are under heavy development.
 
-
 ## Seminar instructor
 
 - **Aug - Dec, 2012 and 2013**.
@@ -108,7 +109,6 @@ R package to distribute the analysis method.
 - [GPU computing](http://www.nvidia.com/object/what-is-gpu-computing.html) seminar series at <a href="http://wlandau.github.io/gpu">wlandau.github.io/gpu</a>.
 - Educated faculty and graduate students on massively parallel computing with [general-purpose graphics processing units](http://www.nvidia.com/object/what-is-gpu-computing.html).
 - Constructed, curated, and distributed slides, video, and example code at <a href="http://wlandau.github.io/gpu">wlandau.github.io/gpu</a> and on <a href="https://www.youtube.com/watch?v=VL3qbqA_Xco&list=PLs5XGFlsJ8Wi635Ig2QX3dbmJCNpss4aT">YouTube</a>.
-
 
 ## Course instructor
 - **Jan - May, 2012 and 2013**.
