@@ -121,6 +121,11 @@ R package to distribute the analysis method.
 - STAT 231: Engineering Probability.
 - STAT 105: Introduction to Engineering Statistics.
 
+## Leadership in Indianapolis
+
+- Member of the board of directors, Friends of Fort Harrison State Park. May 2022 - present.
+- Organizer and leader of volunteer bi-monthly park maintenance sessions at Fort Harrison. Sessions focus on removing and controlling invasive plants. May 2023 - present.
+
 ## Leadership at Eli Lilly and Company
 
 - Led a successful team effort to modernize Lilly's internal procedure for contributing open source software.
