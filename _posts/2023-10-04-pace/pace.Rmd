@@ -1,7 +1,7 @@
 ---
-title: "A strategic change of pace"
+title: "A strategic change of pace for public-facing communication"
 description: |
-  Why my public-facing communication has slowed down.
+  Why my responses have slowed down.
 author: Will Landau
 date: 10-04-2023
 output:
@@ -32,7 +32,7 @@ Late last month, I created digital boundaries to protect my mental health and pr
 
 ## What this means for users
 
-I send most of my responses during the middle part of the week, usually Wednesdays. I may be slower to communicate than in previous years, but I am still committed to helping users. And I am not slowing down at all when it comes to actual software engineering: fixing genuine bugs, adding new features, or creating new packages.
+I send most of my responses during the middle part of the week, usually Wednesdays. I may be slower to communicate than in previous years, but I am still committed to helping users. And I am not slowing down at all when it comes to actual software engineering. Far from it: these communication boundaries are giving me more time and energy to fix bugs, add new features, and create new packages.
 
 ## How you can help
 
