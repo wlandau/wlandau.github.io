@@ -24,7 +24,7 @@ I love to create and maintain open-source software. It is a joy to write code to
 
 ## Problem
 
-Although I value and grow from user feedback, I now face an overwhelming volume of questions and requests about the projects I maintain. Requests come at all times of day on all days of the week, and each response is a context switch. The high throughput wears me down.
+Although I value and grow from user feedback, I now face an overwhelming volume of questions and requests about the projects I maintain. Requests come at all times of day on all days of the week, and each response is a context switch. The high throughput of constant communication wears me down.
 
 ## Solution
 
