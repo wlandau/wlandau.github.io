@@ -20,11 +20,11 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 ## Background
 
-I love to create and maintain open-source software. It is a joy to write code to solve problems, release solutions for everyone, and keep packages working so problems stay solved. Users send feedback on a regular basis, and I value and grow from it all. I want to keep developing and engineering for as long as possible.
+I love to create and maintain open-source software. It is a joy to write code to solve problems, release solutions for everyone, and keep packages working so problems stay solved. I want to keep developing and engineering for as long as possible.
 
 ## Problem
 
-I now face an overwhelming volume of questions and requests about the projects I maintain. Requests come at all times of day on all days of the week, and each response is a context switch. The high throughput wears me down.
+Although I value and grow from user feedback, I now face an overwhelming volume of questions and requests about the projects I maintain. Requests come at all times of day on all days of the week, and each response is a context switch. The high throughput wears me down.
 
 ## Solution
 
