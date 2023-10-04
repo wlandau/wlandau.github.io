@@ -32,7 +32,7 @@ Late last month, I created digital boundaries to protect my mental health and pr
 
 ## What this means for users
 
-I send most of my responses during the middle part of the week, usually Wednesdays. I may be slower than in previous years, but I am still committed to fixing issues and helping users.
+I send most of my responses during the middle part of the week, usually Wednesdays. I may be slower to communicate than in previous years, but I am still committed to helping users. And I am not slowing down at all when it comes to actual software engineering: fixing genuine bugs, adding new features, or creating new packages.
 
 ## How you can help
 
