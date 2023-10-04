@@ -28,7 +28,7 @@ Although I value and grow from user feedback, I now face an overwhelming volume 
 
 ## Solution
 
-Late last month, I created digital boundaries to protect my mental health and productivity. My GitHub notifications, social media, and package maintainer identity now use a special email account that I only check on certain days. The benefits were immediate, and the changes are here to stay.
+Late last month, I created digital boundaries to protect my mental health and productivity. My GitHub notifications, social media, and package maintainer identity now use a special email account that I only check on certain days of the week. The benefits were immediate, and the changes are here to stay.
 
 ## What this means for users
 
