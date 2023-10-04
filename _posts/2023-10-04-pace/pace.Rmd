@@ -1,7 +1,7 @@
 ---
 title: "A strategic change of pace"
 description: |
-  Why my responses have slowed down.
+  Why my public-facing communication has slowed down.
 author: Will Landau
 date: 10-04-2023
 output:
