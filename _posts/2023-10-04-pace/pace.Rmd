@@ -8,9 +8,10 @@ output:
   distill::distill_article:
     self_contained: false
 categories:
-  - productivity
+  - communication
   - community
-preview: app-run.png
+  - productivity
+preview: image.jpg
 ---
 
 ```{r, include = FALSE}
@@ -27,11 +28,11 @@ I now face an overwhelming volume of questions and requests about the projects I
 
 ## Solution
 
-Late last month, I created digital boundaries to protect my mental health and productivity. My GitHub notifications, social media, and package maintainer identity now use a special email account that I only check in the middle part of the week. The benefits were immediate, and the changes are here to stay.
+Late last month, I created digital boundaries to protect my mental health and productivity. My GitHub notifications, social media, and package maintainer identity now use a special email account that I only check on certain days. The benefits were immediate, and the changes are here to stay.
 
 ## What this means for users
 
-I will still respond, but it will take me longer than in previous years.
+I send most of my responses during the middle part of the week, usually Wednesdays. I am slower than in previous years, but I still care about fixing issues and helping users.
 
 ## How you can help
 
