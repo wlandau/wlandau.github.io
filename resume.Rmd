@@ -57,6 +57,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Awards
 
+* 2023 Lilly Innovator Award. Awarded for developing a novel cloud-based computing framework to accelerate clinical trial design.
 * 2021 Lilly Innovator Award. Awarded for creating the R package [`targets`](https://docs.ropensci.org/targets) and its associated ecosystem to track workflow that empowers reproducible analytical research with efficiency.
 * 2020 Lilly Innovator Award. Awarded for the development of efficient clinical trial simulation software needed for complex designs and trials of potential COVID-19 treatments.
 * 2019 NumFOCUS New Contributor Recognition. Awarded for inclusive and collaborative work with rOpenSci. <a href="https://numfocus.org/blog/2019-numfocus-awards">https://numfocus.org/blog/2019-numfocus-awards</a>.
