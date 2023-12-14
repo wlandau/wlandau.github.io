@@ -27,6 +27,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - [`crew`](https://github.com/wlandau/crew): a [`mirai`](https://github.com/shikokuchuo/mirai)-powered worker launcher framework.
 - [`crew.cluster`](https://github.com/wlandau/crew.cluster): [`crew`](https://github.com/wlandau/crew) launcher plugins for traditional clusters.
+- [`crew.aws.batch`](https://github.com/wlandau/crew.aws.batch): a [`crew`](https://github.com/wlandau/crew) launcher plugin for AWS Batch.
 
 ## Other packages
 

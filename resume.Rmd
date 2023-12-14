@@ -51,8 +51,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * [rOpenSci](https://ropensci.org/) packages [`targets`](https://github.com/ropensci/targets), [`tarchetypes`](https://github.com/ropensci/tarchetypes), and [`gittargets`](https://github.com/ropensci/gittargets) for general-purpose reproducible analysis pipelines.
 * [`stantargets`](https://github.com/ropensci/stantargets) and [`jagstargets`](https://github.com/ropensci/jagstargets) for Bayesian data analysis pipelines.
-- [`crew`](https://github.com/wlandau/crew): a [`mirai`](https://github.com/shikokuchuo/mirai)-powered worker launcher framework.
-- [`crew.cluster`](https://github.com/wlandau/crew.cluster): [`crew`](https://github.com/wlandau/crew) launcher plugins for traditional clusters.
+* [`crew`](https://github.com/wlandau/crew): a [`mirai`](https://github.com/shikokuchuo/mirai)-powered worker launcher framework.
+* [`crew.cluster`](https://github.com/wlandau/crew.cluster): [`crew`](https://github.com/wlandau/crew) launcher plugins for traditional clusters.
+* [`crew.aws.batch`](https://github.com/wlandau/crew.aws.batch): a [`crew`](https://github.com/wlandau/crew) launcher plugin for AWS Batch.
 * [`historicalborrow`](https://github.com/wlandau/historicalborrow) and [`historicalborrowlong`](https://github.com/wlandau/historicalborrowlong) for Bayesian historical borrowing methods for clinical trials.
 
 ## Awards
