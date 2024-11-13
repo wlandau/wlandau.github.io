@@ -6,6 +6,8 @@ title: Presentations
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+- **Landau, W.**, and Stock, C., and Bean, A., and Sidi, Y., and Kunzmann, K. (2004) "{brms.mmrm}: a modern R package for Bayesian MMRMs." Bayesian Biostatistics Conference, <https://bayes-pharma.org/wp-content/uploads/2024/11/Will-Landau.pdf>.
+- Gao, C., and **Landau, W.**. (2024) "{mirai} and {crew}: next-generation async to supercharge {promises}, Plumber, Shiny, and {targets}", Posit Conference, <https://www.youtube.com/watch?v=s_cBi155ZIQ>.
 - Scott, E., and Nitta, J., and **Landau, W.**. (2023) "{targets} in Action." rOpenSci Community Call, <https://ropensci.org/commcalls/jan2023-targets/>.
 - **Landau, W.**, and Man, A., and Kemmer, P., and Chatterjee, S., and Bian, F., and Zhao, H., and Zhao, Z. (2022) "Bayesian methods for placebo borrowing in master protocols." Bayesian Biostatistics 2022 Conference, <https://bayes-pharma.org/>.
 - **Landau, W.** (2022) "Data version control for reproducible analysis pipelines in R." useR! 2022 Conference, <https://github.com/wlandau/user-conf-2022/>.
