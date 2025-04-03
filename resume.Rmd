@@ -69,11 +69,12 @@ knitr::opts_chunk$set(echo = FALSE)
 - Reproducible analysis pipelines, high-performance computing, R, package development, Stan, JAGS.
 - Past experience with machine learning, C++, C, CUDA, Python, JavaScript, Fortran.
 
-## Senior Research Scientist
+## Senior Advisor – Innovative Statistics
 - **October 2021 - present**
 - [Eli Lilly and Company](http://www.lilly.com)
-- Developed Bayesian methods and proprietary software packages that were influential in the analyses and decision-making of clinical trials in Alzheimer's and chronic pain.
-- Created significant extensions to the {targets} R package and its ecosystem for Bayesian data analysis, data versioning, and cloud storage.
+- Developed Bayesian methods and statistical modeling packages for the simulation and analysis of clinical trials.
+- Developed clinical trial simulation infrastructure based on the {targets} R package.
+- Consulted on the simulation, design, and analysis of clinical trials in neuroscience and cardiometabolic health.
 
 ## Research Scientist
 - **October 2016 - October 2021**
