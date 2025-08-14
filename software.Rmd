@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### R package repositories
 
-* [R-multiverse](https://r-multiverse.org), a community-curated dual repository fro Ro packages, powered by open-source [R-universe](https://r-universe.dev) infrastructure.
+* [R-multiverse](https://r-multiverse.org), a community-curated dual repository for R packages, powered by open-source [R-universe](https://r-universe.dev) infrastructure.
 
 ### Reproducible analysis pipelines
 

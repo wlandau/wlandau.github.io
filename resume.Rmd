@@ -45,7 +45,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Select open-source software
 
-* [R-multiverse](https://r-multiverse.org), a community-curated dual repository fro Ro packages, powered by open-source [R-universe](https://r-universe.dev) infrastructure.
+* [R-multiverse](https://r-multiverse.org), a community-curated dual repository for R packages, powered by open-source [R-universe](https://r-universe.dev) infrastructure.
 * [rOpenSci](https://ropensci.org/) package [`targets`](https://github.com/ropensci/targets) for general-purpose reproducible analysis pipelines.
 * [`stantargets`](https://github.com/ropensci/stantargets) and [`jagstargets`](https://github.com/ropensci/jagstargets) for Bayesian data analysis pipelines.
 * [`crew`](https://github.com/wlandau/crew): a [`mirai`](https://github.com/shikokuchuo/mirai)-powered worker launcher framework.
