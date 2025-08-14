@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = FALSE)
 </ul>
 </div>
 
-## Select Publications
+## Select publications
 
 * **Landau, W.** (2021), "We Need Trustworthy R Packages", The R Journal, 2021. <https://doi.org/10.32614/RJ-2021-109>.
 * **Landau, W.** (2021), The stantargets R package: a workflow framework for efficient reproducible Stan-powered Bayesian data analysis pipelines. Journal of Open Source Software, 6(60), 3193, <https://doi.org/10.21105/joss.03193>.
@@ -37,19 +37,22 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Select presentations
 
-- **Landau, W.** (2024) "{targets}: a rediscovery from a different field." LatinR Conference (keynote presentation), <https://wlandau.github.io/LatinR2024/>.
-- **Landau, W.**, and Stock, C., and Bean, A., and Sidi, Y., and Kunzmann, K. (2004) "{brms.mmrm}: a modern R package for Bayesian MMRMs." Bayesian Biostatistics Conference, <https://bayes-pharma.org/wp-content/uploads/2024/11/Will-Landau.pdf>.
-- Gao, C., and **Landau, W.**. (2024) "{mirai} and {crew}: next-generation async to supercharge {promises}, Plumber, Shiny, and {targets}", Posit Conference, <https://www.youtube.com/watch?v=s_cBi155ZIQ>.
+* **Landau, W.** (2025) "Powerful simulation pipelines with {targets}" [useR! 2025 Conference](https://user2025.r-project.org/) (keynote presentation), <https://wlandau.github.io/useR2025/>. Recording: <https://www.youtube.com/watch?v=fgtIqJfzPK0>.
+* **Landau, W.** (2024) "{targets}: a rediscovery from a different field." LatinR Conference (keynote presentation), <https://wlandau.github.io/LatinR2024/>.
+* **Landau, W.**, and Stock, C., and Bean, A., and Sidi, Y., and Kunzmann, K. (2004) "{brms.mmrm}: a modern R package for Bayesian MMRMs." Bayesian Biostatistics Conference, <https://bayes-pharma.org/wp-content/uploads/2024/11/Will-Landau.pdf>.
+* Gao, C., and **Landau, W.**. (2024) "{mirai} and {crew}: next-generation async to supercharge {promises}, Plumber, Shiny, and {targets}", Posit Conference, <https://www.youtube.com/watch?v=s_cBi155ZIQ>.
 * Scott, E., and Nitta, J., and **Landau, W.**. (2023) "{targets} in Action." rOpenSci Community Call, <https://ropensci.org/commcalls/jan2023-targets/>.
 
 ## Select open-source software
 
-* [rOpenSci](https://ropensci.org/) packages [`targets`](https://github.com/ropensci/targets) for general-purpose reproducible analysis pipelines.
+* [R-multiverse](https://r-multiverse.org), a community-curated dual repository fro Ro packages, powered by open-source [R-universe](https://r-universe.dev) infrastructure.
+* [rOpenSci](https://ropensci.org/) package [`targets`](https://github.com/ropensci/targets) for general-purpose reproducible analysis pipelines.
 * [`stantargets`](https://github.com/ropensci/stantargets) and [`jagstargets`](https://github.com/ropensci/jagstargets) for Bayesian data analysis pipelines.
 * [`crew`](https://github.com/wlandau/crew): a [`mirai`](https://github.com/shikokuchuo/mirai)-powered worker launcher framework.
 * [`crew.cluster`](https://github.com/wlandau/crew.cluster) and 
  [`crew.aws.batch`](https://github.com/wlandau/crew.aws.batch): [`crew`](https://github.com/wlandau/crew) for high-performance computing systems.
 * [`brms.mmrm`](https://github.com/openpharma/brms.mmrm): a modern R package for Bayesian mixed models for repeated measures (MMRMs).
+
 
 ## Awards
 
@@ -65,85 +68,74 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Skills
 
-- Bayesian methods, Markov chain Monte Carlo, hierarchical models, high-dimensional data analysis, linear and nonlinear models, clinical trial simulation and design.
-- Reproducible analysis pipelines, high-performance computing, R, package development, Stan, JAGS.
-- Past experience with machine learning, C++, C, CUDA, Python, JavaScript, Fortran.
+* Bayesian methods, Markov chain Monte Carlo, hierarchical models, high-dimensional data analysis, linear and nonlinear models, clinical trial simulation and design.
+* Reproducible analysis pipelines, high-performance computing, R, package development, Stan, JAGS.
+* Past experience with machine learning, C++, C, CUDA, Python, JavaScript, Fortran.
 
 ## Senior Advisor – Innovative Statistics
-- **October 2021 - present**
-- [Eli Lilly and Company](http://www.lilly.com)
-- Developed Bayesian methods and statistical modeling packages for the simulation and analysis of clinical trials.
-- Developed clinical trial simulation infrastructure based on the {targets} R package.
-- Consulted on the simulation, design, and analysis of clinical trials in neuroscience and cardiometabolic health.
+* **October 2021 - present**
+* [Eli Lilly and Company](http://www.lilly.com)
+* Developed Bayesian methods and statistical modeling packages for the simulation and analysis of clinical trials.
+* Developed clinical trial simulation infrastructure based on the {targets} R package.
+* Consulted on the simulation, design, and analysis of clinical trials in neuroscience and cardiometabolic health.
 
 ## Research Scientist
-- **October 2016 - October 2021**
-- [Eli Lilly and Company](http://www.lilly.com)
-- Created popular open-source rOpenSci packages such as [`targets`](https://docs.ropensci.org/targets) for reproducible analysis pipelines in R.
-- Drove the standardization and automation of Bayesian methods in the analysis of clinical trials.
-- Led the successful transformation of the internal tool suite for the simulation and design of clinical trials.
-- Increased company-wide external engagement with the R and open-source software (OSS) communities. Modernized internal processes to allow substantial contribution to OSS and served as a gatekeeper for new OSS disclosures.
-- Lead statistician in early-phase autoimmune asset teams.
+* **October 2016 - October 2021**
+* [Eli Lilly and Company](http://www.lilly.com)
+* Created popular open-source rOpenSci packages such as [`targets`](https://docs.ropensci.org/targets) for reproducible analysis pipelines in R.
+* Drove the standardization and automation of Bayesian methods in the analysis of clinical trials.
+* Led the successful transformation of the internal tool suite for the simulation and design of clinical trials.
+* Increased company-wide external engagement with the R and open-source software (OSS) communities. Modernized internal processes to allow substantial contribution to OSS and served as a gatekeeper for new OSS disclosures.
+* Lead statistician in early-phase autoimmune asset teams.
 
 ## Research assistant
-- **May 2013 - Aug 2016**
-- RNA-sequencing Working Group, Department of Statistics, [Iowa State University](http://www.iastate.edu).
-- Funded by NIH grant R01GM109458 with Drs. Dan Nettleton and Jarad Niemi.
-- Developed a new fully Bayesian analysis method for high-dimensional genomic datasets using hierarchical models.
-- Implemented massively parallelized Markov chain Monte Carlo.
-- Created the 
+* **May 2013 - Aug 2016**
+* RNA-sequencing Working Group, Department of Statistics, [Iowa State University](http://www.iastate.edu).
+* Funded by NIH grant R01GM109458 with Drs. Dan Nettleton and Jarad Niemi.
+* Developed a new fully Bayesian analysis method for high-dimensional genomic datasets using hierarchical models.
+* Implemented massively parallelized Markov chain Monte Carlo.
+* Created the 
 <a href="https://github.com/wlandau/fbseq">fbseq</a>
 R package to distribute the analysis method.
-- Implemented and distributed parallel computing backends for [CUDA GPUs](https://developer.nvidia.com/about-cuda) (<a href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</a>) and [OpenMP](https://en.wikipedia.org/wiki/OpenMP) (<a href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</a>).
-- Created the 
+* Implemented and distributed parallel computing backends for [CUDA GPUs](https://developer.nvidia.com/about-cuda) (<a href="https://github.com/wlandau/fbseqCUDA">fbseqCUDA</a>) and [OpenMP](https://en.wikipedia.org/wiki/OpenMP) (<a href="https://github.com/wlandau/fbseqOpenMP">fbseqOpenMP</a>).
+* Created the 
 <a href="http://wlandau.github.io/remakeGenerator">remakeGenerator</a>, 
 <a href="http://wlandau.github.io/parallelRemake">parallelRemake</a>, and 
 <a href="http://wlandau.github.io/downsize">downsize</a> packages to manage, ameliorate, expedite, and accelerate computationally heavy reproducible workflows that are under heavy development.
 
 ## Seminar instructor
 
-- **Aug - Dec, 2012 and 2013**.
-- Department of Statistics, [Iowa State University](http://www.iastate.edu).
-- [GPU computing](http://www.nvidia.com/object/what-is-gpu-computing.html) seminar series at <a href="http://wlandau.github.io/gpu">wlandau.github.io/gpu</a>.
-- Educated faculty and graduate students on massively parallel computing with [general-purpose graphics processing units](http://www.nvidia.com/object/what-is-gpu-computing.html).
-- Constructed, curated, and distributed slides, video, and example code at <a href="http://wlandau.github.io/gpu">wlandau.github.io/gpu</a> and on <a href="https://www.youtube.com/watch?v=VL3qbqA_Xco&list=PLs5XGFlsJ8Wi635Ig2QX3dbmJCNpss4aT">YouTube</a>.
+* **Aug - Dec, 2012 and 2013**.
+* Department of Statistics, [Iowa State University](http://www.iastate.edu).
+* [GPU computing](http://www.nvidia.com/object/what-is-gpu-computing.html) seminar series at <a href="http://wlandau.github.io/gpu">wlandau.github.io/gpu</a>.
+* Educated faculty and graduate students on massively parallel computing with [general-purpose graphics processing units](http://www.nvidia.com/object/what-is-gpu-computing.html).
+* Constructed, curated, and distributed slides, video, and example code at <a href="http://wlandau.github.io/gpu">wlandau.github.io/gpu</a> and on <a href="https://www.youtube.com/watch?v=VL3qbqA_Xco&list=PLs5XGFlsJ8Wi635Ig2QX3dbmJCNpss4aT">YouTube</a>.
 
 ## Course instructor
-- **Jan - May, 2012 and 2013**.
-- Department of Statistics, [Iowa State University](http://www.iastate.edu).
-- STAT 305: Engineering Statistics (<a href="http://wlandau.github.io/stat305/">wlandau.github.io/stat305</a>).
+* **Jan - May, 2012 and 2013**.
+* Department of Statistics, [Iowa State University](http://www.iastate.edu).
+* STAT 305: Engineering Statistics (<a href="http://wlandau.github.io/stat305/">wlandau.github.io/stat305</a>).
 
 ## Grader
-- **Aug - Dec, 2011**.
-- Department of Statistics, [Iowa State University](http://www.iastate.edu).
-- STAT 231: Engineering Probability.
-- STAT 105: Introduction to Engineering Statistics.
+* **Aug - Dec, 2011**.
+* Department of Statistics, [Iowa State University](http://www.iastate.edu).
+* STAT 231: Engineering Probability.
+* STAT 105: Introduction to Engineering Statistics.
 
 ## Leadership in Indianapolis
 
-- Member of the board of directors, Friends of Fort Harrison State Park. May 2022 - present.
-- Organizer and leader of volunteer bi-monthly park maintenance sessions at Fort Harrison. Sessions focus on removing and controlling invasive plants. May 2023 - present.
+* Member of the board of directors, [Friends of Fort Harrison State Park](https://www.friendsoffortharrison.org/). May 2022 - present.
+* Organizer and leader of [Maintenance Mondays](https://www.friendsoffortharrison.org/events.html), a series of bi-monthly volunteer sessions focusing on the removal of invasive plants. May 2023 - present.
 
 ## Leadership at Eli Lilly and Company
 
-- Led a successful team effort to modernize Lilly's internal procedure for contributing open source software.
-- Served as a volunteer moderator in the [2017 National Science Bowl (high school Indiana Regionals)](https://science.energy.gov/wdts/nsb/regional-competitions/high-school-regionals/in_indiana-regional-high-school-science-bowl/).
+* Led a successful team effort to modernize Lilly's internal procedure for contributing open source software.
+* Served as a volunteer moderator in the [2017 National Science Bowl (high school Indiana Regionals)](https://science.energy.gov/wdts/nsb/regional-competitions/high-school-regionals/in_indiana-regional-high-school-science-bowl/).
 
 ## Leadership at Iowa State University
 
-- Founder and leader, Cloud Computing Working Group, Sep - Dec 2015.
-- Member, Computation Advisory Committee, Sep 2015 - May 2016.
-- Volunteer instructor, Office of Precollegiate Programs for Talented and Gifted ([OPPTAG](http://www.opptag.iastate.edu)), Mar 13, 2014.
-- Fellow, [Preparing Future Faculty](http://www.celt.iastate.edu/graduate-students-postdocs/preparing-future-faculty), Aug 2013 - May 2014.
-- Assistant Coach, Boxing Club, Aug 2013 - Dec 2013.
-
-## References
-
-- <a href="http://jarad.me/">Jarad Niemi</a>, PhD advisor and major professor, [niemi@iastate.edu](mailto:niemi@iastate.edu).
-- <a href="http://www.public.iastate.edu/~dnett/">Dan Nettleton</a>, lead principal investigator of the RNA-sequencing Working Group (Iowa State Department of Statistics), [dnett@iastate.edu](mailto:dnett@iastate.edu).
-- <a href="http://www.public.iastate.edu/~pliu/">Peng Liu</a>, MS advisor and major professor, [pliu@iastate.edu](mailto:pliu@iastate.edu).
-- Additional references available on request.
-
-## Hobbies
-
-- Climbing, Brazillian Jiu Jitsu, sailing, windsurfing
+* Founder and leader, Cloud Computing Working Group, Sep - Dec 2015.
+* Member, Computation Advisory Committee, Sep 2015 - May 2016.
+* Volunteer instructor, Office of Precollegiate Programs for Talented and Gifted ([OPPTAG](http://www.opptag.iastate.edu)), Mar 13, 2014.
+* Fellow, [Preparing Future Faculty](http://www.celt.iastate.edu/graduate-students-postdocs/preparing-future-faculty), Aug 2013 - May 2014.
+* Assistant Coach, Boxing Club, Aug 2013 - Dec 2013.
