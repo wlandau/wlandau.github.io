@@ -37,8 +37,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Select presentations
 
-* **Landau, W.** (2025) "Powerful simulation pipelines with {targets}" [useR! 2025 Conference](https://user2025.r-project.org/) (keynote presentation), <https://wlandau.github.io/useR2025/>. Recording: <https://www.youtube.com/watch?v=fgtIqJfzPK0>.
-* **Landau, W.** (2024) "{targets}: a rediscovery from a different field." LatinR Conference (keynote presentation), <https://wlandau.github.io/LatinR2024/>.
+* **Landau, W.** (2025) "Powerful simulation pipelines with {targets}." [useR! Conference 2025](https://user2025.r-project.org/) (keynote presentation), <https://wlandau.github.io/useR2025/>, <https://www.youtube.com/watch?v=fgtIqJfzPK0>.
+* **Landau, W.** (2025) "R-multiverse: a new way to publish R packages." [Posit Conference 2025](https://posit.co/conference/). <https://wlandau.github.io/posit2025/>, <https://www.youtube.com/watch?v=UseltnRVoFo>.
 * **Landau, W.**, and Stock, C., and Bean, A., and Sidi, Y., and Kunzmann, K. (2004) "{brms.mmrm}: a modern R package for Bayesian MMRMs." Bayesian Biostatistics Conference, <https://bayes-pharma.org/wp-content/uploads/2024/11/Will-Landau.pdf>.
 * Gao, C., and **Landau, W.**. (2024) "{mirai} and {crew}: next-generation async to supercharge {promises}, Plumber, Shiny, and {targets}", Posit Conference, <https://www.youtube.com/watch?v=s_cBi155ZIQ>.
 * Scott, E., and Nitta, J., and **Landau, W.**. (2023) "{targets} in Action." rOpenSci Community Call, <https://ropensci.org/commcalls/jan2023-targets/>.
