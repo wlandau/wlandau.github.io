@@ -53,9 +53,9 @@ knitr::opts_chunk$set(echo = FALSE)
  [`crew.aws.batch`](https://github.com/wlandau/crew.aws.batch): [`crew`](https://github.com/wlandau/crew) for high-performance computing systems.
 * [`brms.mmrm`](https://github.com/openpharma/brms.mmrm): a modern R package for Bayesian mixed models for repeated measures (MMRMs).
 
-
 ## Awards
 
+* 2026 Lilly Innovator Award. Awarded for the creation and deployment of the first targeted agentic LLM-powered application for clinical trial simulation in Lilly's Statistics organization.
 * 2023 Lilly Innovator Award. Awarded for developing a novel cloud-based computing framework to accelerate clinical trial design.
 * 2021 Lilly Innovator Award. Awarded for creating the R package [`targets`](https://docs.ropensci.org/targets) and its associated ecosystem to track workflow that empowers reproducible analytical research with efficiency.
 * 2020 Lilly Innovator Award. Awarded for the development of efficient clinical trial simulation software needed for complex designs and trials of potential COVID-19 treatments.
