@@ -81,7 +81,7 @@ knitr::opts_chunk$set(echo = FALSE)
 * Developed Bayesian methods and statistical modeling packages for the simulation and analysis of clinical trials.
 * Developed clinical trial simulation infrastructure based on the {targets} R package.
 * Designed least-privilege trusted AI agent architectures that keep large language model reasoning out of the result path, and created the [Trusted Mini-Agents](https://trustedminiagents.dev) guide to engineering AI errors out of agentic workflows.
-* Built agentic tooling for evidence synthesis, including [`retroglyph`](https://github.com/wlandau/retroglyph) to reconstruct individual patient data from published Kaplan-Meier curves.
+* Built agentic tooling for clinical trial design and evidence synthesis, including [`retroglyph`](https://github.com/wlandau/retroglyph) to reconstruct individual patient data from published Kaplan-Meier curves.
 * Consulted on the simulation, design, and analysis of clinical trials in neuroscience and cardiometabolic health.
 
 ## Research Scientist
