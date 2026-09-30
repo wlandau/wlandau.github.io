@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Select works
 
-### Trusted AI agents
+### Trusted AI systems
 
 * [Trusted Mini-Agents](https://trustedminiagents.dev), a guide to engineering AI errors out of agentic workflows, with agent templates and worked examples in [R](https://trustedminiagents.dev/r-template.html) and [Python](https://trustedminiagents.dev/py-template.html) ([source](https://github.com/wlandau/trustedminiagents)).
 * [`retroglyph`](https://github.com/wlandau/retroglyph), a [trusted mini-agent](https://trustedminiagents.dev) to reconstruct individual patient data from Kaplan-Meier images ([documentation](https://wlandau.github.io/retroglyph/)).
