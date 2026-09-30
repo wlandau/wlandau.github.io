@@ -45,6 +45,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Select open-source software
 
+* [Trusted Mini-Agents](https://trustedminiagents.dev), a guide to engineering AI errors out of agentic workflows, with R and Python templates.
+* [`retroglyph`](https://github.com/wlandau/retroglyph): a trusted mini-agent to reconstruct individual patient data from Kaplan-Meier images.
 * [R-multiverse](https://r-multiverse.org), a community-curated dual repository for R packages, powered by open-source [R-universe](https://r-universe.dev) infrastructure.
 * [rOpenSci](https://ropensci.org/) package [`targets`](https://github.com/ropensci/targets) for general-purpose reproducible analysis pipelines.
 * [`stantargets`](https://github.com/ropensci/stantargets) and [`jagstargets`](https://github.com/ropensci/jagstargets) for Bayesian data analysis pipelines.
@@ -69,14 +71,17 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Skills
 
 * Bayesian methods, Markov chain Monte Carlo, hierarchical models, high-dimensional data analysis, linear and nonlinear models, clinical trial simulation and design.
-* Reproducible analysis pipelines, high-performance computing, R, package development, Stan, JAGS.
-* Past experience with machine learning, C++, C, CUDA, Python, JavaScript, Fortran.
+* Trusted AI agent design, large language models, agentic workflows, LLM tool use, least-privilege agent architecture.
+* Reproducible analysis pipelines, high-performance computing, R, Python, package development, Stan, JAGS.
+* Past experience with machine learning, C++, C, CUDA, JavaScript, Fortran.
 
 ## Senior Advisor – Innovative Statistics
 * **October 2021 - present**
 * [Eli Lilly and Company](http://www.lilly.com)
 * Developed Bayesian methods and statistical modeling packages for the simulation and analysis of clinical trials.
 * Developed clinical trial simulation infrastructure based on the {targets} R package.
+* Designed least-privilege trusted AI agent architectures that keep large language model reasoning out of the result path, and co-authored the [Trusted Mini-Agents](https://trustedminiagents.dev) guide to engineering AI errors out of agentic workflows.
+* Built agentic tooling for evidence synthesis, including [`retroglyph`](https://github.com/wlandau/retroglyph) to reconstruct individual patient data from published Kaplan-Meier curves.
 * Consulted on the simulation, design, and analysis of clinical trials in neuroscience and cardiometabolic health.
 
 ## Research Scientist

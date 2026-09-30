@@ -22,6 +22,8 @@ navbar:
         href: about.html
     - text: "R Targetopia"
       href: https://wlandau.github.io/targetopia/
+    - text: "Trusted Mini-Agents"
+      href: https://trustedminiagents.dev
     - text: "Portfolio"
       menu:
       - text: "Publications"
